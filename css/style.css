@@ -934,13 +934,15 @@ strong {
 .cf-user-badge {
   display: flex;
   align-items: center;
-  gap: 1.1rem;
+  gap: 1.15rem;
 }
 
 .cf-avatar {
-  width: 54px;
-  height: 54px;
+  width: 58px;
+  height: 58px;
   border-radius: 50%;
+  position: relative;
+  overflow: hidden;
   background: linear-gradient(135deg, #0284c7, #2563eb);
   color: #ffffff;
   display: flex;
@@ -948,42 +950,139 @@ strong {
   justify-content: center;
   font-size: 1.5rem;
   box-shadow: 0 4px 14px rgba(2, 132, 199, 0.3);
+  border: 2.5px solid #38bdf8;
+  flex-shrink: 0;
+}
+
+.cf-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.cf-avatar-fallback {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
 .cf-names h3 {
   font-size: 1.35rem;
   color: #0f172a;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.15rem;
 }
 
-.cf-handle {
-  font-size: 0.92rem;
-  color: #64748b;
-}
-
-.cf-handle strong {
-  color: #0284c7;
-}
-
-.cf-rating-tags {
+.cf-name-line {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.75rem;
   flex-wrap: wrap;
 }
 
-.cf-rank-badge.rank-specialist {
+.cf-verified-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #0284c7;
+  background: #e0f2fe;
+  border: 1px solid #bae6fd;
+  padding: 0.15rem 0.6rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.cf-verified-badge:hover {
+  background: #0284c7;
+  color: #ffffff;
+}
+
+.cf-handle-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  font-size: 0.88rem;
+  color: #64748b;
+  flex-wrap: wrap;
+  margin-top: 0.35rem;
+}
+
+.cf-handle-meta a {
+  color: #0284c7;
+  text-decoration: none;
+}
+
+.cf-handle-meta a:hover {
+  text-decoration: underline;
+}
+
+.cf-org {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  color: #475569;
+}
+
+.cf-api-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #047857;
+  background: #d1fae5;
+  border: 1px solid #a7f3d0;
+  padding: 0.2rem 0.65rem;
+  border-radius: 9999px;
+}
+
+.pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #10b981;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+.cf-rank-badge {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  background: #e0f2fe;
-  color: #0369a1;
-  border: 1.5px solid #7dd3fc;
   font-size: 0.88rem;
   font-weight: 700;
   padding: 0.45rem 1rem;
   border-radius: 9999px;
   letter-spacing: 0.02em;
+}
+
+.cf-rank-badge.rank-newbie {
+  background: #f1f5f9;
+  color: #475569;
+  border: 1.5px solid #cbd5e1;
+}
+
+.cf-rank-badge.rank-pupil {
+  background: #dcfce7;
+  color: #15803d;
+  border: 1.5px solid #86efac;
+}
+
+.cf-rank-badge.rank-specialist {
+  background: #e0f2fe;
+  color: #0369a1;
+  border: 1.5px solid #7dd3fc;
 }
 
 .cf-rating-box {
@@ -1218,8 +1317,9 @@ strong {
 }
 
 .lang-bar-fill.cpp { background: #2563eb; }
-.lang-bar-fill.python { background: #eab308; }
 .lang-bar-fill.c { background: #64748b; }
+.lang-bar-fill.java { background: #f97316; }
+.lang-bar-fill.python { background: #eab308; }
 
 .lang-list {
   display: flex;
@@ -1247,8 +1347,9 @@ strong {
   border-radius: 50%;
 }
 .lang-dot.cpp { background: #2563eb; }
-.lang-dot.python { background: #eab308; }
 .lang-dot.c { background: #64748b; }
+.lang-dot.java { background: #f97316; }
+.lang-dot.python { background: #eab308; }
 
 .lang-percent {
   color: #64748b;

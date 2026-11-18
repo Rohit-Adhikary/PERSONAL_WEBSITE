@@ -27,8 +27,8 @@
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-  <!-- Stylesheet (Cache Buster v9.0 - Dedicated Platform Dashboards) -->
-  <link rel="stylesheet" href="css/style.css?v=9.0" />
+  <!-- Stylesheet (Cache Buster v10.0 - Connected Codeforces Handle Rohit_Adhikari) -->
+  <link rel="stylesheet" href="css/style.css?v=10.0" />
 </head>
 <body>
 
@@ -105,9 +105,9 @@
               <a href="https://github.com/Rohit-Adhikary" target="_blank" rel="noopener noreferrer" class="social-chip chip-github">
                 <i class="fa-brands fa-github"></i> <span>GitHub</span>
               </a>
-              <button type="button" class="social-chip chip-codeforces tab-trigger" data-tab="tab-codeforces">
-                <i class="fa-solid fa-code"></i> <span>Codeforces Dashboard</span>
-              </button>
+              <a href="https://codeforces.com/profile/Rohit_Adhikari" target="_blank" rel="noopener noreferrer" class="social-chip chip-codeforces">
+                <i class="fa-solid fa-code"></i> <span>Codeforces (@Rohit_Adhikari)</span>
+              </a>
               <button type="button" class="social-chip chip-linkedin tab-trigger" data-tab="tab-leetcode">
                 <i class="fa-solid fa-laptop-code"></i> <span>LeetCode Stats</span>
               </button>
@@ -401,21 +401,33 @@
           <div class="cf-profile-card">
             <div class="cf-card-header">
               <div class="cf-user-badge">
-                <div class="cf-avatar"><i class="fa-solid fa-user-astronaut"></i></div>
+                <div class="cf-avatar">
+                  <img id="cf-avatar-img" src="https://userpic.codeforces.org/5169015/avatar/6ff5a9e611bbae6f.jpg" alt="Rohit Adhikari" class="cf-avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                  <div class="cf-avatar-fallback"><i class="fa-solid fa-user-astronaut"></i></div>
+                </div>
                 <div class="cf-names">
-                  <h3>Rohit Adhikari</h3>
-                  <span class="cf-handle">Codeforces Handle: <strong>Rohit_Adhikari</strong></span>
+                  <div class="cf-name-line">
+                    <h3 id="cf-full-name">Rohit Adhikari</h3>
+                    <a href="https://codeforces.com/profile/Rohit_Adhikari" target="_blank" rel="noopener noreferrer" class="cf-verified-badge" title="Official Codeforces Profile">
+                      <i class="fa-solid fa-circle-check"></i> Connected Profile
+                    </a>
+                  </div>
+                  <div class="cf-handle-meta">
+                    <span class="cf-handle">Handle: <a href="https://codeforces.com/profile/Rohit_Adhikari" target="_blank" rel="noopener noreferrer"><strong>@Rohit_Adhikari</strong> <i class="fa-solid fa-arrow-up-right-from-square"></i></a></span>
+                    <span class="cf-org" id="cf-org-badge"><i class="fa-solid fa-building-columns"></i> BSMRSTU / GSTU</span>
+                    <span class="cf-api-pill" id="cf-api-pill"><span class="pulse-dot"></span> Live API Synced</span>
+                  </div>
                 </div>
               </div>
 
               <div class="cf-rating-tags">
-                <span class="cf-rank-badge rank-specialist"><i class="fa-solid fa-award"></i> Specialist</span>
+                <span class="cf-rank-badge rank-newbie" id="cf-rank-badge"><i class="fa-solid fa-award"></i> <span id="cf-rank-title">Newbie</span></span>
                 <div class="cf-rating-box">
-                  <span class="cf-rating-val">1412</span>
+                  <span class="cf-rating-val" id="cf-max-rating">1153</span>
                   <span class="cf-rating-lbl">Max Rating</span>
                 </div>
                 <div class="cf-rating-box">
-                  <span class="cf-rating-val">1365</span>
+                  <span class="cf-rating-val" id="cf-current-rating">1153</span>
                   <span class="cf-rating-lbl">Current Rating</span>
                 </div>
               </div>
@@ -424,20 +436,20 @@
             <!-- 4-Stat Metric Row -->
             <div class="cf-metrics-grid">
               <div class="cf-metric-item">
-                <span class="cf-metric-number">490+</span>
-                <span class="cf-metric-label">Problems Solved</span>
+                <span class="cf-metric-number" id="cf-stat-solved">489+</span>
+                <span class="cf-metric-label">Distinct Problems Solved</span>
               </div>
               <div class="cf-metric-item">
-                <span class="cf-metric-number">38</span>
+                <span class="cf-metric-number" id="cf-stat-contests">30</span>
                 <span class="cf-metric-label">Contests Participated</span>
               </div>
               <div class="cf-metric-item">
-                <span class="cf-metric-number">840+</span>
+                <span class="cf-metric-number" id="cf-stat-submissions">938</span>
                 <span class="cf-metric-label">Total Submissions</span>
               </div>
               <div class="cf-metric-item">
-                <span class="cf-metric-number">24 Days</span>
-                <span class="cf-metric-label">Best Daily Streak</span>
+                <span class="cf-metric-number" id="cf-stat-streak">241 Days</span>
+                <span class="cf-metric-label">Active Coding Days</span>
               </div>
             </div>
           </div>
@@ -448,7 +460,7 @@
               <div class="heatmap-title-group">
                 <i class="fa-regular fa-calendar-check"></i>
                 <div>
-                  <h4>Submission Activity Calendar</h4>
+                  <h4>Submission Activity Calendar (@Rohit_Adhikari)</h4>
                   <p>Daily problem-solving timeline and coding consistency over the past year.</p>
                 </div>
               </div>
@@ -471,8 +483,8 @@
             </div>
             
             <div class="heatmap-footer">
-              <span><strong>840+ total submissions</strong> across all problem sets</span>
-              <span>Active on <strong>185+ days</strong> this year</span>
+              <span id="cf-footer-submissions"><strong>938 total submissions</strong> across all problem sets</span>
+              <span id="cf-footer-active-days">Active on <strong>241 days</strong> this year</span>
             </div>
           </div>
 
@@ -488,33 +500,41 @@
               <p class="card-head-desc">Proportion of solutions submitted by programming language.</p>
 
               <!-- Language Bars -->
-              <div class="lang-bar-container">
-                <div class="lang-bar-fill cpp" style="width: 85%;" title="C++: 85%"></div>
-                <div class="lang-bar-fill python" style="width: 10%;" title="Python: 10%"></div>
-                <div class="lang-bar-fill c" style="width: 5%;" title="C: 5%"></div>
+              <div class="lang-bar-container" id="cf-lang-bar-container">
+                <div class="lang-bar-fill cpp" style="width: 83.5%;" title="C++: 83.5% (783 submissions)"></div>
+                <div class="lang-bar-fill c" style="width: 12.0%;" title="GNU C11: 12.0% (113 submissions)"></div>
+                <div class="lang-bar-fill java" style="width: 2.7%;" title="Java 21: 2.7% (25 submissions)"></div>
+                <div class="lang-bar-fill python" style="width: 1.8%;" title="Python/PyPy: 1.8% (17 submissions)"></div>
               </div>
 
-              <div class="lang-list">
+              <div class="lang-list" id="cf-lang-list">
                 <div class="lang-item">
                   <div class="lang-info">
                     <span class="lang-dot cpp"></span>
-                    <strong>C++ (C++17 / C++20)</strong>
+                    <strong>C++ (C++23 / C++20 / C++17)</strong>
                   </div>
-                  <span class="lang-percent">85% (415+ problems)</span>
-                </div>
-                <div class="lang-item">
-                  <div class="lang-info">
-                    <span class="lang-dot python"></span>
-                    <strong>Python 3</strong>
-                  </div>
-                  <span class="lang-percent">10% (50+ problems)</span>
+                  <span class="lang-percent">83.5% (783 submissions)</span>
                 </div>
                 <div class="lang-item">
                   <div class="lang-info">
                     <span class="lang-dot c"></span>
-                    <strong>C</strong>
+                    <strong>GNU C11</strong>
                   </div>
-                  <span class="lang-percent">5% (25+ problems)</span>
+                  <span class="lang-percent">12.0% (113 submissions)</span>
+                </div>
+                <div class="lang-item">
+                  <div class="lang-info">
+                    <span class="lang-dot java"></span>
+                    <strong>Java 21</strong>
+                  </div>
+                  <span class="lang-percent">2.7% (25 submissions)</span>
+                </div>
+                <div class="lang-item">
+                  <div class="lang-info">
+                    <span class="lang-dot python"></span>
+                    <strong>PyPy 3 / Python</strong>
+                  </div>
+                  <span class="lang-percent">1.8% (17 submissions)</span>
                 </div>
               </div>
             </div>
@@ -557,8 +577,8 @@
             <button type="button" class="btn btn-ghost tab-trigger" data-tab="tab-skills">
               <i class="fa-solid fa-arrow-left"></i> Previous: Skills
             </button>
-            <a href="https://codeforces.com" target="_blank" rel="noopener noreferrer" class="btn btn-solid">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Profile on Codeforces
+            <a href="https://codeforces.com/profile/Rohit_Adhikari" target="_blank" rel="noopener noreferrer" class="btn btn-solid">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Open @Rohit_Adhikari on Codeforces
             </a>
             <button type="button" class="btn btn-ghost tab-trigger" data-tab="tab-leetcode">
               Next: Slide to LeetCode <i class="fa-solid fa-arrow-right"></i>
@@ -968,8 +988,8 @@
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-chip chip-linkedin" id="contact-li">
                 <i class="fa-brands fa-linkedin"></i> LinkedIn
               </a>
-              <a href="https://codeforces.com" target="_blank" rel="noopener noreferrer" class="contact-chip chip-codeforces" id="contact-cf">
-                <i class="fa-solid fa-code"></i> Codeforces
+              <a href="https://codeforces.com/profile/Rohit_Adhikari" target="_blank" rel="noopener noreferrer" class="contact-chip chip-codeforces" id="contact-cf">
+                <i class="fa-solid fa-code"></i> Codeforces (@Rohit_Adhikari)
               </a>
               <a href="https://kaggle.com" target="_blank" rel="noopener noreferrer" class="contact-chip chip-kaggle" id="contact-kg">
                 <i class="fa-brands fa-kaggle"></i> Kaggle
@@ -1003,6 +1023,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=9.0"></script>
+  <script src="js/main.js?v=10.0"></script>
 </body>
 </html>
