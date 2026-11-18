@@ -1,32 +1,32 @@
 /* ==========================================================================
-   ROHIT ADHIKARI — PERSONAL WEBSITE
-   Aesthetic: Refined Developer Portfolio with Clear Visual Segmentation
-   Palette: Rich Obsidian Canvas, Distinct Alternating Bands, Elevated Cards
+   ROHIT ADHIKARI — PERSONAL WEBSITE (LIGHT THEME)
+   Aesthetic: Clean, Paper-Crisp, High-Legibility Developer Portfolio
+   Palette: Off-White Canvas, Subtle Slate Bands, Pure White Cards, Rich Ink Text
    ========================================================================== */
 
 :root {
-  /* Color Architecture for Clear Visual Hierarchy */
-  --bg-page: #0b0d13;               /* Base Canvas */
-  --bg-section-alt: #11141d;        /* Alternating Section Band */
-  --bg-card: #161925;               /* Elevated Card Surface */
-  --bg-card-elevated: #1b1f2e;      /* Card Hover / Focus */
-  --bg-chip: #191c28;
+  /* Light Theme Color Architecture */
+  --bg-page: #f8fafc;               /* Clean slate-tinted white canvas */
+  --bg-section-alt: #f1f5f9;        /* Alternating section band */
+  --bg-card: #ffffff;               /* Pure white elevated cards */
+  --bg-card-elevated: #ffffff;      /* Card hover state */
+  --bg-chip: #f1f5f9;               /* Subtle pill background */
 
-  --border-subtle: #1e2230;         /* Section Hairline Border */
-  --border-card: #272c3d;           /* Clear, Visible Card Border */
-  --border-card-hover: #3b435c;     /* Card Border on Hover */
+  --border-subtle: #e2e8f0;         /* Section divider lines */
+  --border-card: #e2e8f0;           /* Clean card borders */
+  --border-card-hover: #cbd5e1;     /* Card border on hover */
 
-  --text-main: #f8fafc;             /* Bright White */
-  --text-body: #cbd5e1;             /* High-Contrast Readable Gray */
-  --text-muted: #94a3b8;            /* Secondary Gray */
-  --text-faint: #64748b;            /* Subtle Info */
+  --text-main: #0f172a;             /* Ink Black / Deep Slate 900 */
+  --text-body: #334155;             /* Natural reading Slate 700 */
+  --text-muted: #64748b;            /* Secondary Slate 500 */
+  --text-faint: #94a3b8;            /* Tertiary Slate 400 */
 
-  /* Tasteful Human Accents */
-  --accent-amber: #f59e0b;          /* Problem Solving / Highlight */
-  --accent-amber-subtle: rgba(245, 158, 11, 0.12);
-  --accent-green: #10b981;          /* Active / Success */
-  --accent-green-subtle: rgba(16, 185, 129, 0.12);
-  --accent-blue: #38bdf8;
+  /* Accents */
+  --accent-amber: #d97706;          /* Rich Amber for CP / highlight */
+  --accent-amber-subtle: #fef3c7;   /* Amber 100 */
+  --accent-green: #16a34a;          /* Emerald for active status */
+  --accent-green-subtle: #dcfce7;
+  --accent-blue: #0284c7;           /* Sky 600 */
 
   /* Typography */
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -40,9 +40,10 @@
   --radius-lg: 14px;
   --radius-full: 9999px;
 
-  /* Shadows */
-  --shadow-card: 0 4px 20px -2px rgba(0, 0, 0, 0.45);
-  --shadow-card-hover: 0 10px 30px -4px rgba(0, 0, 0, 0.6);
+  /* Soft Natural Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+  --shadow-card: 0 4px 16px -2px rgba(0, 0, 0, 0.05), 0 2px 6px -1px rgba(0, 0, 0, 0.03);
+  --shadow-card-hover: 0 12px 28px -4px rgba(0, 0, 0, 0.08), 0 4px 10px -2px rgba(0, 0, 0, 0.04);
 
   /* Transitions */
   --transition-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
@@ -76,8 +77,8 @@ body {
 }
 
 ::selection {
-  background: #334155;
-  color: #ffffff;
+  background: #e2e8f0;
+  color: var(--text-main);
 }
 
 .container {
@@ -108,7 +109,7 @@ strong {
 }
 
 /* --------------------------------------------------------------------------
-   NAVBAR
+   NAVBAR (LIGHT THEME)
    -------------------------------------------------------------------------- */
 .header {
   position: fixed;
@@ -116,7 +117,7 @@ strong {
   left: 0;
   width: 100%;
   height: var(--nav-height);
-  background: rgba(11, 13, 19, 0.88);
+  background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border-subtle);
@@ -140,7 +141,7 @@ strong {
 }
 
 .logo-mark {
-  background: var(--bg-card);
+  background: var(--bg-section-alt);
   border: 1px solid var(--border-card);
   color: var(--text-main);
   font-family: var(--font-mono);
@@ -171,20 +172,21 @@ strong {
 
 .nav-link-contact {
   color: var(--text-main);
-  background: var(--bg-card);
+  background: #ffffff;
   border: 1px solid var(--border-card);
   padding: 0.35rem 0.85rem;
   border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
 }
 
 .nav-link-contact:hover {
   border-color: var(--border-card-hover);
-  background: var(--bg-card-elevated);
+  background: var(--bg-section-alt);
 }
 
 .nav-toggle {
   display: none;
-  background: transparent;
+  background: #ffffff;
   border: 1px solid var(--border-card);
   color: var(--text-main);
   font-size: 1.1rem;
@@ -194,14 +196,14 @@ strong {
 }
 
 /* --------------------------------------------------------------------------
-   SECTION COMMONS & VISUAL BANDING
+   SECTION COMMONS & ALTERNATING BANDS
    -------------------------------------------------------------------------- */
 .section {
   padding: 5rem 0;
   position: relative;
 }
 
-/* Alternating Section Band: Creates clear contrast between sections */
+/* Alternating Section Band: Crisp soft-slate contrast */
 .section-alt {
   background-color: var(--bg-section-alt);
   border-top: 1px solid var(--border-subtle);
@@ -212,19 +214,20 @@ strong {
   margin-bottom: 2.75rem;
 }
 
-/* Eye-Catching Section Pill Badges */
+/* Clean Pill Badges */
 .section-pill {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: var(--bg-card);
+  background: #ffffff;
   border: 1px solid var(--border-card);
-  color: var(--text-body);
+  color: var(--text-main);
   font-size: 0.82rem;
   font-weight: 600;
   padding: 0.3rem 0.8rem;
   border-radius: var(--radius-full);
   margin-bottom: 0.85rem;
+  box-shadow: var(--shadow-sm);
 }
 
 .section-pill i {
@@ -237,6 +240,7 @@ strong {
   font-weight: 700;
   letter-spacing: -0.03em;
   margin-bottom: 0.45rem;
+  color: var(--text-main);
 }
 
 .section-subtitle {
@@ -250,6 +254,7 @@ strong {
 .hero-section {
   padding-top: calc(var(--nav-height) + 5rem);
   padding-bottom: 4rem;
+  background-color: var(--bg-page);
 }
 
 .hero-wrapper {
@@ -262,12 +267,13 @@ strong {
   gap: 0.65rem;
   font-size: 0.86rem;
   font-weight: 500;
-  color: var(--text-muted);
-  background: var(--bg-card);
+  color: var(--text-body);
+  background: #ffffff;
   border: 1px solid var(--border-card);
   padding: 0.35rem 0.85rem;
   border-radius: var(--radius-full);
   margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-sm);
 }
 
 .status-indicator {
@@ -275,14 +281,14 @@ strong {
   height: 8px;
   border-radius: 50%;
   background-color: var(--accent-green);
-  box-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+  box-shadow: 0 0 6px rgba(22, 163, 74, 0.4);
 }
 
 .hero-title {
   font-size: clamp(2.2rem, 4.5vw, 3.25rem);
   font-weight: 700;
   letter-spacing: -0.03em;
-  line-height: 1.2;
+  line-height: 1.22;
   margin-bottom: 1.5rem;
   color: var(--text-main);
 }
@@ -315,25 +321,27 @@ strong {
 }
 
 .btn-solid {
-  background: #f8fafc;
-  color: #0b0d13;
+  background: var(--text-main);
+  color: #ffffff;
   font-weight: 600;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.2);
 }
 
 .btn-solid:hover {
-  background: #ffffff;
+  background: #1e293b;
   transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.25);
 }
 
 .btn-ghost {
-  background: var(--bg-card);
+  background: #ffffff;
   color: var(--text-main);
   border: 1px solid var(--border-card);
+  box-shadow: var(--shadow-sm);
 }
 
 .btn-ghost:hover {
-  background: var(--bg-card-elevated);
+  background: var(--bg-section-alt);
   border-color: var(--border-card-hover);
   transform: translateY(-2px);
 }
@@ -353,18 +361,19 @@ strong {
   gap: 0.55rem;
   padding: 0.45rem 0.9rem;
   border-radius: var(--radius-sm);
-  background: var(--bg-card);
+  background: #ffffff;
   border: 1px solid var(--border-card);
   color: var(--text-body);
   font-size: 0.86rem;
   font-weight: 500;
+  box-shadow: var(--shadow-sm);
   transition: all var(--transition-fast);
 }
 
 .social-chip:hover {
   color: var(--text-main);
   border-color: var(--border-card-hover);
-  background: var(--bg-card-elevated);
+  background: var(--bg-section-alt);
   transform: translateY(-1px);
 }
 
@@ -377,7 +386,7 @@ strong {
 }
 
 .now-box {
-  background: var(--bg-card);
+  background: #ffffff;
   border: 1px solid var(--border-card);
   border-radius: var(--radius-lg);
   padding: 2rem 2.25rem;
@@ -404,7 +413,7 @@ strong {
   height: 8px;
   background-color: var(--accent-amber);
   border-radius: 50%;
-  box-shadow: 0 0 8px rgba(245, 158, 11, 0.6);
+  box-shadow: 0 0 6px rgba(217, 119, 6, 0.4);
 }
 
 .now-badge {
@@ -418,7 +427,7 @@ strong {
 
 .now-updated {
   font-size: 0.82rem;
-  color: var(--text-faint);
+  color: var(--text-muted);
 }
 
 .now-grid {
@@ -437,8 +446,8 @@ strong {
   width: 38px;
   height: 38px;
   border-radius: var(--radius-sm);
-  background: var(--bg-page);
-  border: 1px solid var(--border-card);
+  background: var(--accent-amber-subtle);
+  border: 1px solid #fde68a;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -450,6 +459,7 @@ strong {
 .now-item h4 {
   font-size: 0.96rem;
   margin-bottom: 0.35rem;
+  color: var(--text-main);
 }
 
 .now-item p {
@@ -476,7 +486,7 @@ strong {
 }
 
 .about-details-card {
-  background: var(--bg-card);
+  background: #ffffff;
   border: 1px solid var(--border-card);
   border-radius: var(--radius-md);
   padding: 1.75rem;
@@ -516,20 +526,21 @@ strong {
 
 .detail-label {
   font-size: 0.76rem;
-  color: var(--text-faint);
+  color: var(--text-muted);
   font-family: var(--font-mono);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  font-weight: 500;
 }
 
 .detail-value {
   font-size: 0.93rem;
   color: var(--text-main);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .detail-link {
-  color: var(--text-main);
+  color: var(--accent-blue);
   text-decoration: underline;
   text-underline-offset: 3px;
   word-break: break-all;
@@ -545,7 +556,7 @@ strong {
 }
 
 .skill-group {
-  background: var(--bg-card);
+  background: #ffffff;
   border: 1px solid var(--border-card);
   border-radius: var(--radius-md);
   padding: 1.75rem;
@@ -555,8 +566,8 @@ strong {
 
 .skill-group:hover {
   border-color: var(--border-card-hover);
-  background: var(--bg-card-elevated);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card-hover);
 }
 
 .skill-group-head {
@@ -570,7 +581,7 @@ strong {
   width: 32px;
   height: 32px;
   border-radius: var(--radius-sm);
-  background: var(--bg-page);
+  background: var(--bg-section-alt);
   border: 1px solid var(--border-card);
   display: flex;
   align-items: center;
@@ -601,7 +612,7 @@ strong {
   align-items: flex-start;
   gap: 0.65rem;
   font-size: 0.9rem;
-  color: var(--text-muted);
+  color: var(--text-body);
   line-height: 1.55;
 }
 
@@ -613,7 +624,7 @@ strong {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background-color: var(--border-card-hover);
+  background-color: var(--accent-amber);
   margin-top: 0.55rem;
   flex-shrink: 0;
 }
@@ -622,7 +633,7 @@ strong {
    COMPETITIVE PROGRAMMING SECTION
    -------------------------------------------------------------------------- */
 .cp-container {
-  background: var(--bg-card);
+  background: #ffffff;
   border: 1px solid var(--border-card);
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -633,7 +644,7 @@ strong {
   display: grid;
   grid-template-columns: 1fr auto 1fr auto 1fr;
   align-items: center;
-  background: var(--bg-section-alt);
+  background: #ffffff;
   border-bottom: 1px solid var(--border-subtle);
   padding: 1.75rem 2rem;
 }
@@ -655,6 +666,7 @@ strong {
 .cp-stat-label {
   font-size: 0.82rem;
   color: var(--text-muted);
+  font-weight: 500;
 }
 
 .cp-stat-divider {
@@ -670,6 +682,7 @@ strong {
 
 .cp-text-box {
   padding: 2.25rem;
+  background: #ffffff;
 }
 
 .cp-text-box h3 {
@@ -694,7 +707,7 @@ strong {
 
 .cp-topic-list li {
   font-size: 0.9rem;
-  color: var(--text-muted);
+  color: var(--text-body);
   display: flex;
   align-items: center;
   gap: 0.65rem;
@@ -711,23 +724,25 @@ strong {
   gap: 0.55rem;
   padding: 0.55rem 1.1rem;
   font-size: 0.88rem;
-  font-weight: 500;
+  font-weight: 600;
   border-radius: var(--radius-sm);
-  background: var(--bg-page);
+  background: var(--bg-section-alt);
   color: var(--text-main);
   border: 1px solid var(--border-card);
   transition: all var(--transition-fast);
 }
 
 .btn-outline-clean:hover {
-  background: var(--bg-card-elevated);
+  background: #ffffff;
   border-color: var(--border-card-hover);
   transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
 }
 
+/* Crisp Dark Terminal to contrast beautifully with Light Theme */
 .cp-code-preview {
-  background: #07090e;
-  border-left: 1px solid var(--border-subtle);
+  background: #0f172a;
+  border-left: 1px solid var(--border-card);
   padding: 1.75rem;
   font-family: var(--font-mono);
 }
@@ -738,7 +753,7 @@ strong {
   gap: 0.45rem;
   margin-bottom: 1.1rem;
   padding-bottom: 0.65rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .code-dot {
@@ -752,7 +767,7 @@ strong {
 
 .code-filename {
   font-size: 0.76rem;
-  color: var(--text-faint);
+  color: #94a3b8;
   margin-left: 0.4rem;
 }
 
@@ -781,7 +796,7 @@ strong {
 }
 
 .project-card {
-  background: var(--bg-card);
+  background: #ffffff;
   border: 1px solid var(--border-card);
   border-radius: var(--radius-md);
   padding: 1.75rem;
@@ -793,8 +808,7 @@ strong {
 
 .project-card:hover {
   border-color: var(--border-card-hover);
-  background: var(--bg-card-elevated);
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   box-shadow: var(--shadow-card-hover);
 }
 
@@ -808,15 +822,15 @@ strong {
 .project-tag {
   font-size: 0.76rem;
   font-family: var(--font-mono);
-  font-weight: 500;
+  font-weight: 600;
   padding: 0.25rem 0.6rem;
   border-radius: var(--radius-sm);
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  background: var(--bg-page);
+  background: var(--bg-section-alt);
   border: 1px solid var(--border-card);
-  color: var(--text-body);
+  color: var(--text-main);
 }
 
 .project-links {
@@ -837,11 +851,12 @@ strong {
 .project-name {
   font-size: 1.15rem;
   margin-bottom: 0.75rem;
+  color: var(--text-main);
 }
 
 .project-desc {
   font-size: 0.9rem;
-  color: var(--text-muted);
+  color: var(--text-body);
   line-height: 1.65;
   margin-bottom: 1.5rem;
   flex-grow: 1;
@@ -858,18 +873,19 @@ strong {
 .project-pills span {
   font-family: var(--font-mono);
   font-size: 0.75rem;
-  color: var(--text-faint);
-  background: var(--bg-page);
+  color: var(--text-muted);
+  background: var(--bg-section-alt);
   border: 1px solid var(--border-card);
   padding: 0.2rem 0.5rem;
   border-radius: var(--radius-sm);
+  font-weight: 500;
 }
 
 .more-repos-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: var(--bg-card);
+  background: #ffffff;
   border: 1px solid var(--border-card);
   border-radius: var(--radius-md);
   padding: 1.35rem 1.75rem;
@@ -891,7 +907,7 @@ strong {
 
 .link-styled {
   color: var(--text-main);
-  font-weight: 500;
+  font-weight: 600;
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
@@ -906,7 +922,7 @@ strong {
    CONTACT SECTION
    -------------------------------------------------------------------------- */
 .contact-box {
-  background: var(--bg-card);
+  background: #ffffff;
   border: 1px solid var(--border-card);
   border-radius: var(--radius-lg);
   padding: 3.25rem 2.5rem;
@@ -919,10 +935,11 @@ strong {
 .contact-title {
   font-size: 2.15rem;
   margin-bottom: 0.75rem;
+  color: var(--text-main);
 }
 
 .contact-desc {
-  color: var(--text-muted);
+  color: var(--text-body);
   font-size: 1.05rem;
   max-width: 540px;
   margin: 0 auto 2rem auto;
@@ -937,20 +954,22 @@ strong {
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  background: var(--bg-page);
+  background: #ffffff;
   border: 1px solid var(--border-card);
   padding: 0.85rem 1.6rem;
   border-radius: var(--radius-md);
   font-size: 1.02rem;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--text-main);
+  box-shadow: var(--shadow-sm);
   transition: all var(--transition-fast);
 }
 
 .direct-email-btn:hover {
   border-color: var(--border-card-hover);
-  background: var(--bg-card-elevated);
+  background: var(--bg-section-alt);
   transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
 }
 
 .contact-social-row {
@@ -966,29 +985,31 @@ strong {
   gap: 0.55rem;
   padding: 0.45rem 1rem;
   border-radius: var(--radius-sm);
-  background: var(--bg-page);
+  background: #ffffff;
   border: 1px solid var(--border-card);
   font-size: 0.88rem;
+  font-weight: 500;
   color: var(--text-body);
+  box-shadow: var(--shadow-sm);
   transition: all var(--transition-fast);
 }
 
 .contact-chip:hover {
   color: var(--text-main);
   border-color: var(--border-card-hover);
-  background: var(--bg-card-elevated);
+  background: var(--bg-section-alt);
   transform: translateY(-1px);
 }
 
 /* --------------------------------------------------------------------------
-   FOOTER
+   FOOTER (LIGHT THEME)
    -------------------------------------------------------------------------- */
 .footer {
   border-top: 1px solid var(--border-subtle);
   padding: 2.5rem 0;
   font-size: 0.88rem;
-  color: var(--text-faint);
-  background: var(--bg-page);
+  color: var(--text-muted);
+  background: #ffffff;
 }
 
 .footer-container {
@@ -1065,12 +1086,13 @@ strong {
     top: var(--nav-height);
     left: 0;
     width: 100%;
-    background: var(--bg-page);
+    background: #ffffff;
     border-bottom: 1px solid var(--border-subtle);
     padding: 1.5rem;
     transform: translateY(-120%);
     opacity: 0;
     pointer-events: none;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     transition: all var(--transition-normal);
   }
 
