@@ -27,8 +27,8 @@
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-  <!-- Stylesheet (Cache Buster v11.0 - Competitive Programming Unified Top Bar) -->
-  <link rel="stylesheet" href="css/style.css?v=11.0" />
+  <!-- Stylesheet (Cache Buster v12.0 - Real Live Sync LeetCode & Kaggle Verified) -->
+  <link rel="stylesheet" href="css/style.css?v=12.0" />
 </head>
 <body>
 
@@ -617,7 +617,7 @@
           <div class="lc-profile-card">
             <div class="lc-card-header">
               <div class="lc-user-badge">
-                <div class="lc-avatar"><i class="fa-solid fa-code-commit"></i></div>
+                <div class="lc-avatar"><i class="fa-solid fa-code"></i></div>
                 <div class="lc-names">
                   <div class="cf-name-line">
                     <h3>Rohit Adhikari</h3>
@@ -625,12 +625,16 @@
                       <i class="fa-solid fa-circle-check"></i> Connected Profile
                     </a>
                   </div>
-                  <span class="lc-handle">Handle: <a href="https://leetcode.com/u/RohitAdhikary/" target="_blank" rel="noopener noreferrer"><strong>@RohitAdhikary</strong> <i class="fa-solid fa-arrow-up-right-from-square"></i></a></span>
+                  <div class="cf-handle-meta">
+                    <span class="lc-handle">Handle: <a href="https://leetcode.com/u/RohitAdhikary/" target="_blank" rel="noopener noreferrer"><strong>@RohitAdhikary</strong> <i class="fa-solid fa-arrow-up-right-from-square"></i></a></span>
+                    <span class="cf-api-pill" id="lc-api-pill"><span class="pulse-dot"></span> Live API Synced</span>
+                  </div>
                 </div>
               </div>
               <div class="lc-global-rank">
-                <span class="lc-rank-badge">Top 14% Globally</span>
-                <span class="lc-rating-text">Contest Rating: <strong>1640+</strong></span>
+                <a href="https://leetcode.com/u/RohitAdhikary/" target="_blank" rel="noopener noreferrer" class="btn-outline-clean">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Open LeetCode Profile
+                </a>
               </div>
             </div>
 
@@ -640,10 +644,10 @@
               <!-- Left Total Circle / Summary -->
               <div class="lc-total-box">
                 <div class="lc-circle-stat">
-                  <span class="lc-big-number">250+</span>
-                  <span class="lc-big-label">Solved</span>
+                  <span class="lc-big-number" id="lc-stat-total">2</span>
+                  <span class="lc-big-label">Problems Solved</span>
                 </div>
-                <span class="lc-acceptance">Acceptance Rate: <strong>68.2%</strong></span>
+                <span class="lc-acceptance">Primary CP: <strong>Codeforces (490+)</strong></span>
               </div>
 
               <!-- Right Difficulty Breakdown Cards -->
@@ -653,58 +657,58 @@
                 <div class="diff-card easy">
                   <div class="diff-header">
                     <span class="diff-title">Easy</span>
-                    <span class="diff-count">135 / 820</span>
+                    <span class="diff-count" id="lc-stat-easy">1 / 976</span>
                   </div>
                   <div class="diff-progress-track">
-                    <div class="diff-progress-fill easy" style="width: 60%;"></div>
+                    <div class="diff-progress-fill easy" id="lc-bar-easy" style="width: 25%;"></div>
                   </div>
-                  <span class="diff-sub">Fundamental arrays, hashing, strings</span>
+                  <span class="diff-sub">Fundamental data structures (Two Sum — Accepted)</span>
                 </div>
 
                 <!-- Medium -->
                 <div class="diff-card medium">
                   <div class="diff-header">
                     <span class="diff-title">Medium</span>
-                    <span class="diff-count">95 / 1720</span>
+                    <span class="diff-count" id="lc-stat-medium">0 / 2148</span>
                   </div>
                   <div class="diff-progress-track">
-                    <div class="diff-progress-fill medium" style="width: 45%;"></div>
+                    <div class="diff-progress-fill medium" id="lc-bar-medium" style="width: 0%;"></div>
                   </div>
-                  <span class="diff-sub">DP, trees, backtracking, graphs</span>
+                  <span class="diff-sub">Sliding window & DP state transitions</span>
                 </div>
 
                 <!-- Hard -->
                 <div class="diff-card hard">
                   <div class="diff-header">
                     <span class="diff-title">Hard</span>
-                    <span class="diff-count">20 / 740</span>
+                    <span class="diff-count" id="lc-stat-hard">1 / 991</span>
                   </div>
                   <div class="diff-progress-track">
-                    <div class="diff-progress-fill hard" style="width: 25%;"></div>
+                    <div class="diff-progress-fill hard" id="lc-bar-hard" style="width: 25%;"></div>
                   </div>
-                  <span class="diff-sub">Advanced DP, segment trees, hard geometry</span>
+                  <span class="diff-sub">Advanced binary search & divide and conquer (Median of Two Sorted Arrays — Accepted)</span>
                 </div>
 
               </div>
             </div>
           </div>
 
-          <!-- Badges & Streak Showcase -->
+          <!-- Real Activity & Focus Showcase -->
           <div class="lc-badges-grid">
             <div class="badge-item">
-              <div class="badge-icon gold"><i class="fa-solid fa-fire-flame-curved"></i></div>
-              <h4>50 Days Streak</h4>
-              <p>Maintained consistent daily algorithmic challenges.</p>
+              <div class="badge-icon blue"><i class="fa-solid fa-code"></i></div>
+              <h4>C++ Focus</h4>
+              <p>Implementing optimized algorithmic solutions with fast I/O and STL containers.</p>
             </div>
             <div class="badge-item">
-              <div class="badge-icon blue"><i class="fa-solid fa-shield-halved"></i></div>
-              <h4>Graph Theory Knight</h4>
-              <p>Top performance in advanced BFS, DFS, and topological sorts.</p>
+              <div class="badge-icon gold"><i class="fa-solid fa-arrow-trend-up"></i></div>
+              <h4>Learning Path</h4>
+              <p>Expanding interview-style problem solving alongside primary Codeforces training.</p>
             </div>
             <div class="badge-item">
-              <div class="badge-icon green"><i class="fa-solid fa-cubes-stacked"></i></div>
-              <h4>Dynamic Programming</h4>
-              <p>Mastered 1D, 2D, and knapsack optimization patterns.</p>
+              <div class="badge-icon green"><i class="fa-solid fa-check-double"></i></div>
+              <h4>Verified Accepted</h4>
+              <p>Conquered classic challenges including Two Sum & Median of Two Sorted Arrays.</p>
             </div>
           </div>
 
@@ -751,7 +755,10 @@
           <div class="kg-profile-card">
             <div class="kg-card-header">
               <div class="kg-user-badge">
-                <div class="kg-avatar"><i class="fa-brands fa-kaggle"></i></div>
+                <div class="kg-avatar">
+                  <img src="https://storage.googleapis.com/kaggle-avatars/thumbnails/38027515-kg.jpg?t=2026-11-18-08-16-18" alt="Rohit_Pi" class="cf-avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                  <div class="cf-avatar-fallback"><i class="fa-brands fa-kaggle"></i></div>
+                </div>
                 <div class="kg-names">
                   <div class="cf-name-line">
                     <h3>Rohit_Pi <span class="kg-fullname">(Rohit Adhikari)</span></h3>
@@ -759,90 +766,52 @@
                       <i class="fa-solid fa-circle-check"></i> Connected Profile
                     </a>
                   </div>
-                  <span class="kg-handle">Handle: <a href="https://www.kaggle.com/rohitpi" target="_blank" rel="noopener noreferrer"><strong>@rohitpi</strong> <i class="fa-solid fa-arrow-up-right-from-square"></i></a></span>
+                  <div class="cf-handle-meta">
+                    <span class="kg-handle">Handle: <a href="https://www.kaggle.com/rohitpi" target="_blank" rel="noopener noreferrer"><strong>@rohitpi</strong> <i class="fa-solid fa-arrow-up-right-from-square"></i></a></span>
+                    <span class="cf-org"><i class="fa-brands fa-kaggle"></i> Kaggle Community Member</span>
+                  </div>
                 </div>
               </div>
               <div class="kg-tier-badge">
-                <span class="tier-pill"><i class="fa-solid fa-medal"></i> Notebooks Contributor</span>
-                <span class="kg-rank-text">Global Standing: <strong>Top 15% in Notebooks</strong></span>
+                <a href="https://www.kaggle.com/rohitpi" target="_blank" rel="noopener noreferrer" class="btn-outline-clean">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Kaggle Profile
+                </a>
               </div>
             </div>
 
-            <!-- Kaggle Metrics Grid -->
-            <div class="kg-metrics-grid">
-              <div class="kg-metric-box">
-                <span class="kg-number">140+</span>
-                <span class="kg-label">Notebook Upvotes</span>
-              </div>
-              <div class="kg-metric-box">
-                <span class="kg-number">12</span>
-                <span class="kg-label">Public Notebooks</span>
-              </div>
-              <div class="kg-metric-box">
-                <span class="kg-number">4</span>
-                <span class="kg-label">Medals Earned</span>
-              </div>
-              <div class="kg-metric-box">
-                <span class="kg-number">520+</span>
-                <span class="kg-label">Dataset Downloads</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Featured Notebooks / Machine Learning Showcases -->
-          <div class="kg-notebooks-section">
-            <h3 class="kg-section-heading"><i class="fa-solid fa-book-bookmark"></i> Featured Kaggle Notebooks</h3>
-            
-            <div class="kg-notebooks-grid">
-              
-              <!-- Notebook 1 -->
-              <div class="kg-notebook-card">
-                <div class="nb-top">
-                  <span class="nb-badge silver"><i class="fa-solid fa-medal"></i> Silver Medal</span>
-                  <span class="nb-votes"><i class="fa-regular fa-thumbs-up"></i> 48 Upvotes</span>
-                </div>
-                <h4>End-to-End Classification: Random Forest vs XGBoost</h4>
-                <p>Complete data science pipeline with missing value imputation, feature scaling, and comparing ensemble models with cross-validation.</p>
-                <div class="nb-tags">
-                  <span>Python</span>
-                  <span>Scikit-Learn</span>
-                  <span>XGBoost</span>
-                  <span>Classification</span>
-                </div>
+            <!-- Kaggle Real Practice Journey Content -->
+            <div class="kg-journey-content">
+              <div class="kg-journey-box">
+                <h4><i class="fa-solid fa-chart-line"></i> Machine Learning & Data Science Practice</h4>
+                <p>
+                  On Kaggle, I explore practical machine learning workflows and tabular datasets. My focus is on understanding 
+                  data distributions, preprocessing raw features, and building baseline classification and regression models in Python.
+                </p>
               </div>
 
-              <!-- Notebook 2 -->
-              <div class="kg-notebook-card">
-                <div class="nb-top">
-                  <span class="nb-badge bronze"><i class="fa-solid fa-medal"></i> Bronze Medal</span>
-                  <span class="nb-votes"><i class="fa-regular fa-thumbs-up"></i> 32 Upvotes</span>
+              <!-- 4 Practical ML Focus Cards -->
+              <div class="kg-focus-grid">
+                <div class="kg-focus-card">
+                  <div class="focus-icon-wrap"><i class="fa-solid fa-chart-pie"></i></div>
+                  <h5>Exploratory Data Analysis (EDA)</h5>
+                  <p>Analyzing summary statistics, feature correlations, and data distributions using Pandas, Matplotlib, and Seaborn.</p>
                 </div>
-                <h4>Comprehensive Exploratory Data Analysis & Visualization</h4>
-                <p>In-depth exploratory analysis on real-world tabular data using Pandas, Matplotlib, and Seaborn heatmaps to detect correlations.</p>
-                <div class="nb-tags">
-                  <span>Pandas</span>
-                  <span>Seaborn</span>
-                  <span>EDA</span>
-                  <span>Matplotlib</span>
+                <div class="kg-focus-card">
+                  <div class="focus-icon-wrap"><i class="fa-solid fa-filter"></i></div>
+                  <h5>Feature Engineering & Cleaning</h5>
+                  <p>Handling missing values, categorical encoding, feature scaling, and normalization techniques.</p>
                 </div>
-              </div>
-
-              <!-- Notebook 3 -->
-              <div class="kg-notebook-card">
-                <div class="nb-top">
-                  <span class="nb-badge bronze"><i class="fa-solid fa-medal"></i> Bronze Medal</span>
-                  <span class="nb-votes"><i class="fa-regular fa-thumbs-up"></i> 26 Upvotes</span>
+                <div class="kg-focus-card">
+                  <div class="focus-icon-wrap"><i class="fa-solid fa-brain"></i></div>
+                  <h5>Supervised Model Training</h5>
+                  <p>Experimenting with classification and regression algorithms using Scikit-Learn with cross-validation.</p>
                 </div>
-                <h4>Sensor Telemetry Time-Series Analysis (IoT / ESP32)</h4>
-                <p>Analyzing ambient sensor telemetry streams, anomaly detection on temperature/humidity trends, and forecasting.</p>
-                <div class="nb-tags">
-                  <span>Time Series</span>
-                  <span>NumPy</span>
-                  <span>IoT Sensors</span>
-                  <span>Regression</span>
+                <div class="kg-focus-card">
+                  <div class="focus-icon-wrap"><i class="fa-solid fa-microchip"></i></div>
+                  <h5>IoT & Sensor Data Streams</h5>
+                  <p>Applying data analysis methods to telemetry data collected from hardware sensors and ESP32 microcontrollers.</p>
                 </div>
               </div>
-
             </div>
           </div>
 
@@ -1037,6 +1006,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=11.0"></script>
+  <script src="js/main.js?v=12.0"></script>
 </body>
 </html>

@@ -322,8 +322,72 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  /**
+   * Live LeetCode API Sync
+   * Fetches real-time stats for handle RohitAdhikary via public CORS proxy
+   */
+  async function syncLeetCodeLive() {
+    const handle = 'RohitAdhikary';
+    const pill = document.getElementById('lc-api-pill');
+
+    try {
+      const resp = await fetch(`https://leetcode-api-faisalshohag.vercel.app/${handle}`);
+      if (resp.ok) {
+        const data = await resp.json();
+
+        // Update total solved count
+        const totalSolvedEl = document.getElementById('lc-stat-total');
+        if (totalSolvedEl && data.totalSolved !== undefined) {
+          totalSolvedEl.textContent = data.totalSolved;
+        }
+
+        // Update easy solved
+        const easyEl = document.getElementById('lc-stat-easy');
+        if (easyEl && data.easySolved !== undefined) {
+          easyEl.textContent = `${data.easySolved} / ${data.totalEasy || 976}`;
+        }
+
+        // Update medium solved
+        const medEl = document.getElementById('lc-stat-medium');
+        if (medEl && data.mediumSolved !== undefined) {
+          medEl.textContent = `${data.mediumSolved} / ${data.totalMedium || 2148}`;
+        }
+
+        // Update hard solved
+        const hardEl = document.getElementById('lc-stat-hard');
+        if (hardEl && data.hardSolved !== undefined) {
+          hardEl.textContent = `${data.hardSolved} / ${data.totalHard || 991}`;
+        }
+
+        // Update progress bars
+        const easyBar = document.getElementById('lc-bar-easy');
+        if (easyBar && data.easySolved !== undefined) {
+          easyBar.style.width = Math.min(100, Math.max(10, data.easySolved * 15)) + '%';
+        }
+        const medBar = document.getElementById('lc-bar-medium');
+        if (medBar && data.mediumSolved !== undefined) {
+          medBar.style.width = Math.min(100, Math.max(0, data.mediumSolved * 10)) + '%';
+        }
+        const hardBar = document.getElementById('lc-bar-hard');
+        if (hardBar && data.hardSolved !== undefined) {
+          hardBar.style.width = Math.min(100, Math.max(10, data.hardSolved * 20)) + '%';
+        }
+
+        if (pill) {
+          pill.innerHTML = `<span class="pulse-dot"></span> Live API Connected`;
+        }
+      }
+    } catch (e) {
+      console.log('LeetCode live sync notice:', e);
+      if (pill) {
+        pill.innerHTML = `<span class="pulse-dot"></span> Connected Profile`;
+      }
+    }
+  }
+
   // Trigger live sync in background
   syncCodeforcesLive();
+  syncLeetCodeLive();
 
   // Mobile menu toggle
   if (navToggle && navMenu) {
