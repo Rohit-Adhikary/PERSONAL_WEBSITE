@@ -1,13 +1,11 @@
 /**
- * ROHIT ADHIKARI — HORIZONTAL SLIDING TAB ENGINE
- * Smoothly translates viewport left/right (carousel style) when clicking tabs.
+ * ROHIT ADHIKARI — DIRECTIONAL SLIDING TAB ENGINE
+ * Computes tab index order to slide smoothly left or right on click.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   const TAB_ORDER = ['tab-home', 'tab-about', 'tab-skills', 'tab-cp', 'tab-projects', 'tab-contact'];
-  const sliderTrack = document.getElementById('slider-track');
-  const sliderViewport = document.getElementById('slider-viewport');
-  const slidePanels = document.querySelectorAll('.slide-panel');
+  const tabPanels = document.querySelectorAll('.tab-panel');
   const navLinks = document.querySelectorAll('.nav-link.tab-trigger');
   const allTabTriggers = document.querySelectorAll('.tab-trigger');
   const navToggle = document.getElementById('nav-toggle');
@@ -16,41 +14,33 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentTabId = 'tab-home';
 
   /**
-   * Adjust viewport height to match the current slide's content height
+   * Switch to target tab with directional slide animation (left or right)
    */
-  function adjustHeight(targetPanel) {
-    if (!sliderViewport || !targetPanel) return;
-    // Calculate target panel height
-    const height = targetPanel.offsetHeight;
-    if (height > 0) {
-      sliderViewport.style.height = height + 'px';
-    }
-  }
-
-  /**
-   * Slide horizontally to the given tab ID
-   */
-  function slideToTab(tabId, updateHash = true) {
-    const targetPanel = document.getElementById(tabId) || document.getElementById('tab-home');
+  function switchToTab(targetTabId, updateHash = true) {
+    const targetPanel = document.getElementById(targetTabId) || document.getElementById('tab-home');
     if (!targetPanel) return;
 
-    const targetIndex = parseInt(targetPanel.getAttribute('data-index'), 10);
-    if (isNaN(targetIndex)) return;
+    const currentIndex = TAB_ORDER.indexOf(currentTabId);
+    const targetIndex = TAB_ORDER.indexOf(targetPanel.id);
+
+    // If clicking forward (targetIndex > currentIndex): Slide in from RIGHT (screen moves left)
+    // If clicking backward (targetIndex < currentIndex): Slide in from LEFT (screen moves right)
+    const isSlideFromRight = targetIndex >= currentIndex;
+    const slideClass = isSlideFromRight ? 'slide-in-right' : 'slide-in-left';
+
+    // 1. Reset all panels
+    tabPanels.forEach(panel => {
+      panel.classList.remove('active', 'slide-in-right', 'slide-in-left');
+      panel.style.display = 'none';
+    });
+
+    // 2. Animate and activate target panel
+    targetPanel.style.display = 'block';
+    targetPanel.classList.add(slideClass, 'active');
 
     currentTabId = targetPanel.id;
 
-    // 1. Perform the horizontal slide (translateX)
-    if (sliderTrack) {
-      sliderTrack.style.transform = `translateX(-${targetIndex * 100}vw)`;
-    }
-
-    // 2. Set active class on slides
-    slidePanels.forEach(panel => {
-      panel.classList.remove('active');
-    });
-    targetPanel.classList.add('active');
-
-    // 3. Set active class on nav links
+    // 3. Highlight current nav button
     navLinks.forEach(link => {
       link.classList.remove('active');
       if (link.getAttribute('data-tab') === targetPanel.id) {
@@ -58,15 +48,10 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // 4. Adjust viewport height to current slide so footer fits perfectly
-    setTimeout(() => {
-      adjustHeight(targetPanel);
-    }, 50);
-
-    // 5. Scroll page smoothly to top
+    // 4. Scroll page smoothly to top
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
-    // 6. Update URL hash
+    // 5. Update browser URL hash without page jump
     if (updateHash) {
       const cleanHash = targetPanel.id.replace('tab-', '');
       if (history.pushState) {
@@ -76,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // 7. Close mobile hamburger menu if open
+    // 6. Close mobile menu if open
     if (navMenu && navMenu.classList.contains('open')) {
       navMenu.classList.remove('open');
       if (navToggle) {
@@ -85,41 +70,32 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Bind click event to all tab triggers
+  // Click listeners for all tab triggers
   allTabTriggers.forEach(trigger => {
     trigger.addEventListener('click', (e) => {
       e.preventDefault();
       const targetTab = trigger.getAttribute('data-tab');
       if (targetTab) {
-        slideToTab(targetTab);
+        switchToTab(targetTab);
       }
     });
   });
 
-  // Handle URL Hash (e.g. #skills or #about)
-  function handleHashChange() {
-    const currentHash = window.location.hash.replace('#', '').trim().toLowerCase();
-    if (currentHash) {
-      const targetId = 'tab-' + currentHash;
+  // Handle URL hash on initial load or back/forward browser navigation
+  function handleHash() {
+    const hash = window.location.hash.replace('#', '').trim().toLowerCase();
+    if (hash) {
+      const targetId = 'tab-' + hash;
       if (document.getElementById(targetId)) {
-        slideToTab(targetId, false);
+        switchToTab(targetId, false);
         return;
       }
     }
-    // Default to Home
-    slideToTab('tab-home', false);
+    switchToTab('tab-home', false);
   }
 
-  window.addEventListener('hashchange', handleHashChange);
-  
-  // Initialize slider on load
-  handleHashChange();
-
-  // Re-adjust height on window resize
-  window.addEventListener('resize', () => {
-    const currentPanel = document.getElementById(currentTabId);
-    adjustHeight(currentPanel);
-  });
+  window.addEventListener('hashchange', handleHash);
+  handleHash();
 
   // Mobile menu toggle
   if (navToggle && navMenu) {
