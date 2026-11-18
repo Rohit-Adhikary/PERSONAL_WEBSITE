@@ -1002,6 +1002,52 @@ strong {
   color: #ffffff;
 }
 
+.lc-verified-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #b45309;
+  background: #fef3c7;
+  border: 1px solid #fde68a;
+  padding: 0.15rem 0.6rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.lc-verified-badge:hover {
+  background: #f59e0b;
+  color: #ffffff;
+}
+
+.kg-verified-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #0f766e;
+  background: #ccfbf1;
+  border: 1px solid #99f6e4;
+  padding: 0.15rem 0.6rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.kg-verified-badge:hover {
+  background: #0d9488;
+  color: #ffffff;
+}
+
+.kg-fullname {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #64748b;
+}
+
 .cf-handle-meta {
   display: flex;
   align-items: center;
@@ -2196,6 +2242,26 @@ strong {
   transform: translateY(-2px);
 }
 .chip-codeforces:hover i {
+  color: #ffffff;
+}
+
+.chip-leetcode {
+  background: #ffffff !important;
+  color: #b45309 !important;
+  border: 1.5px solid #f59e0b !important;
+}
+.chip-leetcode i {
+  color: #f59e0b;
+  font-size: 1.05rem;
+}
+.chip-leetcode:hover {
+  background: #d97706 !important;
+  color: #ffffff !important;
+  border-color: #d97706 !important;
+  box-shadow: 0 4px 16px rgba(217, 119, 6, 0.35) !important;
+  transform: translateY(-2px);
+}
+.chip-leetcode:hover i {
   color: #ffffff;
 }
 

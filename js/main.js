@@ -52,9 +52,12 @@ document.addEventListener('DOMContentLoaded', () => {
     currentTabId = targetPanel.id;
 
     // 3. Highlight current nav button & segmented buttons
+    const isCPTab = ['tab-codeforces', 'tab-leetcode', 'tab-kaggle', 'tab-cp'].includes(targetPanel.id);
+
     navLinks.forEach(link => {
       link.classList.remove('active');
-      if (link.getAttribute('data-tab') === targetPanel.id) {
+      const linkTab = link.getAttribute('data-tab');
+      if (linkTab === targetPanel.id || (isCPTab && (link.classList.contains('nav-link-cp') || linkTab === 'tab-cp' || linkTab === 'tab-codeforces'))) {
         link.classList.add('active');
       }
     });
@@ -105,6 +108,10 @@ document.addEventListener('DOMContentLoaded', () => {
   function handleHash() {
     const hash = window.location.hash.replace('#', '').trim().toLowerCase();
     if (hash) {
+      if (hash === 'cp') {
+        switchToTab('tab-codeforces', false);
+        return;
+      }
       const targetId = 'tab-' + hash;
       if (document.getElementById(targetId)) {
         switchToTab(targetId, false);
