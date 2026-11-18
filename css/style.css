@@ -1,51 +1,23 @@
 /* ==========================================================================
-   ROHIT ADHIKARI — PERSONAL WEBSITE (LIGHT THEME)
-   Aesthetic: Clean, Paper-Crisp, High-Legibility Developer Portfolio
-   Palette: Off-White Canvas, Subtle Slate Bands, Pure White Cards, Rich Ink Text
+   ROHIT ADHIKARI — MULTI-COLOR SECTIONAL PORTFOLIO
+   Each section has a distinct, beautiful, high-contrast color identity.
+   Aesthetic: Playful yet professional, clean cards, unmistakable visual rhythm.
    ========================================================================== */
 
 :root {
-  /* Light Theme Color Architecture */
-  --bg-page: #f8fafc;               /* Clean slate-tinted white canvas */
-  --bg-section-alt: #f1f5f9;        /* Alternating section band */
-  --bg-card: #ffffff;               /* Pure white elevated cards */
-  --bg-card-elevated: #ffffff;      /* Card hover state */
-  --bg-chip: #f1f5f9;               /* Subtle pill background */
-
-  --border-subtle: #e2e8f0;         /* Section divider lines */
-  --border-card: #e2e8f0;           /* Clean card borders */
-  --border-card-hover: #cbd5e1;     /* Card border on hover */
-
-  --text-main: #0f172a;             /* Ink Black / Deep Slate 900 */
-  --text-body: #334155;             /* Natural reading Slate 700 */
-  --text-muted: #64748b;            /* Secondary Slate 500 */
-  --text-faint: #94a3b8;            /* Tertiary Slate 400 */
-
-  /* Accents */
-  --accent-amber: #d97706;          /* Rich Amber for CP / highlight */
-  --accent-amber-subtle: #fef3c7;   /* Amber 100 */
-  --accent-green: #16a34a;          /* Emerald for active status */
-  --accent-green-subtle: #dcfce7;
-  --accent-blue: #0284c7;           /* Sky 600 */
-
-  /* Typography */
+  /* Global Typography */
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
-  /* Layout */
-  --max-width: 900px;
+  /* Global Layout */
+  --max-width: 920px;
   --nav-height: 68px;
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 14px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
   --radius-full: 9999px;
 
-  /* Soft Natural Shadows */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
-  --shadow-card: 0 4px 16px -2px rgba(0, 0, 0, 0.05), 0 2px 6px -1px rgba(0, 0, 0, 0.03);
-  --shadow-card-hover: 0 12px 28px -4px rgba(0, 0, 0, 0.08), 0 4px 10px -2px rgba(0, 0, 0, 0.04);
-
-  /* Transitions */
+  /* Global Transitions */
   --transition-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-normal: 0.28s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -61,24 +33,19 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: calc(var(--nav-height) + 20px);
+  scroll-padding-top: calc(var(--nav-height) + 16px);
   -webkit-text-size-adjust: 100%;
 }
 
 body {
-  background-color: var(--bg-page);
-  color: var(--text-body);
   font-family: var(--font-sans);
   font-size: 1rem;
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-}
-
-::selection {
-  background: #e2e8f0;
-  color: var(--text-main);
+  background-color: #fafaf9;
+  color: #334155;
 }
 
 .container {
@@ -93,23 +60,54 @@ body {
 a {
   color: inherit;
   text-decoration: none;
-  transition: color var(--transition-fast), border-color var(--transition-fast);
+  transition: all var(--transition-fast);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: var(--text-main);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.3;
   letter-spacing: -0.02em;
 }
 
 strong {
-  color: var(--text-main);
   font-weight: 600;
 }
 
+.section {
+  padding: 5.5rem 0;
+  position: relative;
+}
+
+.section-title-wrap {
+  margin-bottom: 2.75rem;
+}
+
+.section-title {
+  font-size: clamp(1.85rem, 3.5vw, 2.35rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.45rem;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+}
+
+/* Base Pill Badge */
+.section-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 0.85rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
 /* --------------------------------------------------------------------------
-   NAVBAR (LIGHT THEME)
+   NAVBAR
    -------------------------------------------------------------------------- */
 .header {
   position: fixed;
@@ -117,10 +115,10 @@ strong {
   left: 0;
   width: 100%;
   height: var(--nav-height);
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--border-subtle);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid #e2e8f0;
   z-index: 99;
 }
 
@@ -135,19 +133,18 @@ strong {
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.95rem;
-  color: var(--text-main);
+  color: #0f172a;
 }
 
 .logo-mark {
-  background: var(--bg-section-alt);
-  border: 1px solid var(--border-card);
-  color: var(--text-main);
+  background: #0f172a;
+  color: #ffffff;
   font-family: var(--font-mono);
   font-size: 0.78rem;
   font-weight: 700;
-  padding: 0.2rem 0.5rem;
+  padding: 0.2rem 0.55rem;
   border-radius: var(--radius-sm);
 }
 
@@ -161,104 +158,52 @@ strong {
 .nav-link {
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--text-muted);
-  transition: color var(--transition-fast);
+  color: #64748b;
 }
 
 .nav-link:hover,
 .nav-link.active {
-  color: var(--text-main);
+  color: #0f172a;
 }
 
 .nav-link-contact {
-  color: var(--text-main);
-  background: #ffffff;
-  border: 1px solid var(--border-card);
-  padding: 0.35rem 0.85rem;
+  color: #0f172a;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  padding: 0.35rem 0.9rem;
   border-radius: var(--radius-sm);
-  box-shadow: var(--shadow-sm);
+  font-weight: 600;
 }
 
 .nav-link-contact:hover {
-  border-color: var(--border-card-hover);
-  background: var(--bg-section-alt);
+  background: #0f172a;
+  color: #ffffff;
+  border-color: #0f172a;
 }
 
 .nav-toggle {
   display: none;
   background: #ffffff;
-  border: 1px solid var(--border-card);
-  color: var(--text-main);
+  border: 1px solid #cbd5e1;
+  color: #0f172a;
   font-size: 1.1rem;
   padding: 0.4rem 0.7rem;
   border-radius: var(--radius-sm);
   cursor: pointer;
 }
 
-/* --------------------------------------------------------------------------
-   SECTION COMMONS & ALTERNATING BANDS
-   -------------------------------------------------------------------------- */
-.section {
-  padding: 5rem 0;
-  position: relative;
-}
-
-/* Alternating Section Band: Crisp soft-slate contrast */
-.section-alt {
-  background-color: var(--bg-section-alt);
-  border-top: 1px solid var(--border-subtle);
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.section-title-wrap {
-  margin-bottom: 2.75rem;
-}
-
-/* Clean Pill Badges */
-.section-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: #ffffff;
-  border: 1px solid var(--border-card);
-  color: var(--text-main);
-  font-size: 0.82rem;
-  font-weight: 600;
-  padding: 0.3rem 0.8rem;
-  border-radius: var(--radius-full);
-  margin-bottom: 0.85rem;
-  box-shadow: var(--shadow-sm);
-}
-
-.section-pill i {
-  color: var(--accent-amber);
-  font-size: 0.8rem;
-}
-
-.section-title {
-  font-size: clamp(1.8rem, 3.5vw, 2.25rem);
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  margin-bottom: 0.45rem;
-  color: var(--text-main);
-}
-
-.section-subtitle {
-  color: var(--text-muted);
-  font-size: 1rem;
-}
-
-/* --------------------------------------------------------------------------
-   HERO SECTION
-   -------------------------------------------------------------------------- */
+/* ==========================================================================
+   1. HERO SECTION (Theme: Warm Sand / Linen Canvas)
+   ========================================================================== */
 .hero-section {
+  background-color: #fafaf9; /* Stone 50 */
+  border-bottom: 1px solid #e7e5e4;
   padding-top: calc(var(--nav-height) + 5rem);
-  padding-bottom: 4rem;
-  background-color: var(--bg-page);
+  padding-bottom: 4.5rem;
 }
 
 .hero-wrapper {
-  max-width: 800px;
+  max-width: 820px;
 }
 
 .hero-status {
@@ -266,38 +211,42 @@ strong {
   align-items: center;
   gap: 0.65rem;
   font-size: 0.86rem;
-  font-weight: 500;
-  color: var(--text-body);
+  font-weight: 600;
+  color: #44403c;
   background: #ffffff;
-  border: 1px solid var(--border-card);
-  padding: 0.35rem 0.85rem;
+  border: 1px solid #e7e5e4;
+  padding: 0.35rem 0.9rem;
   border-radius: var(--radius-full);
   margin-bottom: 1.5rem;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .status-indicator {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: var(--accent-green);
-  box-shadow: 0 0 6px rgba(22, 163, 74, 0.4);
+  background-color: #16a34a;
+  box-shadow: 0 0 8px rgba(22, 163, 74, 0.5);
 }
 
 .hero-title {
   font-size: clamp(2.2rem, 4.5vw, 3.25rem);
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1.22;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.2;
   margin-bottom: 1.5rem;
-  color: var(--text-main);
+  color: #1c1917; /* Stone 900 */
 }
 
 .hero-bio {
   font-size: 1.12rem;
   line-height: 1.8;
-  color: var(--text-body);
+  color: #57534e; /* Stone 600 */
   margin-bottom: 2.2rem;
+}
+
+.hero-bio strong {
+  color: #1c1917;
 }
 
 .hero-cta-group {
@@ -312,37 +261,36 @@ strong {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  padding: 0.7rem 1.4rem;
-  font-size: 0.92rem;
-  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.94rem;
+  font-weight: 600;
   border-radius: var(--radius-sm);
   cursor: pointer;
   transition: all var(--transition-fast);
 }
 
 .btn-solid {
-  background: var(--text-main);
+  background: #1c1917;
   color: #ffffff;
-  font-weight: 600;
-  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.2);
+  box-shadow: 0 2px 10px rgba(28, 25, 23, 0.25);
 }
 
 .btn-solid:hover {
-  background: #1e293b;
+  background: #44403c;
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.25);
+  box-shadow: 0 6px 18px rgba(28, 25, 23, 0.3);
 }
 
 .btn-ghost {
   background: #ffffff;
-  color: var(--text-main);
-  border: 1px solid var(--border-card);
-  box-shadow: var(--shadow-sm);
+  color: #1c1917;
+  border: 1px solid #d6d3d1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .btn-ghost:hover {
-  background: var(--bg-section-alt);
-  border-color: var(--border-card-hover);
+  background: #f5f5f4;
+  border-color: #a8a29e;
   transform: translateY(-2px);
 }
 
@@ -352,45 +300,46 @@ strong {
   flex-wrap: wrap;
   gap: 0.75rem;
   padding-top: 1.75rem;
-  border-top: 1px solid var(--border-subtle);
+  border-top: 1px solid #e7e5e4;
 }
 
 .social-chip {
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
-  padding: 0.45rem 0.9rem;
+  padding: 0.45rem 0.95rem;
   border-radius: var(--radius-sm);
   background: #ffffff;
-  border: 1px solid var(--border-card);
-  color: var(--text-body);
+  border: 1px solid #d6d3d1;
+  color: #44403c;
   font-size: 0.86rem;
-  font-weight: 500;
-  box-shadow: var(--shadow-sm);
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
   transition: all var(--transition-fast);
 }
 
 .social-chip:hover {
-  color: var(--text-main);
-  border-color: var(--border-card-hover);
-  background: var(--bg-section-alt);
+  color: #1c1917;
+  border-color: #78716c;
+  background: #f5f5f4;
   transform: translateY(-1px);
 }
 
-/* --------------------------------------------------------------------------
-   NOW SECTION (HIGHLIGHTED STATUS BOX)
-   -------------------------------------------------------------------------- */
+/* ==========================================================================
+   2. NOW SECTION (Theme: Fresh Emerald / Mint)
+   ========================================================================== */
 .now-section {
-  padding-top: 0.5rem;
-  padding-bottom: 4.5rem;
+  background-color: #f0fdf4; /* Emerald 50 */
+  border-bottom: 1px solid #dcfce7;
+  padding: 3.5rem 0;
 }
 
 .now-box {
   background: #ffffff;
-  border: 1px solid var(--border-card);
+  border: 1.5px solid #86efac; /* Emerald 300 */
   border-radius: var(--radius-lg);
-  padding: 2rem 2.25rem;
-  box-shadow: var(--shadow-card);
+  padding: 2.25rem;
+  box-shadow: 0 4px 20px -2px rgba(22, 163, 74, 0.08);
 }
 
 .now-header {
@@ -399,7 +348,7 @@ strong {
   justify-content: space-between;
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid var(--border-subtle);
+  border-bottom: 1px solid #dcfce7;
 }
 
 .now-header-left {
@@ -411,23 +360,24 @@ strong {
 .pulse-dot {
   width: 8px;
   height: 8px;
-  background-color: var(--accent-amber);
+  background-color: #16a34a;
   border-radius: 50%;
-  box-shadow: 0 0 6px rgba(217, 119, 6, 0.4);
+  box-shadow: 0 0 8px rgba(22, 163, 74, 0.6);
 }
 
 .now-badge {
   font-family: var(--font-mono);
   font-size: 0.82rem;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--text-main);
+  color: #15803d; /* Emerald 700 */
 }
 
 .now-updated {
   font-size: 0.82rem;
-  color: var(--text-muted);
+  color: #64748b;
+  font-weight: 500;
 }
 
 .now-grid {
@@ -446,12 +396,12 @@ strong {
   width: 38px;
   height: 38px;
   border-radius: var(--radius-sm);
-  background: var(--accent-amber-subtle);
-  border: 1px solid #fde68a;
+  background: #dcfce7;
+  border: 1px solid #86efac;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--accent-amber);
+  color: #15803d;
   font-size: 0.95rem;
   flex-shrink: 0;
 }
@@ -459,18 +409,37 @@ strong {
 .now-item h4 {
   font-size: 0.96rem;
   margin-bottom: 0.35rem;
-  color: var(--text-main);
+  color: #14532d; /* Emerald 900 */
 }
 
 .now-item p {
   font-size: 0.88rem;
-  color: var(--text-muted);
+  color: #374151;
   line-height: 1.6;
 }
 
-/* --------------------------------------------------------------------------
-   ABOUT SECTION
-   -------------------------------------------------------------------------- */
+/* ==========================================================================
+   3. ABOUT SECTION (Theme: Warm Amber / Honey Cream)
+   ========================================================================== */
+.about-section {
+  background-color: #fffbeb; /* Amber 50 */
+  border-bottom: 1px solid #fef3c7;
+}
+
+.about-section .section-pill {
+  background: #fef3c7;
+  border: 1px solid #fde68a;
+  color: #92400e; /* Amber 800 */
+}
+
+.about-section .section-title {
+  color: #78350f; /* Amber 900 */
+}
+
+.about-section .section-subtitle {
+  color: #92400e;
+}
+
 .about-content-grid {
   display: grid;
   grid-template-columns: 1.35fr 0.85fr;
@@ -479,18 +448,22 @@ strong {
 }
 
 .about-main-text p {
-  font-size: 1.04rem;
+  font-size: 1.05rem;
   line-height: 1.85;
   margin-bottom: 1.4rem;
-  color: var(--text-body);
+  color: #451a03; /* Deep warm brown */
+}
+
+.about-main-text strong {
+  color: #78350f;
 }
 
 .about-details-card {
   background: #ffffff;
-  border: 1px solid var(--border-card);
+  border: 1.5px solid #fde68a; /* Amber 200 */
   border-radius: var(--radius-md);
   padding: 1.75rem;
-  box-shadow: var(--shadow-card);
+  box-shadow: 0 4px 20px -2px rgba(217, 119, 6, 0.08);
 }
 
 .details-card-header {
@@ -499,16 +472,17 @@ strong {
   gap: 0.65rem;
   margin-bottom: 1.25rem;
   padding-bottom: 0.85rem;
-  border-bottom: 1px solid var(--border-subtle);
-  color: var(--text-main);
+  border-bottom: 1px solid #fef3c7;
+  color: #78350f;
 }
 
 .details-card-header h3 {
   font-size: 1.05rem;
+  font-weight: 700;
 }
 
 .details-card-header i {
-  color: var(--accent-amber);
+  color: #d97706;
 }
 
 .detail-list {
@@ -526,29 +500,48 @@ strong {
 
 .detail-label {
   font-size: 0.76rem;
-  color: var(--text-muted);
+  color: #92400e;
   font-family: var(--font-mono);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .detail-value {
-  font-size: 0.93rem;
-  color: var(--text-main);
+  font-size: 0.94rem;
+  color: #1f2937;
   font-weight: 600;
 }
 
 .detail-link {
-  color: var(--accent-blue);
+  color: #b45309;
   text-decoration: underline;
   text-underline-offset: 3px;
   word-break: break-all;
 }
 
-/* --------------------------------------------------------------------------
-   SKILLS & TOOLKIT
-   -------------------------------------------------------------------------- */
+/* ==========================================================================
+   4. SKILLS SECTION (Theme: Cool Sky Blue / Cyan)
+   ========================================================================== */
+.focus-section {
+  background-color: #f0f9ff; /* Sky 50 */
+  border-bottom: 1px solid #e0f2fe;
+}
+
+.focus-section .section-pill {
+  background: #e0f2fe;
+  border: 1px solid #bae6fd;
+  color: #0369a1; /* Sky 700 */
+}
+
+.focus-section .section-title {
+  color: #0c4a6e; /* Sky 900 */
+}
+
+.focus-section .section-subtitle {
+  color: #0284c7;
+}
+
 .skills-showcase-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -557,17 +550,17 @@ strong {
 
 .skill-group {
   background: #ffffff;
-  border: 1px solid var(--border-card);
+  border: 1.5px solid #bae6fd; /* Sky 200 */
   border-radius: var(--radius-md);
   padding: 1.75rem;
-  box-shadow: var(--shadow-card);
+  box-shadow: 0 4px 18px rgba(2, 132, 199, 0.06);
   transition: all var(--transition-fast);
 }
 
 .skill-group:hover {
-  border-color: var(--border-card-hover);
+  border-color: #38bdf8;
   transform: translateY(-3px);
-  box-shadow: var(--shadow-card-hover);
+  box-shadow: 0 10px 25px -4px rgba(2, 132, 199, 0.12);
 }
 
 .skill-group-head {
@@ -578,25 +571,26 @@ strong {
 }
 
 .skill-icon {
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   border-radius: var(--radius-sm);
-  background: var(--bg-section-alt);
-  border: 1px solid var(--border-card);
+  background: #e0f2fe;
+  border: 1px solid #7dd3fc;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--accent-amber);
-  font-size: 0.92rem;
+  color: #0284c7;
+  font-size: 0.95rem;
 }
 
 .skill-group-head h3 {
-  font-size: 1.1rem;
+  font-size: 1.12rem;
+  color: #0c4a6e;
 }
 
 .skill-group-desc {
   font-size: 0.88rem;
-  color: var(--text-muted);
+  color: #475569;
   margin-bottom: 1.35rem;
 }
 
@@ -611,41 +605,60 @@ strong {
   display: flex;
   align-items: flex-start;
   gap: 0.65rem;
-  font-size: 0.9rem;
-  color: var(--text-body);
+  font-size: 0.92rem;
+  color: #334155;
   line-height: 1.55;
 }
 
 .skill-list li strong {
-  color: var(--text-main);
+  color: #0f172a;
 }
 
 .bullet {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background-color: var(--accent-amber);
+  background-color: #0284c7;
   margin-top: 0.55rem;
   flex-shrink: 0;
 }
 
-/* --------------------------------------------------------------------------
-   COMPETITIVE PROGRAMMING SECTION
-   -------------------------------------------------------------------------- */
+/* ==========================================================================
+   5. COMPETITIVE PROGRAMMING (Theme: Royal Violet & Dark Terminal)
+   ========================================================================== */
+.cp-section {
+  background-color: #faf5ff; /* Purple 50 */
+  border-bottom: 1px solid #f3e8ff;
+}
+
+.cp-section .section-pill {
+  background: #f3e8ff;
+  border: 1px solid #e9d5ff;
+  color: #7e22ce; /* Purple 700 */
+}
+
+.cp-section .section-title {
+  color: #581c87; /* Purple 900 */
+}
+
+.cp-section .section-subtitle {
+  color: #7e22ce;
+}
+
 .cp-container {
   background: #ffffff;
-  border: 1px solid var(--border-card);
+  border: 1.5px solid #d8b4fe; /* Purple 300 */
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-card);
+  box-shadow: 0 4px 25px -2px rgba(126, 34, 206, 0.08);
 }
 
 .cp-stats-banner {
   display: grid;
   grid-template-columns: 1fr auto 1fr auto 1fr;
   align-items: center;
-  background: #ffffff;
-  border-bottom: 1px solid var(--border-subtle);
+  background: #fdf4ff; /* Fuchsia 50 */
+  border-bottom: 1px solid #f5d0fe;
   padding: 1.75rem 2rem;
 }
 
@@ -655,9 +668,9 @@ strong {
 
 .cp-stat-number {
   display: block;
-  font-size: 1.85rem;
-  font-weight: 700;
-  color: var(--accent-amber);
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: #7e22ce;
   font-family: var(--font-mono);
   letter-spacing: -0.03em;
   margin-bottom: 0.2rem;
@@ -665,14 +678,14 @@ strong {
 
 .cp-stat-label {
   font-size: 0.82rem;
-  color: var(--text-muted);
-  font-weight: 500;
+  color: #701a75;
+  font-weight: 600;
 }
 
 .cp-stat-divider {
   width: 1px;
   height: 40px;
-  background: var(--border-card);
+  background: #f0abfc;
 }
 
 .cp-grid {
@@ -688,10 +701,11 @@ strong {
 .cp-text-box h3 {
   font-size: 1.25rem;
   margin-bottom: 0.9rem;
+  color: #581c87;
 }
 
 .cp-text-box p {
-  color: var(--text-body);
+  color: #4b5563;
   font-size: 0.96rem;
   margin-bottom: 1.25rem;
   line-height: 1.7;
@@ -706,43 +720,44 @@ strong {
 }
 
 .cp-topic-list li {
-  font-size: 0.9rem;
-  color: var(--text-body);
+  font-size: 0.92rem;
+  color: #374151;
   display: flex;
   align-items: center;
   gap: 0.65rem;
 }
 
 .cp-topic-list i {
-  color: var(--accent-green);
-  font-size: 0.78rem;
+  color: #16a34a;
+  font-size: 0.8rem;
 }
 
 .btn-outline-clean {
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
-  padding: 0.55rem 1.1rem;
+  padding: 0.65rem 1.2rem;
   font-size: 0.88rem;
-  font-weight: 600;
+  font-weight: 700;
   border-radius: var(--radius-sm);
-  background: var(--bg-section-alt);
-  color: var(--text-main);
-  border: 1px solid var(--border-card);
+  background: #f3e8ff;
+  color: #7e22ce;
+  border: 1px solid #d8b4fe;
   transition: all var(--transition-fast);
 }
 
 .btn-outline-clean:hover {
-  background: #ffffff;
-  border-color: var(--border-card-hover);
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-sm);
+  background: #7e22ce;
+  color: #ffffff;
+  border-color: #7e22ce;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(126, 34, 206, 0.25);
 }
 
-/* Crisp Dark Terminal to contrast beautifully with Light Theme */
+/* Sharp Contrast Dark Terminal */
 .cp-code-preview {
   background: #0f172a;
-  border-left: 1px solid var(--border-card);
+  border-left: 1px solid #334155;
   padding: 1.75rem;
   font-family: var(--font-mono);
 }
@@ -785,9 +800,28 @@ strong {
 .c-num { color: #34d399; }
 .c-comment { color: #64748b; font-style: italic; }
 
-/* --------------------------------------------------------------------------
-   PROJECTS SECTION
-   -------------------------------------------------------------------------- */
+/* ==========================================================================
+   6. PROJECTS SECTION (Theme: Clean Cool Slate / Ice)
+   ========================================================================== */
+.projects-section {
+  background-color: #f8fafc; /* Slate 50 */
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.projects-section .section-pill {
+  background: #e2e8f0;
+  border: 1px solid #cbd5e1;
+  color: #334155; /* Slate 700 */
+}
+
+.projects-section .section-title {
+  color: #0f172a;
+}
+
+.projects-section .section-subtitle {
+  color: #64748b;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -797,19 +831,19 @@ strong {
 
 .project-card {
   background: #ffffff;
-  border: 1px solid var(--border-card);
+  border: 1.5px solid #cbd5e1; /* Slate 300 */
   border-radius: var(--radius-md);
   padding: 1.75rem;
   display: flex;
   flex-direction: column;
-  box-shadow: var(--shadow-card);
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
   transition: all var(--transition-fast);
 }
 
 .project-card:hover {
-  border-color: var(--border-card-hover);
+  border-color: #94a3b8;
   transform: translateY(-4px);
-  box-shadow: var(--shadow-card-hover);
+  box-shadow: 0 12px 28px -4px rgba(15, 23, 42, 0.1);
 }
 
 .project-top {
@@ -822,15 +856,15 @@ strong {
 .project-tag {
   font-size: 0.76rem;
   font-family: var(--font-mono);
-  font-weight: 600;
-  padding: 0.25rem 0.6rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
   border-radius: var(--radius-sm);
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  background: var(--bg-section-alt);
-  border: 1px solid var(--border-card);
-  color: var(--text-main);
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  color: #0f172a;
 }
 
 .project-links {
@@ -839,24 +873,23 @@ strong {
 }
 
 .project-links a {
-  color: var(--text-muted);
-  font-size: 1.05rem;
-  transition: color var(--transition-fast);
+  color: #64748b;
+  font-size: 1.1rem;
 }
 
 .project-links a:hover {
-  color: var(--text-main);
+  color: #0f172a;
 }
 
 .project-name {
-  font-size: 1.15rem;
+  font-size: 1.18rem;
   margin-bottom: 0.75rem;
-  color: var(--text-main);
+  color: #0f172a;
 }
 
 .project-desc {
-  font-size: 0.9rem;
-  color: var(--text-body);
+  font-size: 0.92rem;
+  color: #475569;
   line-height: 1.65;
   margin-bottom: 1.5rem;
   flex-grow: 1;
@@ -867,18 +900,18 @@ strong {
   flex-wrap: wrap;
   gap: 0.45rem;
   padding-top: 1rem;
-  border-top: 1px solid var(--border-subtle);
+  border-top: 1px solid #f1f5f9;
 }
 
 .project-pills span {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  background: var(--bg-section-alt);
-  border: 1px solid var(--border-card);
-  padding: 0.2rem 0.5rem;
+  font-size: 0.76rem;
+  color: #475569;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 0.2rem 0.55rem;
   border-radius: var(--radius-sm);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .more-repos-bar {
@@ -886,12 +919,12 @@ strong {
   align-items: center;
   justify-content: space-between;
   background: #ffffff;
-  border: 1px solid var(--border-card);
+  border: 1.5px solid #cbd5e1;
   border-radius: var(--radius-md);
   padding: 1.35rem 1.75rem;
-  font-size: 0.93rem;
-  color: var(--text-body);
-  box-shadow: var(--shadow-card);
+  font-size: 0.95rem;
+  color: #334155;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
 }
 
 .more-repos-left {
@@ -901,13 +934,13 @@ strong {
 }
 
 .more-repos-left i {
-  font-size: 1.2rem;
-  color: var(--text-main);
+  font-size: 1.25rem;
+  color: #0f172a;
 }
 
 .link-styled {
-  color: var(--text-main);
-  font-weight: 600;
+  color: #0f172a;
+  font-weight: 700;
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
@@ -918,28 +951,39 @@ strong {
   text-underline-offset: 3px;
 }
 
-/* --------------------------------------------------------------------------
-   CONTACT SECTION
-   -------------------------------------------------------------------------- */
+/* ==========================================================================
+   7. CONTACT SECTION (Theme: Warm Rose / Coral Sunset)
+   ========================================================================== */
+.contact-section {
+  background-color: #fff1f2; /* Rose 50 */
+  border-bottom: 1px solid #ffe4e6;
+}
+
 .contact-box {
   background: #ffffff;
-  border: 1px solid var(--border-card);
+  border: 1.5px solid #fecdd3; /* Rose 200 */
   border-radius: var(--radius-lg);
-  padding: 3.25rem 2.5rem;
+  padding: 3.5rem 2.5rem;
   text-align: center;
-  max-width: 720px;
+  max-width: 740px;
   margin: 0 auto;
-  box-shadow: var(--shadow-card);
+  box-shadow: 0 4px 25px -2px rgba(225, 29, 72, 0.08);
+}
+
+.contact-section .section-pill {
+  background: #ffe4e6;
+  border: 1px solid #fecdd3;
+  color: #be123c; /* Rose 700 */
 }
 
 .contact-title {
-  font-size: 2.15rem;
+  font-size: 2.25rem;
   margin-bottom: 0.75rem;
-  color: var(--text-main);
+  color: #881337; /* Rose 900 */
 }
 
 .contact-desc {
-  color: var(--text-body);
+  color: #4c0519;
   font-size: 1.05rem;
   max-width: 540px;
   margin: 0 auto 2rem auto;
@@ -955,21 +999,22 @@ strong {
   align-items: center;
   gap: 0.75rem;
   background: #ffffff;
-  border: 1px solid var(--border-card);
-  padding: 0.85rem 1.6rem;
+  border: 1.5px solid #fecdd3;
+  padding: 0.9rem 1.75rem;
   border-radius: var(--radius-md);
-  font-size: 1.02rem;
-  font-weight: 600;
-  color: var(--text-main);
-  box-shadow: var(--shadow-sm);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #be123c;
+  box-shadow: 0 2px 10px rgba(225, 29, 72, 0.1);
   transition: all var(--transition-fast);
 }
 
 .direct-email-btn:hover {
-  border-color: var(--border-card-hover);
-  background: var(--bg-section-alt);
+  background: #be123c;
+  color: #ffffff;
+  border-color: #be123c;
   transform: translateY(-2px);
-  box-shadow: var(--shadow-card);
+  box-shadow: 0 6px 18px rgba(225, 29, 72, 0.25);
 }
 
 .contact-social-row {
@@ -983,33 +1028,32 @@ strong {
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
-  padding: 0.45rem 1rem;
+  padding: 0.5rem 1.1rem;
   border-radius: var(--radius-sm);
-  background: #ffffff;
-  border: 1px solid var(--border-card);
+  background: #fff1f2;
+  border: 1px solid #fecdd3;
   font-size: 0.88rem;
-  font-weight: 500;
-  color: var(--text-body);
-  box-shadow: var(--shadow-sm);
+  font-weight: 600;
+  color: #9f1239;
   transition: all var(--transition-fast);
 }
 
 .contact-chip:hover {
-  color: var(--text-main);
-  border-color: var(--border-card-hover);
-  background: var(--bg-section-alt);
+  color: #ffffff;
+  background: #e11d48;
+  border-color: #e11d48;
   transform: translateY(-1px);
 }
 
-/* --------------------------------------------------------------------------
-   FOOTER (LIGHT THEME)
-   -------------------------------------------------------------------------- */
+/* ==========================================================================
+   8. FOOTER (Theme: Rich Midnight Navy Anchor)
+   ========================================================================== */
 .footer {
-  border-top: 1px solid var(--border-subtle);
-  padding: 2.5rem 0;
-  font-size: 0.88rem;
-  color: var(--text-muted);
-  background: #ffffff;
+  background: #0f172a; /* Slate 900 */
+  border-top: 1px solid #1e293b;
+  padding: 2.75rem 0;
+  font-size: 0.9rem;
+  color: #94a3b8;
 }
 
 .footer-container {
@@ -1020,20 +1064,25 @@ strong {
   gap: 1rem;
 }
 
+.footer-left p {
+  color: #cbd5e1;
+}
+
 .back-link {
-  color: var(--text-muted);
+  color: #94a3b8;
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
+  font-weight: 500;
 }
 
 .back-link:hover {
-  color: var(--text-main);
+  color: #ffffff;
 }
 
-/* --------------------------------------------------------------------------
+/* ==========================================================================
    RESPONSIVE DESIGN (MEDIA QUERIES)
-   -------------------------------------------------------------------------- */
+   ========================================================================== */
 @media (max-width: 860px) {
   .now-grid {
     grid-template-columns: 1fr;
@@ -1053,7 +1102,7 @@ strong {
 
   .cp-code-preview {
     border-left: none;
-    border-top: 1px solid var(--border-subtle);
+    border-top: 1px solid #334155;
   }
 
   .projects-grid {
@@ -1087,7 +1136,7 @@ strong {
     left: 0;
     width: 100%;
     background: #ffffff;
-    border-bottom: 1px solid var(--border-subtle);
+    border-bottom: 1px solid #e2e8f0;
     padding: 1.5rem;
     transform: translateY(-120%);
     opacity: 0;
