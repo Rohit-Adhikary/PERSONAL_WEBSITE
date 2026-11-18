@@ -37,8 +37,8 @@
       <nav class="nav-menu" id="nav-menu">
         <ul class="nav-list">
           <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#focus" class="nav-link">What I Do</a></li>
-          <li><a href="#cp" class="nav-link">Competitive Programming</a></li>
+          <li><a href="#focus" class="nav-link">Skills</a></li>
+          <li><a href="#cp" class="nav-link">Problem Solving</a></li>
           <li><a href="#projects" class="nav-link">Projects</a></li>
           <li><a href="#contact" class="nav-link nav-link-contact">Contact</a></li>
         </ul>
@@ -51,7 +51,7 @@
   </header>
 
   <main>
-    <!-- HERO SECTION -->
+    <!-- HERO SECTION (Canvas) -->
     <section class="hero-section" id="hero">
       <div class="container">
         
@@ -102,13 +102,16 @@
       </div>
     </section>
 
-    <!-- WHAT I'M UP TO RIGHT NOW (AUTHENTIC "NOW" SECTION) -->
+    <!-- WHAT I'M UP TO RIGHT NOW (Highlighted Status Box) -->
     <section class="section now-section">
       <div class="container">
         <div class="now-box">
           <div class="now-header">
-            <span class="now-badge">Current Focus</span>
-            <span class="now-updated">Updated November 2026</span>
+            <div class="now-header-left">
+              <span class="pulse-dot"></span>
+              <span class="now-badge">Current Focus</span>
+            </div>
+            <span class="now-updated">November 2026</span>
           </div>
           <div class="now-grid">
             <div class="now-item">
@@ -137,11 +140,12 @@
       </div>
     </section>
 
-    <!-- ABOUT SECTION -->
-    <section class="section about-section" id="about">
+    <!-- ABOUT SECTION (Visual Band: Alt Background) -->
+    <section class="section section-alt about-section" id="about">
       <div class="container">
         <div class="section-title-wrap">
-          <h2 class="section-title">A bit about me</h2>
+          <span class="section-pill"><i class="fa-regular fa-user"></i> About Me</span>
+          <h2 class="section-title">A bit about my journey</h2>
           <p class="section-subtitle">Background, philosophy, and what gets me excited to build.</p>
         </div>
 
@@ -160,7 +164,10 @@
           </div>
 
           <div class="about-details-card">
-            <h3>Quick Details</h3>
+            <div class="details-card-header">
+              <i class="fa-solid fa-id-card"></i>
+              <h3>Quick Details</h3>
+            </div>
             <ul class="detail-list">
               <li>
                 <span class="detail-label">Institution</span>
@@ -193,11 +200,12 @@
       </div>
     </section>
 
-    <!-- WHAT I DO / SKILLS & AREAS -->
+    <!-- WHAT I DO / SKILLS & AREAS (Canvas Background) -->
     <section class="section focus-section" id="focus">
       <div class="container">
         <div class="section-title-wrap">
-          <h2 class="section-title">Skills & Toolkit</h2>
+          <span class="section-pill"><i class="fa-solid fa-layer-group"></i> Skills & Stack</span>
+          <h2 class="section-title">Technical Toolkit</h2>
           <p class="section-subtitle">Technologies and tools I work with on a regular basis.</p>
         </div>
 
@@ -251,7 +259,7 @@
             <ul class="skill-list">
               <li><span class="bullet"></span><strong>Git & GitHub</strong> — Version control, repository maintenance</li>
               <li><span class="bullet"></span><strong>Linux / Bash</strong> — Command line navigation, scripting</li>
-              <li><span class="bullet"></span><strong>VS Code</strong> — Configured for C++ CP debugging, Python, Arduino/PlatformIO</li>
+              <li><span class="bullet"></span><strong>VS Code</strong> — Configured for C++ CP debugging, Python, PlatformIO</li>
             </ul>
           </div>
 
@@ -259,12 +267,13 @@
       </div>
     </section>
 
-    <!-- COMPETITIVE PROGRAMMING SECTION -->
-    <section class="section cp-section" id="cp">
+    <!-- COMPETITIVE PROGRAMMING SECTION (Visual Band: Alt Background) -->
+    <section class="section section-alt cp-section" id="cp">
       <div class="container">
         <div class="section-title-wrap">
+          <span class="section-pill"><i class="fa-solid fa-trophy"></i> Problem Solving</span>
           <h2 class="section-title">Competitive Programming</h2>
-          <p class="section-subtitle">How I practice problem solving, algorithms, and clean C++ implementation.</p>
+          <p class="section-subtitle">How I practice algorithms, data structures, and clean C++ implementation.</p>
         </div>
 
         <div class="cp-container">
@@ -287,10 +296,9 @@
 
           <div class="cp-grid">
             <div class="cp-text-box">
-              <h3>Why Competitive Programming?</h3>
+              <h3>Disciplined Algorithmic Thinking</h3>
               <p>
-                Competitive programming isn't just about speed; it's about disciplined thinking. 
-                Solving nearly 500 problems on Codeforces has helped me build a deep mental model for:
+                Solving nearly 500 problems on Codeforces has helped me build strong intuition for time and space complexity, edge-case analysis, and structured problem decomposition:
               </p>
               <ul class="cp-topic-list">
                 <li><i class="fa-solid fa-check"></i> <strong>Graph Theory</strong> — BFS, DFS, Dijkstra, Tree traversals</li>
@@ -307,9 +315,9 @@
 
             <div class="cp-code-preview">
               <div class="code-header">
-                <span class="code-dot"></span>
-                <span class="code-dot"></span>
-                <span class="code-dot"></span>
+                <span class="code-dot red"></span>
+                <span class="code-dot yellow"></span>
+                <span class="code-dot green"></span>
                 <span class="code-filename">fast_io_template.cpp</span>
               </div>
               <pre class="code-content"><code><span class="c-pre">#include &lt;bits/stdc++.h&gt;</span>
@@ -341,12 +349,13 @@
       </div>
     </section>
 
-    <!-- PROJECTS SECTION -->
+    <!-- PROJECTS SECTION (Canvas Background) -->
     <section class="section projects-section" id="projects">
       <div class="container">
         <div class="section-title-wrap">
-          <h2 class="section-title">Selected Projects</h2>
-          <p class="section-subtitle">Real things I've built and experimented with.</p>
+          <span class="section-pill"><i class="fa-solid fa-cubes"></i> Featured Projects</span>
+          <h2 class="section-title">Selected Work</h2>
+          <p class="section-subtitle">Real things I've engineered, wired, and coded.</p>
         </div>
 
         <div class="projects-grid">
@@ -354,7 +363,7 @@
           <!-- Project 1: ESP32 Automated System -->
           <article class="project-card">
             <div class="project-top">
-              <span class="project-tag hardware-tag"><i class="fa-solid fa-microchip"></i> Hardware & IoT</span>
+              <span class="project-tag"><i class="fa-solid fa-microchip"></i> Hardware & IoT</span>
               <div class="project-links">
                 <a href="https://github.com/Rohit-Adhikary" target="_blank" rel="noopener noreferrer" title="View Source"><i class="fa-brands fa-github"></i></a>
               </div>
@@ -377,7 +386,7 @@
           <!-- Project 2: AI / ML Pipeline -->
           <article class="project-card">
             <div class="project-top">
-              <span class="project-tag ml-tag"><i class="fa-solid fa-brain"></i> Machine Learning</span>
+              <span class="project-tag"><i class="fa-solid fa-brain"></i> Machine Learning</span>
               <div class="project-links">
                 <a href="https://github.com/Rohit-Adhikary" target="_blank" rel="noopener noreferrer" title="View Notebook"><i class="fa-brands fa-github"></i></a>
                 <a href="https://kaggle.com" target="_blank" rel="noopener noreferrer" title="Kaggle Profile"><i class="fa-brands fa-kaggle"></i></a>
@@ -401,7 +410,7 @@
           <!-- Project 3: Competitive Programming Vault -->
           <article class="project-card">
             <div class="project-top">
-              <span class="project-tag cp-tag"><i class="fa-solid fa-code"></i> Algorithms</span>
+              <span class="project-tag"><i class="fa-solid fa-code"></i> Algorithms</span>
               <div class="project-links">
                 <a href="https://github.com/Rohit-Adhikary" target="_blank" rel="noopener noreferrer" title="View Repository"><i class="fa-brands fa-github"></i></a>
               </div>
@@ -424,25 +433,27 @@
         </div>
 
         <div class="more-repos-bar">
-          <span>Looking for more code?</span>
+          <div class="more-repos-left">
+            <i class="fa-brands fa-github"></i>
+            <span>Looking for more code & experiments?</span>
+          </div>
           <a href="https://github.com/Rohit-Adhikary?tab=repositories" target="_blank" rel="noopener noreferrer" class="link-styled">
-            Browse all my repositories on GitHub <i class="fa-solid fa-arrow-right"></i>
+            Browse all my repositories <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT SECTION -->
-    <section class="section contact-section" id="contact">
+    <!-- CONTACT SECTION (Visual Band: Alt Background) -->
+    <section class="section section-alt contact-section" id="contact">
       <div class="container">
         <div class="contact-box">
-          <div class="contact-header">
-            <h2 class="contact-title">Let's talk.</h2>
-            <p class="contact-desc">
-              I'm always open to discussing new projects, IoT ideas, competitive programming strategies, 
-              or open collaboration. Feel free to shoot me an email or connect on social media.
-            </p>
-          </div>
+          <span class="section-pill"><i class="fa-regular fa-paper-plane"></i> Get In Touch</span>
+          <h2 class="contact-title">Let's talk & collaborate.</h2>
+          <p class="contact-desc">
+            Whether you want to discuss an ESP32 automation idea, competitive programming problem sets, 
+            or potential projects — my inbox is always open.
+          </p>
 
           <div class="contact-action-row">
             <a href="mailto:rohitadhikary299@gmail.com" class="direct-email-btn">
