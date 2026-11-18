@@ -72,3 +72,4 @@ Open `index.html` in any text editor:
 - **Codeforces**: Search for `https://codeforces.com` and replace with your profile URL.
 - **Kaggle**: Search for `https://kaggle.com` and replace with your Kaggle URL.
 - **Add Your Photo**: Place your picture inside the folder (e.g. `assets/photo.jpg`) and link it inside the `.avatar-placeholder` div.
+
