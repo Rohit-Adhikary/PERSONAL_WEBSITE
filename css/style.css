@@ -1,7 +1,7 @@
 /* ==========================================================================
-   ROHIT ADHIKARI — MULTI-COLOR SECTIONAL PORTFOLIO
-   Each section has a distinct, beautiful, high-contrast color identity.
-   Aesthetic: Playful yet professional, clean cards, unmistakable visual rhythm.
+   ROHIT ADHIKARI — TABBED PORTFOLIO (LIGHT MULTI-COLOR THEME)
+   Architecture: Individual Full Tabs (Home, About, Skills, CP, Projects, Contact)
+   Each tab opens exclusively with deep hash routing and distinct palettes.
    ========================================================================== */
 
 :root {
@@ -10,7 +10,7 @@
   --font-mono: 'JetBrains Mono', monospace;
 
   /* Global Layout */
-  --max-width: 920px;
+  --max-width: 940px;
   --nav-height: 68px;
   --radius-sm: 8px;
   --radius-md: 12px;
@@ -63,6 +63,10 @@ a {
   transition: all var(--transition-fast);
 }
 
+button {
+  font-family: inherit;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 1.3;
@@ -73,9 +77,35 @@ strong {
   font-weight: 600;
 }
 
-.section {
-  padding: 5.5rem 0;
-  position: relative;
+/* --------------------------------------------------------------------------
+   TAB ENGINE (INDIVIDUAL TAB PANELS)
+   -------------------------------------------------------------------------- */
+.main-content {
+  min-height: calc(100vh - var(--nav-height) - 120px);
+}
+
+.tab-panel {
+  display: none;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1), transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tab-panel.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Dedicated Tab Padding */
+.about-section,
+.focus-section,
+.cp-section,
+.projects-section,
+.contact-section {
+  padding-top: calc(var(--nav-height) + 3.5rem);
+  padding-bottom: 5.5rem;
+  min-height: calc(100vh - var(--nav-height));
 }
 
 .section-title-wrap {
@@ -83,31 +113,30 @@ strong {
 }
 
 .section-title {
-  font-size: clamp(1.85rem, 3.5vw, 2.35rem);
-  font-weight: 700;
+  font-size: clamp(2rem, 3.8vw, 2.5rem);
+  font-weight: 800;
   letter-spacing: -0.03em;
-  margin-bottom: 0.45rem;
+  margin-bottom: 0.5rem;
 }
 
 .section-subtitle {
-  font-size: 1rem;
+  font-size: 1.05rem;
 }
 
-/* Base Pill Badge */
 .section-pill {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.82rem;
+  font-size: 0.84rem;
   font-weight: 700;
-  padding: 0.35rem 0.85rem;
+  padding: 0.35rem 0.9rem;
   border-radius: var(--radius-full);
   margin-bottom: 0.85rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 /* --------------------------------------------------------------------------
-   NAVBAR
+   NAVBAR & TAB BUTTONS
    -------------------------------------------------------------------------- */
 .header {
   position: fixed;
@@ -115,7 +144,7 @@ strong {
   left: 0;
   width: 100%;
   height: var(--nav-height);
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid #e2e8f0;
@@ -134,8 +163,9 @@ strong {
   align-items: center;
   gap: 0.65rem;
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 0.98rem;
   color: #0f172a;
+  cursor: pointer;
 }
 
 .logo-mark {
@@ -151,34 +181,48 @@ strong {
 .nav-list {
   display: flex;
   align-items: center;
-  gap: 1.75rem;
+  gap: 0.4rem;
   list-style: none;
 }
 
 .nav-link {
+  background: transparent;
+  border: none;
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 600;
   color: #64748b;
+  cursor: pointer;
+  padding: 0.45rem 0.85rem;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  transition: all var(--transition-fast);
 }
 
-.nav-link:hover,
+.nav-link:hover {
+  color: #0f172a;
+  background: #f1f5f9;
+}
+
 .nav-link.active {
   color: #0f172a;
+  background: #e2e8f0;
+  font-weight: 700;
 }
 
 .nav-link-contact {
-  color: #0f172a;
-  background: #f1f5f9;
-  border: 1px solid #cbd5e1;
-  padding: 0.35rem 0.9rem;
-  border-radius: var(--radius-sm);
-  font-weight: 600;
+  color: #be123c !important;
+  background: #ffe4e6 !important;
+  border: 1px solid #fecdd3 !important;
+  font-weight: 700;
 }
 
-.nav-link-contact:hover {
-  background: #0f172a;
-  color: #ffffff;
-  border-color: #0f172a;
+.nav-link-contact:hover,
+.nav-link-contact.active {
+  background: #be123c !important;
+  color: #ffffff !important;
+  border-color: #be123c !important;
 }
 
 .nav-toggle {
@@ -193,12 +237,12 @@ strong {
 }
 
 /* ==========================================================================
-   1. HERO SECTION (Theme: Warm Sand / Linen Canvas)
+   TAB 1: HOME (Warm Sand & Linen)
    ========================================================================== */
-.hero-section {
-  background-color: #fafaf9; /* Stone 50 */
+.tab-hero-section {
+  background-color: #fafaf9;
   border-bottom: 1px solid #e7e5e4;
-  padding-top: calc(var(--nav-height) + 5rem);
+  padding-top: calc(var(--nav-height) + 4.5rem);
   padding-bottom: 4.5rem;
 }
 
@@ -235,13 +279,13 @@ strong {
   letter-spacing: -0.035em;
   line-height: 1.2;
   margin-bottom: 1.5rem;
-  color: #1c1917; /* Stone 900 */
+  color: #1c1917;
 }
 
 .hero-bio {
   font-size: 1.12rem;
   line-height: 1.8;
-  color: #57534e; /* Stone 600 */
+  color: #57534e;
   margin-bottom: 2.2rem;
 }
 
@@ -267,6 +311,7 @@ strong {
   border-radius: var(--radius-sm);
   cursor: pointer;
   transition: all var(--transition-fast);
+  border: none;
 }
 
 .btn-solid {
@@ -309,37 +354,26 @@ strong {
   gap: 0.55rem;
   padding: 0.45rem 0.95rem;
   border-radius: var(--radius-sm);
-  background: #ffffff;
-  border: 1px solid #d6d3d1;
-  color: #44403c;
   font-size: 0.86rem;
   font-weight: 600;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
   transition: all var(--transition-fast);
 }
 
-.social-chip:hover {
-  color: #1c1917;
-  border-color: #78716c;
-  background: #f5f5f4;
-  transform: translateY(-1px);
-}
-
-/* ==========================================================================
-   2. NOW SECTION (Theme: Fresh Emerald / Mint)
-   ========================================================================== */
+/* NOW SECTION (EMERALD HIGHLIGHT) */
 .now-section {
-  background-color: #f0fdf4; /* Emerald 50 */
+  background-color: #f0fdf4;
   border-bottom: 1px solid #dcfce7;
-  padding: 3.5rem 0;
+  padding: 4rem 0 5rem 0;
 }
 
 .now-box {
   background: #ffffff;
-  border: 1.5px solid #86efac; /* Emerald 300 */
+  border: 1.5px solid #86efac;
   border-radius: var(--radius-lg);
   padding: 2.25rem;
   box-shadow: 0 4px 20px -2px rgba(22, 163, 74, 0.08);
+  margin-bottom: 2.5rem;
 }
 
 .now-header {
@@ -371,7 +405,7 @@ strong {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #15803d; /* Emerald 700 */
+  color: #15803d;
 }
 
 .now-updated {
@@ -409,7 +443,7 @@ strong {
 .now-item h4 {
   font-size: 0.96rem;
   margin-bottom: 0.35rem;
-  color: #14532d; /* Emerald 900 */
+  color: #14532d;
 }
 
 .now-item p {
@@ -418,22 +452,93 @@ strong {
   line-height: 1.6;
 }
 
+/* Home Explore Grid Cards */
+.home-explore-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.explore-card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background: #ffffff;
+  border: 1.5px solid #bbf7d0;
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.explore-card:hover {
+  transform: translateY(-3px);
+  border-color: #16a34a;
+  box-shadow: 0 8px 24px -4px rgba(22, 163, 74, 0.15);
+}
+
+.explore-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.explore-icon.amber { background: #fef3c7; color: #b45309; }
+.explore-icon.sky { background: #e0f2fe; color: #0284c7; }
+.explore-icon.purple { background: #f3e8ff; color: #7e22ce; }
+.explore-icon.slate { background: #f1f5f9; color: #334155; }
+
+.explore-info {
+  flex-grow: 1;
+}
+
+.explore-info h3 {
+  font-size: 1.08rem;
+  color: #0f172a;
+  margin-bottom: 0.25rem;
+}
+
+.explore-info p {
+  font-size: 0.86rem;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.explore-arrow {
+  color: #94a3b8;
+  font-size: 1rem;
+  transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.explore-card:hover .explore-arrow {
+  transform: translateX(4px);
+  color: #16a34a;
+}
+
 /* ==========================================================================
-   3. ABOUT SECTION (Theme: Warm Amber / Honey Cream)
+   TAB 2: ABOUT (Warm Honey / Amber Theme)
    ========================================================================== */
 .about-section {
-  background-color: #fffbeb; /* Amber 50 */
+  background-color: #fffbeb;
   border-bottom: 1px solid #fef3c7;
 }
 
 .about-section .section-pill {
   background: #fef3c7;
   border: 1px solid #fde68a;
-  color: #92400e; /* Amber 800 */
+  color: #92400e;
 }
 
 .about-section .section-title {
-  color: #78350f; /* Amber 900 */
+  color: #78350f;
 }
 
 .about-section .section-subtitle {
@@ -451,16 +556,71 @@ strong {
   font-size: 1.05rem;
   line-height: 1.85;
   margin-bottom: 1.4rem;
-  color: #451a03; /* Deep warm brown */
+  color: #451a03;
 }
 
 .about-main-text strong {
   color: #78350f;
 }
 
+.education-card-block {
+  margin-top: 2rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid #fde68a;
+}
+
+.block-title {
+  font-size: 1.15rem;
+  color: #78350f;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.edu-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  background: #ffffff;
+  border: 1px solid #fde68a;
+  padding: 1.25rem;
+  border-radius: var(--radius-sm);
+}
+
+.edu-badge {
+  background: #dcfce7;
+  color: #15803d;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.edu-details h4 {
+  font-size: 1rem;
+  color: #78350f;
+  margin-bottom: 0.25rem;
+}
+
+.edu-inst {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #b45309;
+  margin-bottom: 0.4rem;
+}
+
+.edu-desc {
+  font-size: 0.86rem;
+  color: #451a03;
+  line-height: 1.55;
+}
+
 .about-details-card {
   background: #ffffff;
-  border: 1.5px solid #fde68a; /* Amber 200 */
+  border: 1.5px solid #fde68a;
   border-radius: var(--radius-md);
   padding: 1.75rem;
   box-shadow: 0 4px 20px -2px rgba(217, 119, 6, 0.08);
@@ -521,21 +681,21 @@ strong {
 }
 
 /* ==========================================================================
-   4. SKILLS SECTION (Theme: Cool Sky Blue / Cyan)
+   TAB 3: SKILLS & TOOLKIT (Cool Sky Blue Theme)
    ========================================================================== */
 .focus-section {
-  background-color: #f0f9ff; /* Sky 50 */
+  background-color: #f0f9ff;
   border-bottom: 1px solid #e0f2fe;
 }
 
 .focus-section .section-pill {
   background: #e0f2fe;
   border: 1px solid #bae6fd;
-  color: #0369a1; /* Sky 700 */
+  color: #0369a1;
 }
 
 .focus-section .section-title {
-  color: #0c4a6e; /* Sky 900 */
+  color: #0c4a6e;
 }
 
 .focus-section .section-subtitle {
@@ -550,7 +710,7 @@ strong {
 
 .skill-group {
   background: #ffffff;
-  border: 1.5px solid #bae6fd; /* Sky 200 */
+  border: 1.5px solid #bae6fd;
   border-radius: var(--radius-md);
   padding: 1.75rem;
   box-shadow: 0 4px 18px rgba(2, 132, 199, 0.06);
@@ -624,21 +784,21 @@ strong {
 }
 
 /* ==========================================================================
-   5. COMPETITIVE PROGRAMMING (Theme: Royal Violet & Dark Terminal)
+   TAB 4: COMPETITIVE PROGRAMMING (Royal Violet Theme)
    ========================================================================== */
 .cp-section {
-  background-color: #faf5ff; /* Purple 50 */
+  background-color: #faf5ff;
   border-bottom: 1px solid #f3e8ff;
 }
 
 .cp-section .section-pill {
   background: #f3e8ff;
   border: 1px solid #e9d5ff;
-  color: #7e22ce; /* Purple 700 */
+  color: #7e22ce;
 }
 
 .cp-section .section-title {
-  color: #581c87; /* Purple 900 */
+  color: #581c87;
 }
 
 .cp-section .section-subtitle {
@@ -647,7 +807,7 @@ strong {
 
 .cp-container {
   background: #ffffff;
-  border: 1.5px solid #d8b4fe; /* Purple 300 */
+  border: 1.5px solid #d8b4fe;
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: 0 4px 25px -2px rgba(126, 34, 206, 0.08);
@@ -657,7 +817,7 @@ strong {
   display: grid;
   grid-template-columns: 1fr auto 1fr auto 1fr;
   align-items: center;
-  background: #fdf4ff; /* Fuchsia 50 */
+  background: #fdf4ff;
   border-bottom: 1px solid #f5d0fe;
   padding: 1.75rem 2rem;
 }
@@ -754,7 +914,6 @@ strong {
   box-shadow: 0 4px 12px rgba(126, 34, 206, 0.25);
 }
 
-/* Sharp Contrast Dark Terminal */
 .cp-code-preview {
   background: #0f172a;
   border-left: 1px solid #334155;
@@ -801,17 +960,17 @@ strong {
 .c-comment { color: #64748b; font-style: italic; }
 
 /* ==========================================================================
-   6. PROJECTS SECTION (Theme: Clean Cool Slate / Ice)
+   TAB 5: PROJECTS (Cool Slate Theme)
    ========================================================================== */
 .projects-section {
-  background-color: #f8fafc; /* Slate 50 */
+  background-color: #f8fafc;
   border-bottom: 1px solid #e2e8f0;
 }
 
 .projects-section .section-pill {
   background: #e2e8f0;
   border: 1px solid #cbd5e1;
-  color: #334155; /* Slate 700 */
+  color: #334155;
 }
 
 .projects-section .section-title {
@@ -831,7 +990,7 @@ strong {
 
 .project-card {
   background: #ffffff;
-  border: 1.5px solid #cbd5e1; /* Slate 300 */
+  border: 1.5px solid #cbd5e1;
   border-radius: var(--radius-md);
   padding: 1.75rem;
   display: flex;
@@ -952,16 +1111,18 @@ strong {
 }
 
 /* ==========================================================================
-   7. CONTACT SECTION (Theme: Warm Rose / Coral Sunset)
+   TAB 6: CONTACT (Warm Rose / Blush Theme)
    ========================================================================== */
 .contact-section {
-  background-color: #fff1f2; /* Rose 50 */
+  background-color: #fff1f2;
   border-bottom: 1px solid #ffe4e6;
+  display: flex;
+  align-items: center;
 }
 
 .contact-box {
   background: #ffffff;
-  border: 1.5px solid #fecdd3; /* Rose 200 */
+  border: 1.5px solid #fecdd3;
   border-radius: var(--radius-lg);
   padding: 3.5rem 2.5rem;
   text-align: center;
@@ -973,13 +1134,13 @@ strong {
 .contact-section .section-pill {
   background: #ffe4e6;
   border: 1px solid #fecdd3;
-  color: #be123c; /* Rose 700 */
+  color: #be123c;
 }
 
 .contact-title {
   font-size: 2.25rem;
   margin-bottom: 0.75rem;
-  color: #881337; /* Rose 900 */
+  color: #881337;
 }
 
 .contact-desc {
@@ -1036,10 +1197,7 @@ strong {
   transition: all var(--transition-fast);
 }
 
-/* ==========================================================================
-   OFFICIAL BRAND-COLORED SOCIAL BUTTONS (GitHub, LinkedIn, Codeforces, Kaggle)
-   ========================================================================== */
-/* GitHub: Official Dark */
+/* BRAND SOCIAL BUTTONS */
 .chip-github {
   background: #ffffff !important;
   color: #24292f !important;
@@ -1048,7 +1206,6 @@ strong {
 .chip-github i {
   color: #24292f;
   font-size: 1.05rem;
-  transition: color var(--transition-fast);
 }
 .chip-github:hover {
   background: #24292f !important;
@@ -1061,7 +1218,6 @@ strong {
   color: #ffffff;
 }
 
-/* LinkedIn: Official Blue #0a66c2 */
 .chip-linkedin {
   background: #ffffff !important;
   color: #0a66c2 !important;
@@ -1070,7 +1226,6 @@ strong {
 .chip-linkedin i {
   color: #0a66c2;
   font-size: 1.05rem;
-  transition: color var(--transition-fast);
 }
 .chip-linkedin:hover {
   background: #0a66c2 !important;
@@ -1083,7 +1238,6 @@ strong {
   color: #ffffff;
 }
 
-/* Codeforces: Official Brand Blue #1f8ac6 */
 .chip-codeforces {
   background: #ffffff !important;
   color: #185a9d !important;
@@ -1092,7 +1246,6 @@ strong {
 .chip-codeforces i {
   color: #1f8ac6;
   font-size: 1.05rem;
-  transition: color var(--transition-fast);
 }
 .chip-codeforces:hover {
   background: #185a9d !important;
@@ -1105,7 +1258,6 @@ strong {
   color: #ffffff;
 }
 
-/* Kaggle: Official Cyan #20beff */
 .chip-kaggle {
   background: #ffffff !important;
   color: #008ebd !important;
@@ -1114,7 +1266,6 @@ strong {
 .chip-kaggle i {
   color: #008ebd;
   font-size: 1.05rem;
-  transition: color var(--transition-fast);
 }
 .chip-kaggle:hover {
   background: #008ebd !important;
@@ -1128,10 +1279,10 @@ strong {
 }
 
 /* ==========================================================================
-   8. FOOTER (Theme: Rich Midnight Navy Anchor)
+   FOOTER
    ========================================================================== */
 .footer {
-  background: #0f172a; /* Slate 900 */
+  background: #0f172a;
   border-top: 1px solid #1e293b;
   padding: 2.75rem 0;
   font-size: 0.9rem;
@@ -1151,11 +1302,16 @@ strong {
 }
 
 .back-link {
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
   color: #94a3b8;
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
   font-weight: 500;
+  transition: color var(--transition-fast);
 }
 
 .back-link:hover {
@@ -1167,6 +1323,10 @@ strong {
    ========================================================================== */
 @media (max-width: 860px) {
   .now-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-explore-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1235,8 +1395,15 @@ strong {
 
   .nav-list {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 1.25rem;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .nav-link {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
   }
 
   .hero-cta-group {
