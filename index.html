@@ -3,56 +3,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
-  <title>Rohit Adhikari | CSE Student & Tech Enthusiast</title>
-  <meta name="description" content="Personal portfolio of Rohit Adhikari — CSE Student at Gopalganj Science and Technology University. Passionate about AI, Machine Learning, Competitive Programming (490+ problems solved), and ESP32 Automation." />
-  <meta name="keywords" content="Rohit Adhikari, Portfolio, CSE, GSTU, Machine Learning, AI, Competitive Programming, Codeforces, ESP32, IoT, Python, C++" />
+  <title>Rohit Adhikari — CSE Student & Developer</title>
+  <meta name="description" content="Personal website of Rohit Adhikari. CSE student at Gopalganj Science and Technology University, competitive programmer with 490+ Codeforces solves, ESP32 hardware tinkerer, and ML enthusiast." />
   <meta name="author" content="Rohit Adhikari" />
 
-  <!-- Open Graph / Meta for LinkedIn & Social Sharing -->
-  <meta property="og:title" content="Rohit Adhikari | Portfolio" />
-  <meta property="og:description" content="CSE Undergrad @ GSTU | AI & ML Enthusiast | 490+ Solved on Codeforces | ESP32 Automation" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Rohit Adhikari — Developer & CSE Undergrad" />
+  <meta property="og:description" content="CSE @ GSTU • 490+ Codeforces Solved • ESP32 Automation • AI & ML" />
+  <meta property="og:url" content="https://rohit-adhikary.github.io/PERSONAL_WEBSITE/" />
   <meta property="og:type" content="website" />
 
-  <!-- Google Fonts -->
+  <!-- Fonts: Inter for clean text, JetBrains Mono for code -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <!-- Font Awesome Icons -->
+  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-  <!-- Custom Stylesheet -->
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <!-- Background Decorative Glowing Orbs -->
-  <div class="glow-orb orb-1"></div>
-  <div class="glow-orb orb-2"></div>
-  <div class="glow-orb orb-3"></div>
-
-  <!-- Header / Navigation Bar -->
+  <!-- Minimal Header / Navigation -->
   <header class="header" id="navbar">
     <div class="container nav-container">
-      <a href="#hero" class="logo">
-        <span class="logo-bracket">&lt;</span>Rohit<span class="logo-accent">.dev</span><span class="logo-bracket">/&gt;</span>
+      <a href="#hero" class="nav-logo">
+        <span class="logo-mark">RA</span>
+        <span class="logo-text">Rohit Adhikari</span>
       </a>
 
-      <!-- Desktop Navigation Menu -->
       <nav class="nav-menu" id="nav-menu">
         <ul class="nav-list">
-          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-          <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
-          <li class="nav-item"><a href="#cp" class="nav-link">Competitive Programming</a></li>
-          <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
-          <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
-          <li class="nav-item"><a href="#contact" class="nav-link nav-btn">Contact Me</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#focus" class="nav-link">What I Do</a></li>
+          <li><a href="#cp" class="nav-link">Competitive Programming</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link nav-link-contact">Contact</a></li>
         </ul>
       </nav>
 
-      <!-- Mobile Hamburger Toggle -->
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
         <i class="fa-solid fa-bars"></i>
       </button>
@@ -62,251 +53,206 @@
   <main>
     <!-- HERO SECTION -->
     <section class="hero-section" id="hero">
-      <div class="container hero-container">
+      <div class="container">
         
-        <div class="hero-content">
-          <div class="hero-badge">
-            <span class="pulse-dot"></span>
-            <span>Available for Opportunities & Collaborations</span>
+        <div class="hero-wrapper">
+          <div class="hero-status">
+            <span class="status-indicator"></span>
+            <span>CSE Student @ Gopalganj Science and Technology University</span>
           </div>
 
           <h1 class="hero-title">
-            Hi, I'm <span class="gradient-text">Rohit Adhikari</span>
+            Hi, I'm Rohit. <br />
+            I solve algorithmic problems, tinker with hardware, and build software.
           </h1>
 
-          <h2 class="hero-subtitle">
-            I am a <span class="typewriter-text" id="typewriter"></span><span class="cursor">&nbsp;</span>
-          </h2>
-
-          <p class="hero-description">
-            Computer Science & Engineering undergraduate at <strong>Gopalganj Science and Technology University</strong>. 
-            Passionate about exploring the frontiers of <strong>Artificial Intelligence & Machine Learning</strong>, 
-            solving complex algorithmic puzzles with <strong>490+ solved problems on Codeforces</strong>, and engineering 
-            real-world automated systems with <strong>ESP32</strong> microcontrollers.
+          <p class="hero-bio">
+            I'm a Computer Science & Engineering undergraduate at <strong>Gopalganj Science and Technology University (GSTU)</strong>. 
+            Most of my time is spent diving into <strong>C++ on Codeforces</strong> (where I've solved <strong>490+ problems</strong>), 
+            building automated IoT devices with <strong>ESP32 microcontrollers</strong>, and exploring practical 
+            applications in <strong>Machine Learning & Data Science</strong> with Python.
           </p>
 
-          <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary">
-              <i class="fa-solid fa-laptop-code"></i> View Projects
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-solid">
+              See my work <i class="fa-solid fa-arrow-down"></i>
             </a>
-            <a href="#contact" class="btn btn-secondary">
-              <i class="fa-regular fa-envelope"></i> Get In Touch
+            <a href="mailto:rohitadhikary299@gmail.com" class="btn btn-ghost">
+              Say hello <i class="fa-regular fa-paper-plane"></i>
             </a>
           </div>
 
-          <!-- Social Icons Bar -->
-          <div class="hero-socials">
-            <span class="social-label">Connect:</span>
-            <!-- Update the href values with your actual profile links -->
-            <a href="https://github.com/Rohit-Adhikary" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub" id="social-github">
-              <i class="fa-brands fa-github"></i>
+          <!-- Direct Links Bar -->
+          <div class="social-strip">
+            <a href="https://github.com/Rohit-Adhikary" target="_blank" rel="noopener noreferrer" class="social-chip">
+              <i class="fa-brands fa-github"></i> <span>GitHub</span>
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn" id="social-linkedin">
-              <i class="fa-brands fa-linkedin-in"></i>
+            <a href="https://codeforces.com" target="_blank" rel="noopener noreferrer" class="social-chip" id="hero-cf-link">
+              <i class="fa-solid fa-code"></i> <span>Codeforces (490+)</span>
             </a>
-            <a href="https://codeforces.com" target="_blank" rel="noopener noreferrer" class="social-link" title="Codeforces" id="social-codeforces">
-              <i class="fa-solid fa-code"></i>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-chip" id="hero-li-link">
+              <i class="fa-brands fa-linkedin"></i> <span>LinkedIn</span>
             </a>
-            <a href="https://kaggle.com" target="_blank" rel="noopener noreferrer" class="social-link" title="Kaggle" id="social-kaggle">
-              <i class="fa-brands fa-kaggle"></i>
+            <a href="https://kaggle.com" target="_blank" rel="noopener noreferrer" class="social-chip" id="hero-kg-link">
+              <i class="fa-brands fa-kaggle"></i> <span>Kaggle</span>
             </a>
           </div>
         </div>
 
-        <div class="hero-visual">
-          <div class="visual-card">
-            <div class="card-glow"></div>
-            <div class="profile-avatar">
-              <div class="avatar-ring">
-                <div class="avatar-inner">
-                  <!-- Default avatar badge if photo is not yet provided -->
-                  <div class="avatar-placeholder">
-                    <span class="avatar-letters">RA</span>
-                  </div>
-                </div>
+      </div>
+    </section>
+
+    <!-- WHAT I'M UP TO RIGHT NOW (AUTHENTIC "NOW" SECTION) -->
+    <section class="section now-section">
+      <div class="container">
+        <div class="now-box">
+          <div class="now-header">
+            <span class="now-badge">Current Focus</span>
+            <span class="now-updated">Updated November 2026</span>
+          </div>
+          <div class="now-grid">
+            <div class="now-item">
+              <div class="now-icon"><i class="fa-solid fa-fire"></i></div>
+              <div>
+                <h4>Problem Solving & Algorithms</h4>
+                <p>Solving medium-to-hard Codeforces problems daily, sharpening dynamic programming, graph traversal, and combinatorics.</p>
               </div>
             </div>
-
-            <!-- Interactive Quick Stats Floating Badges -->
-            <div class="stat-badge stat-badge-1">
-              <div class="stat-icon"><i class="fa-solid fa-trophy"></i></div>
-              <div class="stat-info">
-                <span class="stat-number">490+</span>
-                <span class="stat-name">CF Problems</span>
+            <div class="now-item">
+              <div class="now-icon"><i class="fa-solid fa-microchip"></i></div>
+              <div>
+                <h4>ESP32 Automation Systems</h4>
+                <p>Building local WiFi/Bluetooth controllers, sensor telemetry, and reliable relay switching circuits for smart room automation.</p>
               </div>
             </div>
-
-            <div class="stat-badge stat-badge-2">
-              <div class="stat-icon"><i class="fa-solid fa-microchip"></i></div>
-              <div class="stat-info">
-                <span class="stat-number">ESP32</span>
-                <span class="stat-name">IoT Automation</span>
-              </div>
-            </div>
-
-            <div class="stat-badge stat-badge-3">
-              <div class="stat-icon"><i class="fa-solid fa-brain"></i></div>
-              <div class="stat-info">
-                <span class="stat-number">AI & ML</span>
-                <span class="stat-name">Research & Build</span>
+            <div class="now-item">
+              <div class="now-icon"><i class="fa-solid fa-brain"></i></div>
+              <div>
+                <h4>Machine Learning & Data</h4>
+                <p>Experimenting with Python, NumPy, Pandas, and Scikit-Learn to build predictive models from tabular and sensor datasets.</p>
               </div>
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
     <!-- ABOUT SECTION -->
     <section class="section about-section" id="about">
       <div class="container">
-        <div class="section-header">
-          <span class="section-tag">// 01. WHO I AM</span>
-          <h2 class="section-title">About Me</h2>
-          <div class="section-divider"></div>
+        <div class="section-title-wrap">
+          <h2 class="section-title">A bit about me</h2>
+          <p class="section-subtitle">Background, philosophy, and what gets me excited to build.</p>
         </div>
 
-        <div class="about-grid">
-          <div class="about-text-card">
-            <h3 class="about-heading">Curious Engineer, Lifelong Learner & Problem Solver</h3>
+        <div class="about-content-grid">
+          <div class="about-main-text">
             <p>
-              I am currently pursuing my <strong>B.Sc. in Computer Science and Engineering</strong> at 
-              <strong>Gopalganj Science and Technology University (GSTU)</strong>. My journey in technology 
-              is driven by curiosity and a desire to build intelligent, practical solutions.
+              I'm an undergraduate student studying Computer Science and Engineering at <strong>Gopalganj Science and Technology University</strong>. 
+              My journey into tech started with curiosity about how things work under the hood — from the logic gate and memory level all the way to complex algorithms and data-driven systems.
             </p>
             <p>
-              I spend a significant amount of my time practicing algorithmic thinking through 
-              <strong>Competitive Programming (CP)</strong>, having solved over 490 problems on Codeforces. 
-              This rigorous practice has honed my ability to analyze edge cases, optimize runtime complexity, 
-              and write efficient C++ code.
+              When I'm writing code, I value <strong>efficiency and clarity</strong>. Competitive programming has taught me to respect time limits, memory constraints, and corner cases. Every problem solved on Codeforces is a lesson in breaking down ambiguous puzzles into deterministic, step-by-step logic.
             </p>
             <p>
-              Simultaneously, I am deeply fascinated by <strong>Machine Learning and Artificial Intelligence</strong>, 
-              aiming to build intelligent systems that solve real-world problems. In the hardware realm, I enjoy 
-              designing <strong>Automated Systems using ESP32</strong> microcontrollers, bridging the physical and 
-              digital worlds with IoT.
+              Outside of pure software, I love working with physical hardware. There's something deeply satisfying about writing C++ code that flashes onto an ESP32 chip, reads an ambient temperature sensor, and triggers a real-world switch over your local network. 
             </p>
-
-            <div class="about-highlights">
-              <div class="highlight-item">
-                <i class="fa-solid fa-graduation-cap highlight-icon"></i>
-                <div>
-                  <strong>CSE Undergrad</strong>
-                  <span>Gopalganj Science and Technology University</span>
-                </div>
-              </div>
-              <div class="highlight-item">
-                <i class="fa-solid fa-chart-line highlight-icon"></i>
-                <div>
-                  <strong>Competitive Programmer</strong>
-                  <span>490+ Solved & Daily Problem Solver</span>
-                </div>
-              </div>
-              <div class="highlight-item">
-                <i class="fa-solid fa-robot highlight-icon"></i>
-                <div>
-                  <strong>AI/ML & IoT Enthusiast</strong>
-                  <span>Smart Hardware & Intelligent Models</span>
-                </div>
-              </div>
-            </div>
           </div>
 
-          <div class="about-meta-cards">
-            <div class="meta-card">
-              <span class="meta-card-icon"><i class="fa-solid fa-code-branch"></i></span>
-              <h4>Problem Solving</h4>
-              <p>Strong grasp on algorithms, dynamic programming, graph theory, and mathematical problem-solving.</p>
-            </div>
-            <div class="meta-card">
-              <span class="meta-card-icon"><i class="fa-solid fa-network-wired"></i></span>
-              <h4>Embedded Systems</h4>
-              <p>Hands-on development with ESP32, sensor integration, relays, and automated control mechanisms.</p>
-            </div>
-            <div class="meta-card">
-              <span class="meta-card-icon"><i class="fa-solid fa-brain"></i></span>
-              <h4>Artificial Intelligence</h4>
-              <p>Exploring supervised learning, computer vision, data analysis, and predictive modeling with Python.</p>
-            </div>
-            <div class="meta-card">
-              <span class="meta-card-icon"><i class="fa-solid fa-users"></i></span>
-              <h4>Collaboration</h4>
-              <p>Always enthusiastic to collaborate on open-source projects, research initiatives, and hackathons.</p>
-            </div>
+          <div class="about-details-card">
+            <h3>Quick Details</h3>
+            <ul class="detail-list">
+              <li>
+                <span class="detail-label">Institution</span>
+                <span class="detail-value">Gopalganj Science & Tech University</span>
+              </li>
+              <li>
+                <span class="detail-label">Degree</span>
+                <span class="detail-value">B.Sc. in Computer Science & Engineering</span>
+              </li>
+              <li>
+                <span class="detail-label">Primary Languages</span>
+                <span class="detail-value">C++, Python, C</span>
+              </li>
+              <li>
+                <span class="detail-label">Hardware Stack</span>
+                <span class="detail-value">ESP32, Relays, WiFi/BLE, Sensors</span>
+              </li>
+              <li>
+                <span class="detail-label">Location</span>
+                <span class="detail-value">Gopalganj, Bangladesh</span>
+              </li>
+              <li>
+                <span class="detail-label">Email</span>
+                <a href="mailto:rohitadhikary299@gmail.com" class="detail-value detail-link">rohitadhikary299@gmail.com</a>
+              </li>
+            </ul>
           </div>
         </div>
+
       </div>
     </section>
 
-    <!-- SKILLS SECTION -->
-    <section class="section skills-section" id="skills">
+    <!-- WHAT I DO / SKILLS & AREAS -->
+    <section class="section focus-section" id="focus">
       <div class="container">
-        <div class="section-header">
-          <span class="section-tag">// 02. MY CAPABILITIES</span>
-          <h2 class="section-title">Technical Skills</h2>
-          <div class="section-divider"></div>
+        <div class="section-title-wrap">
+          <h2 class="section-title">Skills & Toolkit</h2>
+          <p class="section-subtitle">Technologies and tools I work with on a regular basis.</p>
         </div>
 
-        <div class="skills-grid">
+        <div class="skills-showcase-grid">
           
-          <!-- Category 1: Languages -->
-          <div class="skill-category-card">
-            <div class="category-header">
-              <div class="cat-icon-wrapper"><i class="fa-solid fa-code"></i></div>
-              <h3>Programming Languages</h3>
+          <div class="skill-group">
+            <div class="skill-group-head">
+              <span class="skill-icon"><i class="fa-solid fa-code"></i></span>
+              <h3>Languages & Core</h3>
             </div>
-            <p class="category-desc">Core languages used for algorithms, modeling, and system programming.</p>
-            <div class="skill-tags">
-              <span class="skill-pill"><i class="fa-solid fa-file-code"></i> C</span>
-              <span class="skill-pill"><i class="fa-solid fa-terminal"></i> C++ (STL & Algorithms)</span>
-              <span class="skill-pill"><i class="fa-brands fa-python"></i> Python</span>
-            </div>
+            <p class="skill-group-desc">The foundations I use for algorithmic programming and development.</p>
+            <ul class="skill-list">
+              <li><span class="bullet"></span><strong>C++ (C++17/20)</strong> — Primary language for CP, STL, custom data structures</li>
+              <li><span class="bullet"></span><strong>Python</strong> — Scripting, data analysis, ML modeling</li>
+              <li><span class="bullet"></span><strong>C</strong> — Low-level understanding, pointers, memory management</li>
+            </ul>
           </div>
 
-          <!-- Category 2: Embedded Systems & Automation -->
-          <div class="skill-category-card">
-            <div class="category-header">
-              <div class="cat-icon-wrapper"><i class="fa-solid fa-microchip"></i></div>
-              <h3>Automation & IoT</h3>
+          <div class="skill-group">
+            <div class="skill-group-head">
+              <span class="skill-icon"><i class="fa-solid fa-microchip"></i></span>
+              <h3>IoT & Automation</h3>
             </div>
-            <p class="category-desc">Designing smart microcontroller-based automated devices.</p>
-            <div class="skill-tags">
-              <span class="skill-pill"><i class="fa-solid fa-bolt"></i> ESP32 Microcontroller</span>
-              <span class="skill-pill"><i class="fa-solid fa-wifi"></i> IoT & WiFi Communication</span>
-              <span class="skill-pill"><i class="fa-solid fa-gears"></i> Automated Systems</span>
-              <span class="skill-pill"><i class="fa-solid fa-satellite-dish"></i> Sensor Interfacing</span>
-            </div>
+            <p class="skill-group-desc">Hardware prototyping and physical computing systems.</p>
+            <ul class="skill-list">
+              <li><span class="bullet"></span><strong>ESP32 Microcontrollers</strong> — Dual-core processing, GPIO control</li>
+              <li><span class="bullet"></span><strong>IoT Protocols</strong> — WiFi, Bluetooth LE, HTTP WebServer, MQTT basics</li>
+              <li><span class="bullet"></span><strong>Electronics Interfacing</strong> — Relays, DHT sensors, ultrasonic, servo controls</li>
+            </ul>
           </div>
 
-          <!-- Category 3: AI & Machine Learning -->
-          <div class="skill-category-card">
-            <div class="category-header">
-              <div class="cat-icon-wrapper"><i class="fa-solid fa-brain"></i></div>
-              <h3>AI & Machine Learning</h3>
+          <div class="skill-group">
+            <div class="skill-group-head">
+              <span class="skill-icon"><i class="fa-solid fa-chart-line"></i></span>
+              <h3>Data & Machine Learning</h3>
             </div>
-            <p class="category-desc">Developing predictive models and data-driven solutions.</p>
-            <div class="skill-tags">
-              <span class="skill-pill"><i class="fa-solid fa-diagram-project"></i> Machine Learning</span>
-              <span class="skill-pill"><i class="fa-solid fa-chart-pie"></i> Data Analysis</span>
-              <span class="skill-pill"><i class="fa-solid fa-robot"></i> Artificial Intelligence</span>
-              <span class="skill-pill"><i class="fa-solid fa-table"></i> NumPy & Pandas</span>
-            </div>
+            <p class="skill-group-desc">Working with data, finding patterns, and training predictive models.</p>
+            <ul class="skill-list">
+              <li><span class="bullet"></span><strong>NumPy & Pandas</strong> — Data wrangling, cleaning, matrix operations</li>
+              <li><span class="bullet"></span><strong>Scikit-Learn</strong> — Supervised classification, regression, evaluation</li>
+              <li><span class="bullet"></span><strong>Kaggle & Jupyter</strong> — Exploratory data analysis, reproducible notebooks</li>
+            </ul>
           </div>
 
-          <!-- Category 4: Tools & Platforms -->
-          <div class="skill-category-card">
-            <div class="category-header">
-              <div class="cat-icon-wrapper"><i class="fa-solid fa-toolbox"></i></div>
-              <h3>Tools & Platforms</h3>
+          <div class="skill-group">
+            <div class="skill-group-head">
+              <span class="skill-icon"><i class="fa-solid fa-terminal"></i></span>
+              <h3>Workflow & Tools</h3>
             </div>
-            <p class="category-desc">Development environments, version control, and platforms.</p>
-            <div class="skill-tags">
-              <span class="skill-pill"><i class="fa-brands fa-git-alt"></i> Git & GitHub</span>
-              <span class="skill-pill"><i class="fa-solid fa-code"></i> Codeforces</span>
-              <span class="skill-pill"><i class="fa-brands fa-kaggle"></i> Kaggle</span>
-              <span class="skill-pill"><i class="fa-brands fa-linux"></i> Linux</span>
-              <span class="skill-pill"><i class="fa-solid fa-laptop-file"></i> VS Code</span>
-            </div>
+            <p class="skill-group-desc">Day-to-day developer environment and tools.</p>
+            <ul class="skill-list">
+              <li><span class="bullet"></span><strong>Git & GitHub</strong> — Version control, repository maintenance</li>
+              <li><span class="bullet"></span><strong>Linux / Bash</strong> — Command line navigation, scripting</li>
+              <li><span class="bullet"></span><strong>VS Code</strong> — Configured for C++ CP debugging, Python, Arduino/PlatformIO</li>
+            </ul>
           </div>
 
         </div>
@@ -316,68 +262,77 @@
     <!-- COMPETITIVE PROGRAMMING SECTION -->
     <section class="section cp-section" id="cp">
       <div class="container">
-        <div class="section-header">
-          <span class="section-tag">// 03. PROBLEM SOLVING</span>
+        <div class="section-title-wrap">
           <h2 class="section-title">Competitive Programming</h2>
-          <div class="section-divider"></div>
+          <p class="section-subtitle">How I practice problem solving, algorithms, and clean C++ implementation.</p>
         </div>
 
-        <div class="cp-showcase-card">
-          <div class="cp-card-left">
-            <div class="cp-platform-badge">
-              <i class="fa-solid fa-fire"></i> Codeforces Explorer
+        <div class="cp-container">
+          <div class="cp-stats-banner">
+            <div class="cp-stat-item">
+              <span class="cp-stat-number">490+</span>
+              <span class="cp-stat-label">Codeforces Problems Solved</span>
             </div>
-            <h3 class="cp-card-title">490+ Problems Conquered</h3>
-            <p class="cp-card-desc">
-              Competitive programming is my mental gym. Actively solving problems on Codeforces has helped me 
-              develop deep intuition for optimal time and space complexity, graph algorithms, number theory, 
-              greedy heuristics, and dynamic programming.
-            </p>
-            
-            <div class="cp-stats-grid">
-              <div class="cp-stat-box">
-                <span class="cp-stat-val">490+</span>
-                <span class="cp-stat-lbl">Problems Solved</span>
-              </div>
-              <div class="cp-stat-box">
-                <span class="cp-stat-val">C++</span>
-                <span class="cp-stat-lbl">Primary Language</span>
-              </div>
-              <div class="cp-stat-box">
-                <span class="cp-stat-val">STL</span>
-                <span class="cp-stat-lbl">Data Structures</span>
-              </div>
+            <div class="cp-stat-divider"></div>
+            <div class="cp-stat-item">
+              <span class="cp-stat-number">C++20</span>
+              <span class="cp-stat-label">Favorite Weapon of Choice</span>
             </div>
-
-            <div class="cp-actions">
-              <!-- Update with your exact Codeforces profile link -->
-              <a href="https://codeforces.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="cf-profile-btn">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Codeforces Profile
-              </a>
+            <div class="cp-stat-divider"></div>
+            <div class="cp-stat-item">
+              <span class="cp-stat-number">Daily</span>
+              <span class="cp-stat-label">Consistent Problem Solver</span>
             </div>
           </div>
 
-          <div class="cp-card-right">
-            <div class="code-terminal">
-              <div class="terminal-bar">
-                <span class="terminal-dot red"></span>
-                <span class="terminal-dot yellow"></span>
-                <span class="terminal-dot green"></span>
-                <span class="terminal-title">solution.cpp — C++20</span>
+          <div class="cp-grid">
+            <div class="cp-text-box">
+              <h3>Why Competitive Programming?</h3>
+              <p>
+                Competitive programming isn't just about speed; it's about disciplined thinking. 
+                Solving nearly 500 problems on Codeforces has helped me build a deep mental model for:
+              </p>
+              <ul class="cp-topic-list">
+                <li><i class="fa-solid fa-check"></i> <strong>Graph Theory</strong> — BFS, DFS, Dijkstra, Tree traversals</li>
+                <li><i class="fa-solid fa-check"></i> <strong>Dynamic Programming</strong> — State design, memoization, space optimization</li>
+                <li><i class="fa-solid fa-check"></i> <strong>Binary Search & Two Pointers</strong> — Invariant maintenance & range reduction</li>
+                <li><i class="fa-solid fa-check"></i> <strong>Number Theory & Math</strong> — GCD, primes, modular arithmetic, combinatorics</li>
+              </ul>
+              <div class="cp-action-btn">
+                <a href="https://codeforces.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline-clean" id="cp-main-btn">
+                  Check my Codeforces activity <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
               </div>
-              <pre class="terminal-body"><code><span class="code-keyword">#include</span> <span class="code-string">&lt;bits/stdc++.h&gt;</span>
-<span class="code-keyword">using namespace</span> std;
+            </div>
 
-<span class="code-type">int</span> <span class="code-func">main</span>() {
-    ios_base::sync_with_stdio(<span class="code-keyword">false</span>);
-    cin.tie(<span class="code-keyword">NULL</span>);
-    
-    <span class="code-type">int</span> problems_solved = <span class="code-number">490</span>;
-    <span class="code-type">string</span> handle = <span class="code-string">"Rohit_Adhikari"</span>;
-    
-    <span class="code-comment">// Striving for mastery every single day!</span>
-    cout &lt;&lt; <span class="code-string">"Continuous learning in progress..."</span> &lt;&lt; endl;
-    <span class="code-keyword">return</span> <span class="code-number">0</span>;
+            <div class="cp-code-preview">
+              <div class="code-header">
+                <span class="code-dot"></span>
+                <span class="code-dot"></span>
+                <span class="code-dot"></span>
+                <span class="code-filename">fast_io_template.cpp</span>
+              </div>
+              <pre class="code-content"><code><span class="c-pre">#include &lt;bits/stdc++.h&gt;</span>
+<span class="c-key">using namespace</span> std;
+
+<span class="c-comment">// Optimized Fast I/O for Competitive Programming</span>
+<span class="c-key">void</span> <span class="c-func">solve</span>() {
+    <span class="c-type">int</span> n;
+    <span class="c-key">if</span> (!(cin &gt;&gt; n)) <span class="c-key">return</span>;
+    vector&lt;<span class="c-type">long long</span>&gt; a(n);
+    <span class="c-key">for</span> (<span class="c-type">auto</span> &amp;x : a) cin &gt;&gt; x;
+
+    <span class="c-comment">// Logic, edge cases &amp; optimal complexity</span>
+}
+
+<span class="c-type">int</span> <span class="c-func">main</span>() {
+    ios_base::sync_with_stdio(<span class="c-key">false</span>);
+    cin.tie(<span class="c-key">nullptr</span>);
+
+    <span class="c-type">int</span> t = <span class="c-num">1</span>;
+    <span class="c-comment">// cin &gt;&gt; t;</span>
+    <span class="c-key">while</span> (t--) solve();
+    <span class="c-key">return</span> <span class="c-num">0</span>;
 }</code></pre>
             </div>
           </div>
@@ -389,229 +344,144 @@
     <!-- PROJECTS SECTION -->
     <section class="section projects-section" id="projects">
       <div class="container">
-        <div class="section-header">
-          <span class="section-tag">// 04. WHAT I'VE BUILT</span>
-          <h2 class="section-title">Featured Projects</h2>
-          <div class="section-divider"></div>
+        <div class="section-title-wrap">
+          <h2 class="section-title">Selected Projects</h2>
+          <p class="section-subtitle">Real things I've built and experimented with.</p>
         </div>
 
         <div class="projects-grid">
           
           <!-- Project 1: ESP32 Automated System -->
-          <div class="project-card">
-            <div class="project-card-header">
-              <div class="project-folder-icon">
-                <i class="fa-solid fa-microchip"></i>
-              </div>
-              <div class="project-card-links">
-                <a href="#contact" class="project-link" title="Code Repository"><i class="fa-brands fa-github"></i></a>
-                <a href="#contact" class="project-link" title="Project Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          <article class="project-card">
+            <div class="project-top">
+              <span class="project-tag hardware-tag"><i class="fa-solid fa-microchip"></i> Hardware & IoT</span>
+              <div class="project-links">
+                <a href="https://github.com/Rohit-Adhikary" target="_blank" rel="noopener noreferrer" title="View Source"><i class="fa-brands fa-github"></i></a>
               </div>
             </div>
-            
-            <h3 class="project-title">Smart Automated System (ESP32)</h3>
-            <p class="project-description">
-              An intelligent automation and control system engineered with the <strong>ESP32</strong> microcontroller. 
-              Features sensor data acquisition, wireless communication (WiFi/Bluetooth), automated device switching, 
-              and real-time monitoring to streamline daily physical operations without manual intervention.
+            <h3 class="project-name">Smart Room Automation System</h3>
+            <p class="project-desc">
+              A microcontroller-based home automation setup built with an ESP32. It creates a local asynchronous web server 
+              allowing mobile and browser-based control of AC electrical appliances via 4-channel relay modules, 
+              paired with real-time temperature and humidity telemetry.
             </p>
-
-            <div class="project-tech-list">
+            <div class="project-pills">
               <span>ESP32</span>
-              <span>C/C++</span>
-              <span>IoT</span>
-              <span>Sensors</span>
-              <span>Automation</span>
-            </div>
-          </div>
-
-          <!-- Project 2: AI / ML Project Placeholder -->
-          <div class="project-card">
-            <div class="project-card-header">
-              <div class="project-folder-icon">
-                <i class="fa-solid fa-brain"></i>
-              </div>
-              <div class="project-card-links">
-                <a href="#contact" class="project-link" title="Code Repository"><i class="fa-brands fa-github"></i></a>
-                <a href="#contact" class="project-link" title="Notebook / Kaggle"><i class="fa-brands fa-kaggle"></i></a>
-              </div>
-            </div>
-            
-            <h3 class="project-title">AI & ML Predictive Analysis Pipeline</h3>
-            <p class="project-description">
-              A comprehensive data science workflow incorporating data preprocessing, feature engineering, 
-              and machine learning modeling in Python. Built to discover patterns and forecast key outcomes 
-              with high precision.
-            </p>
-
-            <div class="project-tech-list">
-              <span>Python</span>
-              <span>Scikit-Learn</span>
-              <span>Pandas</span>
-              <span>Machine Learning</span>
-            </div>
-          </div>
-
-          <!-- Project 3: Algorithmic Problem Solver Vault -->
-          <div class="project-card">
-            <div class="project-card-header">
-              <div class="project-folder-icon">
-                <i class="fa-solid fa-terminal"></i>
-              </div>
-              <div class="project-card-links">
-                <a href="#contact" class="project-link" title="Code Repository"><i class="fa-brands fa-github"></i></a>
-                <a href="#cp" class="project-link" title="Details"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-              </div>
-            </div>
-            
-            <h3 class="project-title">Competitive Programming Solutions Vault</h3>
-            <p class="project-description">
-              Curated repository of tested C++ solutions and reusable templates for 490+ algorithmic challenges. 
-              Covers Graph Algorithms (BFS/DFS, Dijkstra), Dynamic Programming, Binary Search, and Number Theory.
-            </p>
-
-            <div class="project-tech-list">
               <span>C++</span>
-              <span>Data Structures</span>
-              <span>Algorithms</span>
+              <span>AsyncWebServer</span>
+              <span>DHT22</span>
+              <span>Relays</span>
+            </div>
+          </article>
+
+          <!-- Project 2: AI / ML Pipeline -->
+          <article class="project-card">
+            <div class="project-top">
+              <span class="project-tag ml-tag"><i class="fa-solid fa-brain"></i> Machine Learning</span>
+              <div class="project-links">
+                <a href="https://github.com/Rohit-Adhikary" target="_blank" rel="noopener noreferrer" title="View Notebook"><i class="fa-brands fa-github"></i></a>
+                <a href="https://kaggle.com" target="_blank" rel="noopener noreferrer" title="Kaggle Profile"><i class="fa-brands fa-kaggle"></i></a>
+              </div>
+            </div>
+            <h3 class="project-name">Predictive ML Exploration & Analysis</h3>
+            <p class="project-desc">
+              End-to-end data analysis and predictive pipeline in Python. Features structured data cleaning, 
+              correlation analysis, missing-value imputation, feature scaling, and comparing classification/regression 
+              benchmarks using Scikit-Learn algorithms.
+            </p>
+            <div class="project-pills">
+              <span>Python</span>
+              <span>Pandas</span>
+              <span>Scikit-Learn</span>
+              <span>NumPy</span>
+              <span>Matplotlib</span>
+            </div>
+          </article>
+
+          <!-- Project 3: Competitive Programming Vault -->
+          <article class="project-card">
+            <div class="project-top">
+              <span class="project-tag cp-tag"><i class="fa-solid fa-code"></i> Algorithms</span>
+              <div class="project-links">
+                <a href="https://github.com/Rohit-Adhikary" target="_blank" rel="noopener noreferrer" title="View Repository"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <h3 class="project-name">Codeforces CP Solutions Vault</h3>
+            <p class="project-desc">
+              My structured archive of 490+ accepted solutions from Codeforces contests and problem sets. 
+              Organized by algorithmic paradigms (Graphs, Number Theory, Dynamic Programming) with clean, 
+              modular C++ templates.
+            </p>
+            <div class="project-pills">
+              <span>C++20</span>
+              <span>STL</span>
+              <span>Graph Theory</span>
+              <span>DP</span>
               <span>Codeforces</span>
             </div>
-          </div>
+          </article>
 
         </div>
 
-        <div class="projects-footer-cta">
-          <p>More projects and research work are continuously being pushed to my repositories.</p>
-          <a href="https://github.com/Rohit-Adhikary?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="all-projects-btn">
-            <i class="fa-brands fa-github"></i> Explore GitHub Repositories
+        <div class="more-repos-bar">
+          <span>Looking for more code?</span>
+          <a href="https://github.com/Rohit-Adhikary?tab=repositories" target="_blank" rel="noopener noreferrer" class="link-styled">
+            Browse all my repositories on GitHub <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
-      </div>
-    </section>
-
-    <!-- EDUCATION SECTION -->
-    <section class="section education-section" id="education">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">// 05. ACADEMIC BACKGROUND</span>
-          <h2 class="section-title">Education & Milestones</h2>
-          <div class="section-divider"></div>
-        </div>
-
-        <div class="timeline">
-          <!-- Timeline Item 1 -->
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <span class="timeline-date">Present</span>
-              <h3 class="timeline-title">B.Sc. in Computer Science and Engineering</h3>
-              <h4 class="timeline-institution">Gopalganj Science and Technology University (GSTU)</h4>
-              <p class="timeline-desc">
-                Engaged in deep coursework covering Data Structures, Algorithms, Object-Oriented Programming, 
-                Computer Architecture, Database Management Systems, and Artificial Intelligence foundations.
-              </p>
-            </div>
-          </div>
-
-          <!-- Timeline Item 2 -->
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <span class="timeline-date">Milestone</span>
-              <h3 class="timeline-title">Competitive Programming & 490+ Solved</h3>
-              <h4 class="timeline-institution">Codeforces & Online Judges</h4>
-              <p class="timeline-desc">
-                Achieved a milestone of solving over 490 algorithmic challenges, building strong perseverance, 
-                debugging precision, and algorithmic problem-solving speed in C++.
-              </p>
-            </div>
-          </div>
-        </div>
-
       </div>
     </section>
 
     <!-- CONTACT SECTION -->
     <section class="section contact-section" id="contact">
       <div class="container">
-        <div class="section-header text-center">
-          <span class="section-tag">// 06. GET IN TOUCH</span>
-          <h2 class="section-title">Let's Connect & Collaborate</h2>
-          <div class="section-divider center"></div>
-          <p class="contact-intro">
-            Whether you want to discuss a Machine Learning idea, an ESP32 automation project, 
-            algorithmic problem solving, or potential opportunities — my inbox is always open!
-          </p>
-        </div>
-
-        <div class="contact-card">
-          <div class="contact-info-list">
-            <div class="contact-info-item">
-              <div class="info-icon"><i class="fa-regular fa-envelope"></i></div>
-              <div class="info-text">
-                <span class="info-label">Email Me At:</span>
-                <!-- Clickable mail link; replace with your email -->
-                <a href="mailto:rohitadhikary299@gmail.com" id="contact-email" class="info-val">rohitadhikary299@gmail.com</a>
-              </div>
-            </div>
-
-            <div class="contact-info-item">
-              <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
-              <div class="info-text">
-                <span class="info-label">Location:</span>
-                <span class="info-val">Gopalganj, Bangladesh</span>
-              </div>
-            </div>
-
-            <div class="contact-info-item">
-              <div class="info-icon"><i class="fa-solid fa-user-graduate"></i></div>
-              <div class="info-text">
-                <span class="info-label">Affiliation:</span>
-                <span class="info-val">Gopalganj Science and Technology University</span>
-              </div>
-            </div>
+        <div class="contact-box">
+          <div class="contact-header">
+            <h2 class="contact-title">Let's talk.</h2>
+            <p class="contact-desc">
+              I'm always open to discussing new projects, IoT ideas, competitive programming strategies, 
+              or open collaboration. Feel free to shoot me an email or connect on social media.
+            </p>
           </div>
 
-          <div class="contact-social-grid">
-            <span class="social-grid-title">Find Me Across The Web</span>
-            <div class="social-buttons">
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn" id="contact-link-linkedin">
-                <i class="fa-brands fa-linkedin-in"></i> LinkedIn
-              </a>
-              <a href="https://github.com/Rohit-Adhikary" target="_blank" rel="noopener noreferrer" class="social-btn" id="contact-link-github">
-                <i class="fa-brands fa-github"></i> GitHub
-              </a>
-              <a href="https://codeforces.com" target="_blank" rel="noopener noreferrer" class="social-btn" id="contact-link-codeforces">
-                <i class="fa-solid fa-code"></i> Codeforces
-              </a>
-              <a href="https://kaggle.com" target="_blank" rel="noopener noreferrer" class="social-btn" id="contact-link-kaggle">
-                <i class="fa-brands fa-kaggle"></i> Kaggle
-              </a>
-            </div>
+          <div class="contact-action-row">
+            <a href="mailto:rohitadhikary299@gmail.com" class="direct-email-btn">
+              <i class="fa-regular fa-envelope"></i>
+              <span>rohitadhikary299@gmail.com</span>
+            </a>
+          </div>
+
+          <div class="contact-social-row">
+            <a href="https://github.com/Rohit-Adhikary" target="_blank" rel="noopener noreferrer" class="contact-chip">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-chip" id="contact-li">
+              <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://codeforces.com" target="_blank" rel="noopener noreferrer" class="contact-chip" id="contact-cf">
+              <i class="fa-solid fa-code"></i> Codeforces
+            </a>
+            <a href="https://kaggle.com" target="_blank" rel="noopener noreferrer" class="contact-chip" id="contact-kg">
+              <i class="fa-brands fa-kaggle"></i> Kaggle
+            </a>
           </div>
         </div>
-
       </div>
     </section>
   </main>
 
-  <!-- FOOTER -->
+  <!-- Clean Minimalist Footer -->
   <footer class="footer">
     <div class="container footer-container">
-      <p class="footer-text">
-        Designed & Built by <span class="footer-highlight">Rohit Adhikari</span> &copy; <span id="year">2026</span>.
-      </p>
-      <p class="footer-subtext">
-        Ready for GitHub Pages Deployment • Gopalganj Science and Technology University
-      </p>
-      <a href="#hero" class="back-to-top" title="Back to top">
-        <i class="fa-solid fa-arrow-up"></i>
-      </a>
+      <div class="footer-left">
+        <p>&copy; <span id="year">2026</span> Rohit Adhikari. Built with care and hosted on GitHub Pages.</p>
+      </div>
+      <div class="footer-right">
+        <a href="#hero" class="back-link">Back to top <i class="fa-solid fa-arrow-up"></i></a>
+      </div>
     </div>
   </footer>
 
-  <!-- Custom JavaScript -->
   <script src="js/main.js"></script>
 </body>
 </html>
-
