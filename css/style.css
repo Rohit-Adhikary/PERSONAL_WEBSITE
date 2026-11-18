@@ -211,9 +211,25 @@ strong {
   align-items: center;
   gap: 0.65rem;
   font-weight: 700;
-  font-size: 0.98rem;
+  font-size: 1rem;
   color: #0f172a;
   cursor: pointer;
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  text-decoration: none;
+}
+
+.nav-logo:hover,
+.nav-logo:focus,
+.nav-logo:active {
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  color: #0f172a;
 }
 
 .logo-mark {
