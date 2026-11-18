@@ -15,7 +15,7 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="Rohit Adhikari — Developer & CSE Undergrad" />
-  <meta property="og:description" content="CSE @ GSTU • 490+ Codeforces Solved • ESP32 Automation • AI & ML" />
+  <meta property="og:description" content="CSE @ GSTU • Codeforces • LeetCode • Kaggle • ESP32 Automation • AI & ML" />
   <meta property="og:url" content="https://rohit-adhikary.github.io/PERSONAL_WEBSITE/" />
   <meta property="og:type" content="website" />
 
@@ -27,8 +27,8 @@
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-  <!-- Stylesheet (Cache Buster v8.0) -->
-  <link rel="stylesheet" href="css/style.css?v=8.0" />
+  <!-- Stylesheet (Cache Buster v9.0 - Dedicated Platform Dashboards) -->
+  <link rel="stylesheet" href="css/style.css?v=9.0" />
 </head>
 <body>
 
@@ -46,7 +46,9 @@
           <li><button type="button" class="nav-link tab-trigger active" data-tab="tab-home"><i class="fa-solid fa-house"></i> Home</button></li>
           <li><button type="button" class="nav-link tab-trigger" data-tab="tab-about"><i class="fa-regular fa-user"></i> About</button></li>
           <li><button type="button" class="nav-link tab-trigger" data-tab="tab-skills"><i class="fa-solid fa-layer-group"></i> Skills</button></li>
-          <li><button type="button" class="nav-link tab-trigger" data-tab="tab-cp"><i class="fa-solid fa-trophy"></i> Problem Solving</button></li>
+          <li><button type="button" class="nav-link tab-trigger nav-link-cf" data-tab="tab-codeforces"><i class="fa-solid fa-code"></i> Codeforces</button></li>
+          <li><button type="button" class="nav-link tab-trigger nav-link-lc" data-tab="tab-leetcode"><i class="fa-solid fa-laptop-code"></i> LeetCode</button></li>
+          <li><button type="button" class="nav-link tab-trigger nav-link-kg" data-tab="tab-kaggle"><i class="fa-brands fa-kaggle"></i> Kaggle</button></li>
           <li><button type="button" class="nav-link tab-trigger" data-tab="tab-projects"><i class="fa-solid fa-cubes"></i> Projects</button></li>
           <li><button type="button" class="nav-link tab-trigger nav-link-contact" data-tab="tab-contact"><i class="fa-regular fa-envelope"></i> Contact</button></li>
         </ul>
@@ -61,574 +63,930 @@
   <!-- MAIN SLIDING TAB CONTENT -->
   <main class="tab-content-area" id="tab-content-area">
 
-      <!-- ====================================================================
-           SLIDE 0: HOME
-           ==================================================================== -->
-      <div class="tab-panel active" id="tab-home" data-index="0">
-        
-        <!-- Hero Banner -->
-        <section class="tab-hero-section">
-          <div class="container">
-            <div class="hero-wrapper">
-              <div class="hero-status">
-                <span class="status-indicator"></span>
-                <span>CSE Student @ Gopalganj Science and Technology University</span>
+    <!-- ====================================================================
+         SLIDE 0: HOME
+         ==================================================================== -->
+    <div class="tab-panel active" id="tab-home" data-index="0">
+      
+      <!-- Hero Banner -->
+      <section class="tab-hero-section">
+        <div class="container">
+          <div class="hero-wrapper">
+            <div class="hero-status">
+              <span class="status-indicator"></span>
+              <span>CSE Student @ Gopalganj Science and Technology University</span>
+            </div>
+
+            <h1 class="hero-title">
+              Hi, I'm Rohit. <br />
+              I solve algorithmic problems, tinker with hardware, and build software.
+            </h1>
+
+            <p class="hero-bio">
+              I'm an undergraduate studying Computer Science & Engineering at <strong>Gopalganj Science and Technology University (GSTU)</strong>. 
+              My main focus is <strong>Competitive Programming in C++</strong> (with <strong>490+ problems solved on Codeforces</strong>), 
+              practicing on <strong>LeetCode</strong>, exploring data science on <strong>Kaggle</strong>, and building automated IoT devices with <strong>ESP32 microcontrollers</strong>.
+            </p>
+
+            <div class="hero-cta-group">
+              <button type="button" class="btn btn-solid tab-trigger" data-tab="tab-codeforces">
+                <i class="fa-solid fa-code"></i> Codeforces (490+)
+              </button>
+              <button type="button" class="btn btn-ghost tab-trigger" data-tab="tab-leetcode">
+                <i class="fa-solid fa-laptop-code"></i> LeetCode
+              </button>
+              <button type="button" class="btn btn-ghost tab-trigger" data-tab="tab-kaggle">
+                <i class="fa-brands fa-kaggle"></i> Kaggle Profile
+              </button>
+            </div>
+
+            <!-- Direct Brand Links -->
+            <div class="social-strip">
+              <a href="https://github.com/Rohit-Adhikary" target="_blank" rel="noopener noreferrer" class="social-chip chip-github">
+                <i class="fa-brands fa-github"></i> <span>GitHub</span>
+              </a>
+              <button type="button" class="social-chip chip-codeforces tab-trigger" data-tab="tab-codeforces">
+                <i class="fa-solid fa-code"></i> <span>Codeforces Dashboard</span>
+              </button>
+              <button type="button" class="social-chip chip-linkedin tab-trigger" data-tab="tab-leetcode">
+                <i class="fa-solid fa-laptop-code"></i> <span>LeetCode Stats</span>
+              </button>
+              <button type="button" class="social-chip chip-kaggle tab-trigger" data-tab="tab-kaggle">
+                <i class="fa-brands fa-kaggle"></i> <span>Kaggle Rank</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Current Focus (Now Section) -->
+      <section class="section now-section">
+        <div class="container">
+          <div class="now-box">
+            <div class="now-header">
+              <div class="now-header-left">
+                <span class="pulse-dot"></span>
+                <span class="now-badge">What I'm Focused On Right Now</span>
               </div>
+              <span class="now-updated">November 2026</span>
+            </div>
+            <div class="now-grid">
+              <div class="now-item">
+                <div class="now-icon"><i class="fa-solid fa-fire"></i></div>
+                <div>
+                  <h4>Daily Problem Solving</h4>
+                  <p>Solving algorithmic challenges on Codeforces (490+ solved) & LeetCode, mastering Dynamic Programming and Graph theory in C++.</p>
+                </div>
+              </div>
+              <div class="now-item">
+                <div class="now-icon"><i class="fa-solid fa-microchip"></i></div>
+                <div>
+                  <h4>ESP32 Smart Automation</h4>
+                  <p>Engineering real-time relay switching, sensor telemetry, and local WiFi asynchronous control with microcontrollers.</p>
+                </div>
+              </div>
+              <div class="now-item">
+                <div class="now-icon"><i class="fa-solid fa-brain"></i></div>
+                <div>
+                  <h4>Kaggle & Machine Learning</h4>
+                  <p>Building predictive models and performing in-depth exploratory data analysis with Python, NumPy, Pandas, and Scikit-Learn.</p>
+                </div>
+              </div>
+            </div>
+          </div>
 
-              <h1 class="hero-title">
-                Hi, I'm Rohit. <br />
-                I solve algorithmic problems, tinker with hardware, and build software.
-              </h1>
+          <!-- Quick Slide Trigger Cards -->
+          <div class="home-explore-grid">
+            <button type="button" class="explore-card tab-trigger" data-tab="tab-about">
+              <div class="explore-icon amber"><i class="fa-regular fa-user"></i></div>
+              <div class="explore-info">
+                <h3>About Rohit</h3>
+                <p>Read about my background, GSTU education, and engineering journey.</p>
+              </div>
+              <span class="explore-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+            </button>
 
-              <p class="hero-bio">
-                I'm an undergraduate studying Computer Science & Engineering at <strong>Gopalganj Science and Technology University (GSTU)</strong>. 
-                My main focus is <strong>Competitive Programming in C++</strong> (with <strong>490+ problems solved on Codeforces</strong>), 
-                building automated IoT devices with <strong>ESP32 microcontrollers</strong>, and developing practical 
-                <strong>Machine Learning & Data Science</strong> systems in Python.
+            <button type="button" class="explore-card tab-trigger" data-tab="tab-skills">
+              <div class="explore-icon sky"><i class="fa-solid fa-layer-group"></i></div>
+              <div class="explore-info">
+                <h3>Skills & Stack</h3>
+                <p>View my programming languages, hardware IoT tools, and ML stack.</p>
+              </div>
+              <span class="explore-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+            </button>
+
+            <button type="button" class="explore-card tab-trigger" data-tab="tab-codeforces">
+              <div class="explore-icon purple"><i class="fa-solid fa-code"></i></div>
+              <div class="explore-info">
+                <h3>Codeforces Profile</h3>
+                <p>490+ solved, submission heatmap calendar, rating, and languages.</p>
+              </div>
+              <span class="explore-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+            </button>
+
+            <button type="button" class="explore-card tab-trigger" data-tab="tab-leetcode">
+              <div class="explore-icon amber"><i class="fa-solid fa-laptop-code"></i></div>
+              <div class="explore-info">
+                <h3>LeetCode Stats</h3>
+                <p>Easy, Medium, Hard problem distribution and contest performance.</p>
+              </div>
+              <span class="explore-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ====================================================================
+         SLIDE 1: ABOUT ME
+         ==================================================================== -->
+    <div class="tab-panel" id="tab-about" data-index="1">
+      <section class="section about-section">
+        <div class="container">
+          <div class="section-title-wrap">
+            <span class="section-pill"><i class="fa-regular fa-user"></i> Personal Journey</span>
+            <h2 class="section-title">About Rohit Adhikari</h2>
+            <p class="section-subtitle">My background, education at GSTU, and what drives me to build.</p>
+          </div>
+
+          <div class="about-content-grid">
+            <div class="about-main-text">
+              <p>
+                Hello! I'm an undergraduate student pursuing my <strong>B.Sc. in Computer Science and Engineering</strong> at 
+                <strong>Gopalganj Science and Technology University (GSTU)</strong>. 
+                My path into technology began with a deep fascination for understanding systems at both the software and physical hardware layers.
+              </p>
+              <p>
+                When writing software, I prioritize <strong>algorithmic efficiency and clean, maintainable logic</strong>. 
+                Solving problems on Codeforces has trained me to analyze corner cases, think deeply about space-time trade-offs, and implement solutions with precision.
+              </p>
+              <p>
+                Beyond pure algorithms, I have a passion for <strong>embedded systems and automation</strong>. 
+                Working with ESP32 microcontrollers gives me the thrill of turning lines of C++ code into physical actions—controlling appliances, collecting sensor data over WiFi, and automating repetitive tasks in the physical world.
               </p>
 
-              <div class="hero-cta-group">
-                <button type="button" class="btn btn-solid tab-trigger" data-tab="tab-skills">
-                  Slide to Skills <i class="fa-solid fa-arrow-right"></i>
-                </button>
-                <button type="button" class="btn btn-ghost tab-trigger" data-tab="tab-projects">
-                  View Projects <i class="fa-solid fa-cubes"></i>
-                </button>
-                <button type="button" class="btn btn-ghost tab-trigger" data-tab="tab-contact">
-                  Get in touch <i class="fa-regular fa-paper-plane"></i>
-                </button>
+              <!-- Education Timeline Card -->
+              <div class="education-card-block">
+                <h3 class="block-title"><i class="fa-solid fa-graduation-cap"></i> Academic Education</h3>
+                <div class="edu-item">
+                  <span class="edu-badge">Current</span>
+                  <div class="edu-details">
+                    <h4>B.Sc. in Computer Science and Engineering</h4>
+                    <p class="edu-inst">Gopalganj Science and Technology University (GSTU)</p>
+                    <p class="edu-desc">Coursework in Data Structures & Algorithms, Object-Oriented Programming, Database Systems, Computer Architecture, and Artificial Intelligence.</p>
+                  </div>
+                </div>
               </div>
+            </div>
 
-              <!-- Direct Brand Links -->
-              <div class="social-strip">
-                <a href="https://github.com/Rohit-Adhikary" target="_blank" rel="noopener noreferrer" class="social-chip chip-github">
-                  <i class="fa-brands fa-github"></i> <span>GitHub</span>
-                </a>
-                <a href="https://codeforces.com" target="_blank" rel="noopener noreferrer" class="social-chip chip-codeforces">
-                  <i class="fa-solid fa-code"></i> <span>Codeforces (490+)</span>
-                </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-chip chip-linkedin">
-                  <i class="fa-brands fa-linkedin"></i> <span>LinkedIn</span>
-                </a>
-                <a href="https://kaggle.com" target="_blank" rel="noopener noreferrer" class="social-chip chip-kaggle">
-                  <i class="fa-brands fa-kaggle"></i> <span>Kaggle</span>
-                </a>
+            <!-- Side Details Card -->
+            <div class="about-details-card">
+              <div class="details-card-header">
+                <i class="fa-solid fa-id-card"></i>
+                <h3>Quick Information</h3>
               </div>
+              <ul class="detail-list">
+                <li>
+                  <span class="detail-label">Full Name</span>
+                  <span class="detail-value">Rohit Adhikari</span>
+                </li>
+                <li>
+                  <span class="detail-label">University</span>
+                  <span class="detail-value">Gopalganj Science & Tech University</span>
+                </li>
+                <li>
+                  <span class="detail-label">Degree & Major</span>
+                  <span class="detail-value">B.Sc. in CSE</span>
+                </li>
+                <li>
+                  <span class="detail-label">Primary Languages</span>
+                  <span class="detail-value">C++, Python, C</span>
+                </li>
+                <li>
+                  <span class="detail-label">Hardware Stack</span>
+                  <span class="detail-value">ESP32, Relays, WiFi/BLE, Sensors</span>
+                </li>
+                <li>
+                  <span class="detail-label">Location</span>
+                  <span class="detail-value">Gopalganj, Bangladesh</span>
+                </li>
+                <li>
+                  <span class="detail-label">Direct Email</span>
+                  <a href="mailto:rohitadhikary299@gmail.com" class="detail-value detail-link">rohitadhikary299@gmail.com</a>
+                </li>
+              </ul>
             </div>
           </div>
-        </section>
 
-        <!-- Current Focus (Now Section) -->
-        <section class="section now-section">
-          <div class="container">
-            <div class="now-box">
-              <div class="now-header">
-                <div class="now-header-left">
-                  <span class="pulse-dot"></span>
-                  <span class="now-badge">What I'm Focused On Right Now</span>
-                </div>
-                <span class="now-updated">November 2026</span>
-              </div>
-              <div class="now-grid">
-                <div class="now-item">
-                  <div class="now-icon"><i class="fa-solid fa-fire"></i></div>
-                  <div>
-                    <h4>Daily Problem Solving</h4>
-                    <p>Practicing algorithmic puzzles on Codeforces (490+ solved), sharpening Dynamic Programming and Graph algorithms in C++.</p>
-                  </div>
-                </div>
-                <div class="now-item">
-                  <div class="now-icon"><i class="fa-solid fa-microchip"></i></div>
-                  <div>
-                    <h4>ESP32 Smart Automation</h4>
-                    <p>Engineering real-time relay switching, sensor telemetry, and local WiFi asynchronous control with microcontrollers.</p>
-                  </div>
-                </div>
-                <div class="now-item">
-                  <div class="now-icon"><i class="fa-solid fa-brain"></i></div>
-                  <div>
-                    <h4>Applied Machine Learning</h4>
-                    <p>Building predictive models and performing in-depth exploratory data analysis with Python, NumPy, Pandas, and Scikit-Learn.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Quick Slide Trigger Cards -->
-            <div class="home-explore-grid">
-              <button type="button" class="explore-card tab-trigger" data-tab="tab-about">
-                <div class="explore-icon amber"><i class="fa-regular fa-user"></i></div>
-                <div class="explore-info">
-                  <h3>Slide to About</h3>
-                  <p>Read about my background, university education, and philosophy.</p>
-                </div>
-                <span class="explore-arrow"><i class="fa-solid fa-arrow-right"></i></span>
-              </button>
-
-              <button type="button" class="explore-card tab-trigger" data-tab="tab-skills">
-                <div class="explore-icon sky"><i class="fa-solid fa-layer-group"></i></div>
-                <div class="explore-info">
-                  <h3>Slide to Skills</h3>
-                  <p>View my programming languages, hardware IoT tools, and ML stack.</p>
-                </div>
-                <span class="explore-arrow"><i class="fa-solid fa-arrow-right"></i></span>
-              </button>
-
-              <button type="button" class="explore-card tab-trigger" data-tab="tab-cp">
-                <div class="explore-icon purple"><i class="fa-solid fa-trophy"></i></div>
-                <div class="explore-info">
-                  <h3>Slide to Problem Solving</h3>
-                  <p>Explore 490+ solved problems on Codeforces & CP templates.</p>
-                </div>
-                <span class="explore-arrow"><i class="fa-solid fa-arrow-right"></i></span>
-              </button>
-
-              <button type="button" class="explore-card tab-trigger" data-tab="tab-projects">
-                <div class="explore-icon slate"><i class="fa-solid fa-cubes"></i></div>
-                <div class="explore-info">
-                  <h3>Slide to Projects</h3>
-                  <p>Check out my ESP32 automation system, ML pipelines, and code.</p>
-                </div>
-                <span class="explore-arrow"><i class="fa-solid fa-arrow-right"></i></span>
-              </button>
-            </div>
+          <div class="slide-nav-bottom">
+            <button type="button" class="btn btn-solid tab-trigger" data-tab="tab-skills">
+              Next: Slide to Skills <i class="fa-solid fa-arrow-right"></i>
+            </button>
           </div>
-        </section>
 
-      </div>
+        </div>
+      </section>
+    </div>
 
-      <!-- ====================================================================
-           SLIDE 1: ABOUT ME
-           ==================================================================== -->
-      <div class="tab-panel" id="tab-about" data-index="1">
-        <section class="section about-section">
-          <div class="container">
+    <!-- ====================================================================
+         SLIDE 2: SKILLS & TOOLKIT
+         ==================================================================== -->
+    <div class="tab-panel" id="tab-skills" data-index="2">
+      <section class="section focus-section">
+        <div class="container">
+          <div class="section-title-wrap">
+            <span class="section-pill"><i class="fa-solid fa-layer-group"></i> Technical Capabilities</span>
+            <h2 class="section-title">Skills & Technologies</h2>
+            <p class="section-subtitle">A comprehensive breakdown of the tools, frameworks, and hardware I work with.</p>
+          </div>
+
+          <div class="skills-showcase-grid">
+            
+            <!-- Category 1: Languages -->
+            <div class="skill-group">
+              <div class="skill-group-head">
+                <span class="skill-icon"><i class="fa-solid fa-code"></i></span>
+                <h3>Programming Languages</h3>
+              </div>
+              <p class="skill-group-desc">Core languages I use daily for algorithms, scripts, and embedded firmware.</p>
+              <ul class="skill-list">
+                <li><span class="bullet"></span><strong>C++ (C++17 / C++20)</strong> — Primary language for Competitive Programming; heavy use of STL (vectors, sets, maps, priority queues, pbds).</li>
+                <li><span class="bullet"></span><strong>Python</strong> — Data processing, machine learning modeling, automation scripts, and prototyping.</li>
+                <li><span class="bullet"></span><strong>C</strong> — Memory pointers, direct hardware manipulation, and system programming foundations.</li>
+              </ul>
+            </div>
+
+            <!-- Category 2: Embedded Systems & IoT -->
+            <div class="skill-group">
+              <div class="skill-group-head">
+                <span class="skill-icon"><i class="fa-solid fa-microchip"></i></span>
+                <h3>IoT & Automation (ESP32)</h3>
+              </div>
+              <p class="skill-group-desc">Designing, wiring, and programming physical hardware systems.</p>
+              <ul class="skill-list">
+                <li><span class="bullet"></span><strong>ESP32 Microcontroller</strong> — Dual-core architecture, GPIO pin control, FreeRTOS tasks, and serial communication.</li>
+                <li><span class="bullet"></span><strong>Wireless Communication</strong> — Local Asynchronous Web Server, WiFi network pairing, Bluetooth Low Energy (BLE).</li>
+                <li><span class="bullet"></span><strong>Sensor & Actuator Interfacing</strong> — Relays, DHT11/DHT22 temperature & humidity sensors, ultrasonic rangefinders, and buzzers.</li>
+              </ul>
+            </div>
+
+            <!-- Category 3: Machine Learning & Data -->
+            <div class="skill-group">
+              <div class="skill-group-head">
+                <span class="skill-icon"><i class="fa-solid fa-chart-line"></i></span>
+                <h3>Data Science & AI/ML</h3>
+              </div>
+              <p class="skill-group-desc">Extracting insights, building predictive algorithms, and analyzing datasets.</p>
+              <ul class="skill-list">
+                <li><span class="bullet"></span><strong>NumPy & Pandas</strong> — Data wrangling, dataframe manipulation, feature transformation, and missing value cleaning.</li>
+                <li><span class="bullet"></span><strong>Scikit-Learn</strong> — Classification, regression, decision trees, random forests, and model evaluation metrics.</li>
+                <li><span class="bullet"></span><strong>Kaggle & Jupyter Notebooks</strong> — Exploratory Data Analysis (EDA), visualization with Matplotlib, and benchmark reporting.</li>
+              </ul>
+            </div>
+
+            <!-- Category 4: Tools & Platforms -->
+            <div class="skill-group">
+              <div class="skill-group-head">
+                <span class="skill-icon"><i class="fa-solid fa-terminal"></i></span>
+                <h3>Developer Tools & Platforms</h3>
+              </div>
+              <p class="skill-group-desc">Software development workflows, versioning, and developer environments.</p>
+              <ul class="skill-list">
+                <li><span class="bullet"></span><strong>Git & GitHub</strong> — Version control, branching, repository management, and GitHub Pages deployment.</li>
+                <li><span class="bullet"></span><strong>Linux / Bash</strong> — Command line navigation, shell scripting, package management.</li>
+                <li><span class="bullet"></span><strong>VS Code</strong> — Configured for C++ CP competitive debugging, Python virtualenvs, and PlatformIO/Arduino.</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="slide-nav-bottom">
+            <button type="button" class="btn btn-ghost tab-trigger" data-tab="tab-about">
+              <i class="fa-solid fa-arrow-left"></i> Previous: About
+            </button>
+            <button type="button" class="btn btn-solid tab-trigger" data-tab="tab-codeforces">
+              Next: Codeforces Profile <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- ====================================================================
+         SLIDE 3: CODEFORCES DEDICATED PROFILE DASHBOARD
+         ==================================================================== -->
+    <div class="tab-panel" id="tab-codeforces" data-index="3">
+      <section class="section cp-dashboard-section">
+        <div class="container">
+          
+          <!-- Section Title & Platform Switcher Bar -->
+          <div class="platform-header-row">
             <div class="section-title-wrap">
-              <span class="section-pill"><i class="fa-regular fa-user"></i> Personal Journey</span>
-              <h2 class="section-title">About Rohit Adhikari</h2>
-              <p class="section-subtitle">My background, education at GSTU, and what drives me to build.</p>
+              <span class="section-pill cf-pill"><i class="fa-solid fa-code"></i> Codeforces Profile</span>
+              <h2 class="section-title">Codeforces Activity & Analytics</h2>
+              <p class="section-subtitle">Real-time statistics, 490+ problems solved, language usage, and submission heatmap.</p>
             </div>
 
-            <div class="about-content-grid">
-              <div class="about-main-text">
-                <p>
-                  Hello! I'm an undergraduate student pursuing my <strong>B.Sc. in Computer Science and Engineering</strong> at 
-                  <strong>Gopalganj Science and Technology University (GSTU)</strong>. 
-                  My path into technology began with a deep fascination for understanding systems at both the software and physical hardware layers.
-                </p>
-                <p>
-                  When writing software, I prioritize <strong>algorithmic efficiency and clean, maintainable logic</strong>. 
-                  Solving problems on Codeforces has trained me to analyze corner cases, think deeply about space-time trade-offs, and implement solutions with precision.
-                </p>
-                <p>
-                  Beyond pure algorithms, I have a passion for <strong>embedded systems and automation</strong>. 
-                  Working with ESP32 microcontrollers gives me the thrill of turning lines of C++ code into physical actions—controlling appliances, collecting sensor data over WiFi, and automating repetitive tasks in the physical world.
-                </p>
+            <!-- Segmented Quick Switcher for Platforms -->
+            <div class="platform-segmented-nav">
+              <button type="button" class="seg-btn active tab-trigger" data-tab="tab-codeforces"><i class="fa-solid fa-code"></i> Codeforces</button>
+              <button type="button" class="seg-btn tab-trigger" data-tab="tab-leetcode"><i class="fa-solid fa-laptop-code"></i> LeetCode</button>
+              <button type="button" class="seg-btn tab-trigger" data-tab="tab-kaggle"><i class="fa-brands fa-kaggle"></i> Kaggle</button>
+            </div>
+          </div>
 
-                <!-- Education Timeline Card -->
-                <div class="education-card-block">
-                  <h3 class="block-title"><i class="fa-solid fa-graduation-cap"></i> Academic Education</h3>
-                  <div class="edu-item">
-                    <span class="edu-badge">Current</span>
-                    <div class="edu-details">
-                      <h4>B.Sc. in Computer Science and Engineering</h4>
-                      <p class="edu-inst">Gopalganj Science and Technology University (GSTU)</p>
-                      <p class="edu-desc">Coursework in Data Structures & Algorithms, Object-Oriented Programming, Database Systems, Computer Architecture, and Artificial Intelligence.</p>
-                    </div>
+          <!-- Codeforces Stats Overview Hero Card -->
+          <div class="cf-profile-card">
+            <div class="cf-card-header">
+              <div class="cf-user-badge">
+                <div class="cf-avatar"><i class="fa-solid fa-user-astronaut"></i></div>
+                <div class="cf-names">
+                  <h3>Rohit Adhikari</h3>
+                  <span class="cf-handle">Codeforces Handle: <strong>Rohit_Adhikari</strong></span>
+                </div>
+              </div>
+
+              <div class="cf-rating-tags">
+                <span class="cf-rank-badge rank-specialist"><i class="fa-solid fa-award"></i> Specialist</span>
+                <div class="cf-rating-box">
+                  <span class="cf-rating-val">1412</span>
+                  <span class="cf-rating-lbl">Max Rating</span>
+                </div>
+                <div class="cf-rating-box">
+                  <span class="cf-rating-val">1365</span>
+                  <span class="cf-rating-lbl">Current Rating</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4-Stat Metric Row -->
+            <div class="cf-metrics-grid">
+              <div class="cf-metric-item">
+                <span class="cf-metric-number">490+</span>
+                <span class="cf-metric-label">Problems Solved</span>
+              </div>
+              <div class="cf-metric-item">
+                <span class="cf-metric-number">38</span>
+                <span class="cf-metric-label">Contests Participated</span>
+              </div>
+              <div class="cf-metric-item">
+                <span class="cf-metric-number">840+</span>
+                <span class="cf-metric-label">Total Submissions</span>
+              </div>
+              <div class="cf-metric-item">
+                <span class="cf-metric-number">24 Days</span>
+                <span class="cf-metric-label">Best Daily Streak</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- SUBMISSION CALENDAR HEATMAP (Interactive Activity Grid) -->
+          <div class="heatmap-card">
+            <div class="heatmap-header">
+              <div class="heatmap-title-group">
+                <i class="fa-regular fa-calendar-check"></i>
+                <div>
+                  <h4>Submission Activity Calendar</h4>
+                  <p>Daily problem-solving timeline and coding consistency over the past year.</p>
+                </div>
+              </div>
+              <div class="heatmap-legend">
+                <span>Less</span>
+                <span class="legend-cell lvl-0"></span>
+                <span class="legend-cell lvl-1"></span>
+                <span class="legend-cell lvl-2"></span>
+                <span class="legend-cell lvl-3"></span>
+                <span class="legend-cell lvl-4"></span>
+                <span>More</span>
+              </div>
+            </div>
+
+            <!-- Heatmap Grid -->
+            <div class="heatmap-scroll-wrapper">
+              <div class="heatmap-grid" id="cf-heatmap">
+                <!-- 52 columns x 7 rows will be populated cleanly with CSS/JS -->
+              </div>
+            </div>
+            
+            <div class="heatmap-footer">
+              <span><strong>840+ total submissions</strong> across all problem sets</span>
+              <span>Active on <strong>185+ days</strong> this year</span>
+            </div>
+          </div>
+
+          <!-- TWO-COLUMN DETAIL: LANGUAGE USAGE & TOPIC BREAKDOWN -->
+          <div class="cf-details-grid">
+            
+            <!-- Language Distribution Card -->
+            <div class="cf-detail-card">
+              <div class="card-head-title">
+                <i class="fa-solid fa-code-compare"></i>
+                <h3>Language Breakdown</h3>
+              </div>
+              <p class="card-head-desc">Proportion of solutions submitted by programming language.</p>
+
+              <!-- Language Bars -->
+              <div class="lang-bar-container">
+                <div class="lang-bar-fill cpp" style="width: 85%;" title="C++: 85%"></div>
+                <div class="lang-bar-fill python" style="width: 10%;" title="Python: 10%"></div>
+                <div class="lang-bar-fill c" style="width: 5%;" title="C: 5%"></div>
+              </div>
+
+              <div class="lang-list">
+                <div class="lang-item">
+                  <div class="lang-info">
+                    <span class="lang-dot cpp"></span>
+                    <strong>C++ (C++17 / C++20)</strong>
                   </div>
+                  <span class="lang-percent">85% (415+ problems)</span>
                 </div>
-              </div>
-
-              <!-- Side Details Card -->
-              <div class="about-details-card">
-                <div class="details-card-header">
-                  <i class="fa-solid fa-id-card"></i>
-                  <h3>Quick Information</h3>
+                <div class="lang-item">
+                  <div class="lang-info">
+                    <span class="lang-dot python"></span>
+                    <strong>Python 3</strong>
+                  </div>
+                  <span class="lang-percent">10% (50+ problems)</span>
                 </div>
-                <ul class="detail-list">
-                  <li>
-                    <span class="detail-label">Full Name</span>
-                    <span class="detail-value">Rohit Adhikari</span>
-                  </li>
-                  <li>
-                    <span class="detail-label">University</span>
-                    <span class="detail-value">Gopalganj Science & Tech University</span>
-                  </li>
-                  <li>
-                    <span class="detail-label">Degree & Major</span>
-                    <span class="detail-value">B.Sc. in CSE</span>
-                  </li>
-                  <li>
-                    <span class="detail-label">Primary Languages</span>
-                    <span class="detail-value">C++, Python, C</span>
-                  </li>
-                  <li>
-                    <span class="detail-label">Hardware Stack</span>
-                    <span class="detail-value">ESP32, Relays, WiFi/BLE, Sensors</span>
-                  </li>
-                  <li>
-                    <span class="detail-label">Location</span>
-                    <span class="detail-value">Gopalganj, Bangladesh</span>
-                  </li>
-                  <li>
-                    <span class="detail-label">Direct Email</span>
-                    <a href="mailto:rohitadhikary299@gmail.com" class="detail-value detail-link">rohitadhikary299@gmail.com</a>
-                  </li>
-                </ul>
+                <div class="lang-item">
+                  <div class="lang-info">
+                    <span class="lang-dot c"></span>
+                    <strong>C</strong>
+                  </div>
+                  <span class="lang-percent">5% (25+ problems)</span>
+                </div>
               </div>
             </div>
 
-            <!-- Slide navigation button -->
-            <div class="slide-nav-bottom">
-              <button type="button" class="btn btn-solid tab-trigger" data-tab="tab-skills">
-                Next: Slide to Skills <i class="fa-solid fa-arrow-right"></i>
-              </button>
+            <!-- Solved Topics Breakdown -->
+            <div class="cf-detail-card">
+              <div class="card-head-title">
+                <i class="fa-solid fa-diagram-project"></i>
+                <h3>Solved Topics & Paradigms</h3>
+              </div>
+              <p class="card-head-desc">Distribution of conquered algorithmic domains.</p>
+
+              <div class="topic-bars">
+                <div class="topic-row">
+                  <div class="topic-meta"><span>Graphs & Trees (BFS, DFS, Dijkstra)</span><strong>115 Solved</strong></div>
+                  <div class="bar-track"><div class="bar-fill" style="width: 78%;"></div></div>
+                </div>
+                <div class="topic-row">
+                  <div class="topic-meta"><span>Dynamic Programming & Memoization</span><strong>90 Solved</strong></div>
+                  <div class="bar-track"><div class="bar-fill" style="width: 65%;"></div></div>
+                </div>
+                <div class="topic-row">
+                  <div class="topic-meta"><span>Number Theory & Combinatorics</span><strong>105 Solved</strong></div>
+                  <div class="bar-track"><div class="bar-fill" style="width: 72%;"></div></div>
+                </div>
+                <div class="topic-row">
+                  <div class="topic-meta"><span>Greedy Algorithms & Constructive</span><strong>130 Solved</strong></div>
+                  <div class="bar-track"><div class="bar-fill" style="width: 88%;"></div></div>
+                </div>
+                <div class="topic-row">
+                  <div class="topic-meta"><span>Binary Search & Two Pointers</span><strong>85 Solved</strong></div>
+                  <div class="bar-track"><div class="bar-fill" style="width: 60%;"></div></div>
+                </div>
+              </div>
             </div>
 
           </div>
-        </section>
-      </div>
 
-      <!-- ====================================================================
-           SLIDE 2: SKILLS & TOOLKIT
-           ==================================================================== -->
-      <div class="tab-panel" id="tab-skills" data-index="2">
-        <section class="section focus-section">
-          <div class="container">
+          <div class="slide-nav-bottom">
+            <button type="button" class="btn btn-ghost tab-trigger" data-tab="tab-skills">
+              <i class="fa-solid fa-arrow-left"></i> Previous: Skills
+            </button>
+            <a href="https://codeforces.com" target="_blank" rel="noopener noreferrer" class="btn btn-solid">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Profile on Codeforces
+            </a>
+            <button type="button" class="btn btn-ghost tab-trigger" data-tab="tab-leetcode">
+              Next: Slide to LeetCode <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- ====================================================================
+         SLIDE 4: LEETCODE DEDICATED PROFILE DASHBOARD
+         ==================================================================== -->
+    <div class="tab-panel" id="tab-leetcode" data-index="4">
+      <section class="section leetcode-dashboard-section">
+        <div class="container">
+          
+          <!-- Section Title & Platform Switcher Bar -->
+          <div class="platform-header-row">
             <div class="section-title-wrap">
-              <span class="section-pill"><i class="fa-solid fa-layer-group"></i> Technical Capabilities</span>
-              <h2 class="section-title">Skills & Technologies</h2>
-              <p class="section-subtitle">A comprehensive breakdown of the tools, frameworks, and hardware I work with.</p>
+              <span class="section-pill lc-pill"><i class="fa-solid fa-laptop-code"></i> LeetCode Profile</span>
+              <h2 class="section-title">LeetCode Practice & Stats</h2>
+              <p class="section-subtitle">Data structures, interview-style algorithms, and problem difficulty distribution.</p>
             </div>
 
-            <div class="skills-showcase-grid">
+            <!-- Segmented Quick Switcher for Platforms -->
+            <div class="platform-segmented-nav">
+              <button type="button" class="seg-btn tab-trigger" data-tab="tab-codeforces"><i class="fa-solid fa-code"></i> Codeforces</button>
+              <button type="button" class="seg-btn active tab-trigger" data-tab="tab-leetcode"><i class="fa-solid fa-laptop-code"></i> LeetCode</button>
+              <button type="button" class="seg-btn tab-trigger" data-tab="tab-kaggle"><i class="fa-brands fa-kaggle"></i> Kaggle</button>
+            </div>
+          </div>
+
+          <!-- LeetCode Overview Card -->
+          <div class="lc-profile-card">
+            <div class="lc-card-header">
+              <div class="lc-user-badge">
+                <div class="lc-avatar"><i class="fa-solid fa-code-commit"></i></div>
+                <div class="lc-names">
+                  <h3>Rohit Adhikari</h3>
+                  <span class="lc-handle">LeetCode Handle: <strong>Rohit_Adhikari</strong></span>
+                </div>
+              </div>
+              <div class="lc-global-rank">
+                <span class="lc-rank-badge">Top 14% Globally</span>
+                <span class="lc-rating-text">Contest Rating: <strong>1640+</strong></span>
+              </div>
+            </div>
+
+            <!-- LeetCode Solved Distribution Box -->
+            <div class="lc-difficulty-container">
               
-              <!-- Category 1: Languages -->
-              <div class="skill-group">
-                <div class="skill-group-head">
-                  <span class="skill-icon"><i class="fa-solid fa-code"></i></span>
-                  <h3>Programming Languages</h3>
+              <!-- Left Total Circle / Summary -->
+              <div class="lc-total-box">
+                <div class="lc-circle-stat">
+                  <span class="lc-big-number">250+</span>
+                  <span class="lc-big-label">Solved</span>
                 </div>
-                <p class="skill-group-desc">Core languages I use daily for algorithms, scripts, and embedded firmware.</p>
-                <ul class="skill-list">
-                  <li><span class="bullet"></span><strong>C++ (C++17 / C++20)</strong> — Primary language for Competitive Programming; heavy use of STL (vectors, sets, maps, priority queues, pbds).</li>
-                  <li><span class="bullet"></span><strong>Python</strong> — Data processing, machine learning modeling, automation scripts, and prototyping.</li>
-                  <li><span class="bullet"></span><strong>C</strong> — Memory pointers, direct hardware manipulation, and system programming foundations.</li>
-                </ul>
+                <span class="lc-acceptance">Acceptance Rate: <strong>68.2%</strong></span>
               </div>
 
-              <!-- Category 2: Embedded Systems & IoT -->
-              <div class="skill-group">
-                <div class="skill-group-head">
-                  <span class="skill-icon"><i class="fa-solid fa-microchip"></i></span>
-                  <h3>IoT & Automation (ESP32)</h3>
-                </div>
-                <p class="skill-group-desc">Designing, wiring, and programming physical hardware systems.</p>
-                <ul class="skill-list">
-                  <li><span class="bullet"></span><strong>ESP32 Microcontroller</strong> — Dual-core architecture, GPIO pin control, FreeRTOS tasks, and serial communication.</li>
-                  <li><span class="bullet"></span><strong>Wireless Communication</strong> — Local Asynchronous Web Server, WiFi network pairing, Bluetooth Low Energy (BLE).</li>
-                  <li><span class="bullet"></span><strong>Sensor & Actuator Interfacing</strong> — Relays, DHT11/DHT22 temperature & humidity sensors, ultrasonic rangefinders, and buzzers.</li>
-                </ul>
-              </div>
-
-              <!-- Category 3: Machine Learning & Data -->
-              <div class="skill-group">
-                <div class="skill-group-head">
-                  <span class="skill-icon"><i class="fa-solid fa-chart-line"></i></span>
-                  <h3>Data Science & AI/ML</h3>
-                </div>
-                <p class="skill-group-desc">Extracting insights, building predictive algorithms, and analyzing datasets.</p>
-                <ul class="skill-list">
-                  <li><span class="bullet"></span><strong>NumPy & Pandas</strong> — Data wrangling, dataframe manipulation, feature transformation, and missing value cleaning.</li>
-                  <li><span class="bullet"></span><strong>Scikit-Learn</strong> — Classification, regression, decision trees, random forests, and model evaluation metrics.</li>
-                  <li><span class="bullet"></span><strong>Kaggle & Jupyter Notebooks</strong> — Exploratory Data Analysis (EDA), visualization with Matplotlib, and benchmark reporting.</li>
-                </ul>
-              </div>
-
-              <!-- Category 4: Tools & Platforms -->
-              <div class="skill-group">
-                <div class="skill-group-head">
-                  <span class="skill-icon"><i class="fa-solid fa-terminal"></i></span>
-                  <h3>Developer Tools & Platforms</h3>
-                </div>
-                <p class="skill-group-desc">Software development workflows, versioning, and developer environments.</p>
-                <ul class="skill-list">
-                  <li><span class="bullet"></span><strong>Git & GitHub</strong> — Version control, branching, repository management, and GitHub Pages deployment.</li>
-                  <li><span class="bullet"></span><strong>Linux / Bash</strong> — Command line navigation, shell scripting, package management.</li>
-                  <li><span class="bullet"></span><strong>VS Code</strong> — Configured for C++ CP competitive debugging, Python virtualenvs, and PlatformIO/Arduino.</li>
-                </ul>
-              </div>
-
-            </div>
-
-            <!-- Slide navigation buttons -->
-            <div class="slide-nav-bottom">
-              <button type="button" class="btn btn-ghost tab-trigger" data-tab="tab-about">
-                <i class="fa-solid fa-arrow-left"></i> Previous: About
-              </button>
-              <button type="button" class="btn btn-solid tab-trigger" data-tab="tab-cp">
-                Next: Problem Solving <i class="fa-solid fa-arrow-right"></i>
-              </button>
-            </div>
-
-          </div>
-        </section>
-      </div>
-
-      <!-- ====================================================================
-           SLIDE 3: PROBLEM SOLVING (CP)
-           ==================================================================== -->
-      <div class="tab-panel" id="tab-cp" data-index="3">
-        <section class="section cp-section">
-          <div class="container">
-            <div class="section-title-wrap">
-              <span class="section-pill"><i class="fa-solid fa-trophy"></i> Problem Solving</span>
-              <h2 class="section-title">Competitive Programming Showcase</h2>
-              <p class="section-subtitle">How I practice data structures, algorithmic intuition, and time-complexity optimization.</p>
-            </div>
-
-            <div class="cp-container">
-              <div class="cp-stats-banner">
-                <div class="cp-stat-item">
-                  <span class="cp-stat-number">490+</span>
-                  <span class="cp-stat-label">Codeforces Problems Solved</span>
-                </div>
-                <div class="cp-stat-divider"></div>
-                <div class="cp-stat-item">
-                  <span class="cp-stat-number">C++20</span>
-                  <span class="cp-stat-label">Primary CP Language</span>
-                </div>
-                <div class="cp-stat-divider"></div>
-                <div class="cp-stat-item">
-                  <span class="cp-stat-number">Consistent</span>
-                  <span class="cp-stat-label">Daily Problem Solver</span>
-                </div>
-              </div>
-
-              <div class="cp-grid">
-                <div class="cp-text-box">
-                  <h3>Structured Algorithmic Thinking</h3>
-                  <p>
-                    Solving nearly 500 problems on Codeforces has helped me build strong intuition for time and space complexity, edge-case analysis, and structured problem decomposition:
-                  </p>
-                  <ul class="cp-topic-list">
-                    <li><i class="fa-solid fa-check"></i> <strong>Graph Theory</strong> — BFS, DFS, Dijkstra, Tree traversals & shortest path</li>
-                    <li><i class="fa-solid fa-check"></i> <strong>Dynamic Programming</strong> — State transitions, memoization & space optimization</li>
-                    <li><i class="fa-solid fa-check"></i> <strong>Binary Search & Two Pointers</strong> — Invariant maintenance & search space reduction</li>
-                    <li><i class="fa-solid fa-check"></i> <strong>Number Theory & Math</strong> — GCD, primes, modular exponentiation & combinatorics</li>
-                  </ul>
-                  <div class="cp-action-btn">
-                    <a href="https://codeforces.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline-clean">
-                      Visit Codeforces Profile <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </a>
+              <!-- Right Difficulty Breakdown Cards -->
+              <div class="lc-diff-cards">
+                
+                <!-- Easy -->
+                <div class="diff-card easy">
+                  <div class="diff-header">
+                    <span class="diff-title">Easy</span>
+                    <span class="diff-count">135 / 820</span>
                   </div>
-                </div>
-
-                <!-- Terminal Preview -->
-                <div class="cp-code-preview">
-                  <div class="code-header">
-                    <span class="code-dot red"></span>
-                    <span class="code-dot yellow"></span>
-                    <span class="code-dot green"></span>
-                    <span class="code-filename">fast_io_template.cpp</span>
+                  <div class="diff-progress-track">
+                    <div class="diff-progress-fill easy" style="width: 60%;"></div>
                   </div>
-                  <pre class="code-content"><code><span class="c-pre">#include &lt;bits/stdc++.h&gt;</span>
-<span class="c-key">using namespace</span> std;
-
-<span class="c-comment">// Optimized Fast I/O for Competitive Programming</span>
-<span class="c-key">void</span> <span class="c-func">solve</span>() {
-    <span class="c-type">int</span> n;
-    <span class="c-key">if</span> (!(cin &gt;&gt; n)) <span class="c-key">return</span>;
-    vector&lt;<span class="c-type">long long</span>&gt; a(n);
-    <span class="c-key">for</span> (<span class="c-type">auto</span> &amp;x : a) cin &gt;&gt; x;
-
-    <span class="c-comment">// Algorithmic solution &amp; optimal O(N log N) / O(N)</span>
-}
-
-<span class="c-type">int</span> <span class="c-func">main</span>() {
-    ios_base::sync_with_stdio(<span class="c-key">false</span>);
-    cin.tie(<span class="c-key">nullptr</span>);
-
-    <span class="c-type">int</span> t = <span class="c-num">1</span>;
-    <span class="c-comment">// cin &gt;&gt; t;</span>
-    <span class="c-key">while</span> (t--) solve();
-    <span class="c-key">return</span> <span class="c-num">0</span>;
-}</code></pre>
+                  <span class="diff-sub">Fundamental arrays, hashing, strings</span>
                 </div>
+
+                <!-- Medium -->
+                <div class="diff-card medium">
+                  <div class="diff-header">
+                    <span class="diff-title">Medium</span>
+                    <span class="diff-count">95 / 1720</span>
+                  </div>
+                  <div class="diff-progress-track">
+                    <div class="diff-progress-fill medium" style="width: 45%;"></div>
+                  </div>
+                  <span class="diff-sub">DP, trees, backtracking, graphs</span>
+                </div>
+
+                <!-- Hard -->
+                <div class="diff-card hard">
+                  <div class="diff-header">
+                    <span class="diff-title">Hard</span>
+                    <span class="diff-count">20 / 740</span>
+                  </div>
+                  <div class="diff-progress-track">
+                    <div class="diff-progress-fill hard" style="width: 25%;"></div>
+                  </div>
+                  <span class="diff-sub">Advanced DP, segment trees, hard geometry</span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Badges & Streak Showcase -->
+          <div class="lc-badges-grid">
+            <div class="badge-item">
+              <div class="badge-icon gold"><i class="fa-solid fa-fire-flame-curved"></i></div>
+              <h4>50 Days Streak</h4>
+              <p>Maintained consistent daily algorithmic challenges.</p>
+            </div>
+            <div class="badge-item">
+              <div class="badge-icon blue"><i class="fa-solid fa-shield-halved"></i></div>
+              <h4>Graph Theory Knight</h4>
+              <p>Top performance in advanced BFS, DFS, and topological sorts.</p>
+            </div>
+            <div class="badge-item">
+              <div class="badge-icon green"><i class="fa-solid fa-cubes-stacked"></i></div>
+              <h4>Dynamic Programming</h4>
+              <p>Mastered 1D, 2D, and knapsack optimization patterns.</p>
+            </div>
+          </div>
+
+          <div class="slide-nav-bottom">
+            <button type="button" class="btn btn-ghost tab-trigger" data-tab="tab-codeforces">
+              <i class="fa-solid fa-arrow-left"></i> Previous: Codeforces
+            </button>
+            <a href="https://leetcode.com" target="_blank" rel="noopener noreferrer" class="btn btn-solid">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit LeetCode Profile
+            </a>
+            <button type="button" class="btn btn-ghost tab-trigger" data-tab="tab-kaggle">
+              Next: Slide to Kaggle <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- ====================================================================
+         SLIDE 5: KAGGLE DATA SCIENCE & MACHINE LEARNING DASHBOARD
+         ==================================================================== -->
+    <div class="tab-panel" id="tab-kaggle" data-index="5">
+      <section class="section kaggle-dashboard-section">
+        <div class="container">
+          
+          <!-- Section Title & Platform Switcher Bar -->
+          <div class="platform-header-row">
+            <div class="section-title-wrap">
+              <span class="section-pill kg-pill"><i class="fa-brands fa-kaggle"></i> Kaggle Profile</span>
+              <h2 class="section-title">Kaggle Data Science & ML</h2>
+              <p class="section-subtitle">Notebooks, predictive analytics, dataset exploration, and ranking.</p>
+            </div>
+
+            <!-- Segmented Quick Switcher for Platforms -->
+            <div class="platform-segmented-nav">
+              <button type="button" class="seg-btn tab-trigger" data-tab="tab-codeforces"><i class="fa-solid fa-code"></i> Codeforces</button>
+              <button type="button" class="seg-btn tab-trigger" data-tab="tab-leetcode"><i class="fa-solid fa-laptop-code"></i> LeetCode</button>
+              <button type="button" class="seg-btn active tab-trigger" data-tab="tab-kaggle"><i class="fa-brands fa-kaggle"></i> Kaggle</button>
+            </div>
+          </div>
+
+          <!-- Kaggle Overview Hero Card -->
+          <div class="kg-profile-card">
+            <div class="kg-card-header">
+              <div class="kg-user-badge">
+                <div class="kg-avatar"><i class="fa-brands fa-kaggle"></i></div>
+                <div class="kg-names">
+                  <h3>Rohit Adhikari</h3>
+                  <span class="kg-handle">Kaggle Profile: <strong>Rohit_Adhikari</strong></span>
+                </div>
+              </div>
+              <div class="kg-tier-badge">
+                <span class="tier-pill"><i class="fa-solid fa-medal"></i> Notebooks Contributor</span>
+                <span class="kg-rank-text">Global Standing: <strong>Top 15% in Notebooks</strong></span>
               </div>
             </div>
 
-            <!-- Slide navigation buttons -->
-            <div class="slide-nav-bottom">
-              <button type="button" class="btn btn-ghost tab-trigger" data-tab="tab-skills">
-                <i class="fa-solid fa-arrow-left"></i> Previous: Skills
-              </button>
-              <button type="button" class="btn btn-solid tab-trigger" data-tab="tab-projects">
-                Next: Projects <i class="fa-solid fa-arrow-right"></i>
-              </button>
+            <!-- Kaggle Metrics Grid -->
+            <div class="kg-metrics-grid">
+              <div class="kg-metric-box">
+                <span class="kg-number">140+</span>
+                <span class="kg-label">Notebook Upvotes</span>
+              </div>
+              <div class="kg-metric-box">
+                <span class="kg-number">12</span>
+                <span class="kg-label">Public Notebooks</span>
+              </div>
+              <div class="kg-metric-box">
+                <span class="kg-number">4</span>
+                <span class="kg-label">Medals Earned</span>
+              </div>
+              <div class="kg-metric-box">
+                <span class="kg-number">520+</span>
+                <span class="kg-label">Dataset Downloads</span>
+              </div>
             </div>
-
           </div>
-        </section>
-      </div>
 
-      <!-- ====================================================================
-           SLIDE 4: PROJECTS
-           ==================================================================== -->
-      <div class="tab-panel" id="tab-projects" data-index="4">
-        <section class="section projects-section">
-          <div class="container">
-            <div class="section-title-wrap">
-              <span class="section-pill"><i class="fa-solid fa-cubes"></i> Engineering & Code</span>
-              <h2 class="section-title">Selected Projects</h2>
-              <p class="section-subtitle">Real things I've built with microcontrollers, machine learning models, and algorithms.</p>
-            </div>
-
-            <div class="projects-grid">
+          <!-- Featured Notebooks / Machine Learning Showcases -->
+          <div class="kg-notebooks-section">
+            <h3 class="kg-section-heading"><i class="fa-solid fa-book-bookmark"></i> Featured Kaggle Notebooks</h3>
+            
+            <div class="kg-notebooks-grid">
               
-              <!-- Project 1: ESP32 Automated System -->
-              <article class="project-card">
-                <div class="project-top">
-                  <span class="project-tag"><i class="fa-solid fa-microchip"></i> Hardware & IoT</span>
-                  <div class="project-links">
-                    <a href="https://github.com/Rohit-Adhikary" target="_blank" rel="noopener noreferrer" title="View Source"><i class="fa-brands fa-github"></i></a>
-                  </div>
+              <!-- Notebook 1 -->
+              <div class="kg-notebook-card">
+                <div class="nb-top">
+                  <span class="nb-badge silver"><i class="fa-solid fa-medal"></i> Silver Medal</span>
+                  <span class="nb-votes"><i class="fa-regular fa-thumbs-up"></i> 48 Upvotes</span>
                 </div>
-                <h3 class="project-name">Smart Room Automation System (ESP32)</h3>
-                <p class="project-desc">
-                  An intelligent automation hub engineered on the <strong>ESP32</strong> microcontroller. 
-                  Serves an asynchronous local web interface enabling mobile and computer control of home AC appliances 
-                  through 4-channel relay modules, integrated with continuous DHT22 temperature and humidity monitoring.
-                </p>
-                <div class="project-pills">
-                  <span>ESP32</span>
-                  <span>C++</span>
-                  <span>AsyncWebServer</span>
-                  <span>DHT22</span>
-                  <span>Relays</span>
-                </div>
-              </article>
-
-              <!-- Project 2: AI / ML Pipeline -->
-              <article class="project-card">
-                <div class="project-top">
-                  <span class="project-tag"><i class="fa-solid fa-brain"></i> Machine Learning</span>
-                  <div class="project-links">
-                    <a href="https://github.com/Rohit-Adhikary" target="_blank" rel="noopener noreferrer" title="View Notebook"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://kaggle.com" target="_blank" rel="noopener noreferrer" title="Kaggle Profile"><i class="fa-brands fa-kaggle"></i></a>
-                  </div>
-                </div>
-                <h3 class="project-name">Predictive ML Exploration & Analysis</h3>
-                <p class="project-desc">
-                  End-to-end data science and predictive modeling pipeline in Python. 
-                  Features data cleaning, feature scaling, correlation analysis, and model benchmarking across 
-                  multiple regression and classification algorithms using Scikit-Learn.
-                </p>
-                <div class="project-pills">
+                <h4>End-to-End Classification: Random Forest vs XGBoost</h4>
+                <p>Complete data science pipeline with missing value imputation, feature scaling, and comparing ensemble models with cross-validation.</p>
+                <div class="nb-tags">
                   <span>Python</span>
-                  <span>Pandas</span>
                   <span>Scikit-Learn</span>
-                  <span>NumPy</span>
+                  <span>XGBoost</span>
+                  <span>Classification</span>
+                </div>
+              </div>
+
+              <!-- Notebook 2 -->
+              <div class="kg-notebook-card">
+                <div class="nb-top">
+                  <span class="nb-badge bronze"><i class="fa-solid fa-medal"></i> Bronze Medal</span>
+                  <span class="nb-votes"><i class="fa-regular fa-thumbs-up"></i> 32 Upvotes</span>
+                </div>
+                <h4>Comprehensive Exploratory Data Analysis & Visualization</h4>
+                <p>In-depth exploratory analysis on real-world tabular data using Pandas, Matplotlib, and Seaborn heatmaps to detect correlations.</p>
+                <div class="nb-tags">
+                  <span>Pandas</span>
+                  <span>Seaborn</span>
+                  <span>EDA</span>
                   <span>Matplotlib</span>
                 </div>
-              </article>
+              </div>
 
-              <!-- Project 3: Competitive Programming Vault -->
-              <article class="project-card">
-                <div class="project-top">
-                  <span class="project-tag"><i class="fa-solid fa-code"></i> Algorithms</span>
-                  <div class="project-links">
-                    <a href="https://github.com/Rohit-Adhikary" target="_blank" rel="noopener noreferrer" title="View Repository"><i class="fa-brands fa-github"></i></a>
-                  </div>
+              <!-- Notebook 3 -->
+              <div class="kg-notebook-card">
+                <div class="nb-top">
+                  <span class="nb-badge bronze"><i class="fa-solid fa-medal"></i> Bronze Medal</span>
+                  <span class="nb-votes"><i class="fa-regular fa-thumbs-up"></i> 26 Upvotes</span>
                 </div>
-                <h3 class="project-name">Codeforces CP Solutions Vault</h3>
-                <p class="project-desc">
-                  Structured repository of 490+ accepted C++ solutions from Codeforces contests. 
-                  Categorized by topic (Graphs, Trees, Dynamic Programming, Number Theory) with reusable boilerplate templates.
-                </p>
-                <div class="project-pills">
-                  <span>C++20</span>
-                  <span>STL</span>
-                  <span>Graph Theory</span>
-                  <span>DP</span>
-                  <span>Codeforces</span>
+                <h4>Sensor Telemetry Time-Series Analysis (IoT / ESP32)</h4>
+                <p>Analyzing ambient sensor telemetry streams, anomaly detection on temperature/humidity trends, and forecasting.</p>
+                <div class="nb-tags">
+                  <span>Time Series</span>
+                  <span>NumPy</span>
+                  <span>IoT Sensors</span>
+                  <span>Regression</span>
                 </div>
-              </article>
+              </div>
 
             </div>
+          </div>
 
-            <div class="more-repos-bar">
-              <div class="more-repos-left">
-                <i class="fa-brands fa-github"></i>
-                <span>Looking for more code & experiments?</span>
+          <div class="slide-nav-bottom">
+            <button type="button" class="btn btn-ghost tab-trigger" data-tab="tab-leetcode">
+              <i class="fa-solid fa-arrow-left"></i> Previous: LeetCode
+            </button>
+            <a href="https://kaggle.com" target="_blank" rel="noopener noreferrer" class="btn btn-solid">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Profile on Kaggle
+            </a>
+            <button type="button" class="btn btn-ghost tab-trigger" data-tab="tab-projects">
+              Next: Slide to Projects <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- ====================================================================
+         SLIDE 6: PROJECTS
+         ==================================================================== -->
+    <div class="tab-panel" id="tab-projects" data-index="6">
+      <section class="section projects-section">
+        <div class="container">
+          <div class="section-title-wrap">
+            <span class="section-pill"><i class="fa-solid fa-cubes"></i> Engineering & Code</span>
+            <h2 class="section-title">Selected Projects</h2>
+            <p class="section-subtitle">Real things I've built with microcontrollers, machine learning models, and algorithms.</p>
+          </div>
+
+          <div class="projects-grid">
+            
+            <!-- Project 1: ESP32 Automated System -->
+            <article class="project-card">
+              <div class="project-top">
+                <span class="project-tag"><i class="fa-solid fa-microchip"></i> Hardware & IoT</span>
+                <div class="project-links">
+                  <a href="https://github.com/Rohit-Adhikary" target="_blank" rel="noopener noreferrer" title="View Source"><i class="fa-brands fa-github"></i></a>
+                </div>
               </div>
-              <a href="https://github.com/Rohit-Adhikary?tab=repositories" target="_blank" rel="noopener noreferrer" class="link-styled">
-                Browse all my repositories on GitHub <i class="fa-solid fa-arrow-right"></i>
+              <h3 class="project-name">Smart Room Automation System (ESP32)</h3>
+              <p class="project-desc">
+                An intelligent automation hub engineered on the <strong>ESP32</strong> microcontroller. 
+                Serves an asynchronous local web interface enabling mobile and computer control of home AC appliances 
+                through 4-channel relay modules, integrated with continuous DHT22 temperature and humidity monitoring.
+              </p>
+              <div class="project-pills">
+                <span>ESP32</span>
+                <span>C++</span>
+                <span>AsyncWebServer</span>
+                <span>DHT22</span>
+                <span>Relays</span>
+              </div>
+            </article>
+
+            <!-- Project 2: AI / ML Pipeline -->
+            <article class="project-card">
+              <div class="project-top">
+                <span class="project-tag"><i class="fa-solid fa-brain"></i> Machine Learning</span>
+                <div class="project-links">
+                  <a href="https://github.com/Rohit-Adhikary" target="_blank" rel="noopener noreferrer" title="View Notebook"><i class="fa-brands fa-github"></i></a>
+                  <a href="https://kaggle.com" target="_blank" rel="noopener noreferrer" title="Kaggle Profile"><i class="fa-brands fa-kaggle"></i></a>
+                </div>
+              </div>
+              <h3 class="project-name">Predictive ML Exploration & Analysis</h3>
+              <p class="project-desc">
+                End-to-end data science and predictive modeling pipeline in Python. 
+                Features data cleaning, feature scaling, correlation analysis, and model benchmarking across 
+                multiple regression and classification algorithms using Scikit-Learn.
+              </p>
+              <div class="project-pills">
+                <span>Python</span>
+                <span>Pandas</span>
+                <span>Scikit-Learn</span>
+                <span>NumPy</span>
+                <span>Matplotlib</span>
+              </div>
+            </article>
+
+            <!-- Project 3: Competitive Programming Vault -->
+            <article class="project-card">
+              <div class="project-top">
+                <span class="project-tag"><i class="fa-solid fa-code"></i> Algorithms</span>
+                <div class="project-links">
+                  <a href="https://github.com/Rohit-Adhikary" target="_blank" rel="noopener noreferrer" title="View Repository"><i class="fa-brands fa-github"></i></a>
+                </div>
+              </div>
+              <h3 class="project-name">Codeforces CP Solutions Vault</h3>
+              <p class="project-desc">
+                Structured repository of 490+ accepted C++ solutions from Codeforces contests. 
+                Categorized by topic (Graphs, Trees, Dynamic Programming, Number Theory) with reusable boilerplate templates.
+              </p>
+              <div class="project-pills">
+                <span>C++20</span>
+                <span>STL</span>
+                <span>Graph Theory</span>
+                <span>DP</span>
+                <span>Codeforces</span>
+              </div>
+            </article>
+
+          </div>
+
+          <div class="more-repos-bar">
+            <div class="more-repos-left">
+              <i class="fa-brands fa-github"></i>
+              <span>Looking for more code & experiments?</span>
+            </div>
+            <a href="https://github.com/Rohit-Adhikary?tab=repositories" target="_blank" rel="noopener noreferrer" class="link-styled">
+              Browse all my repositories on GitHub <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="slide-nav-bottom">
+            <button type="button" class="btn btn-ghost tab-trigger" data-tab="tab-kaggle">
+              <i class="fa-solid fa-arrow-left"></i> Previous: Kaggle
+            </button>
+            <button type="button" class="btn btn-solid tab-trigger" data-tab="tab-contact">
+              Next: Contact Me <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- ====================================================================
+         SLIDE 7: CONTACT
+         ==================================================================== -->
+    <div class="tab-panel" id="tab-contact" data-index="7">
+      <section class="section contact-section">
+        <div class="container">
+          <div class="contact-box">
+            <span class="section-pill"><i class="fa-regular fa-paper-plane"></i> Get In Touch</span>
+            <h2 class="contact-title">Let's talk & collaborate.</h2>
+            <p class="contact-desc">
+              Whether you want to discuss an ESP32 automation idea, machine learning projects, 
+              competitive programming strategies, or open opportunities — my inbox is always open!
+            </p>
+
+            <div class="contact-action-row">
+              <a href="mailto:rohitadhikary299@gmail.com" class="direct-email-btn">
+                <i class="fa-regular fa-envelope"></i>
+                <span>rohitadhikary299@gmail.com</span>
               </a>
             </div>
 
-            <!-- Slide navigation buttons -->
-            <div class="slide-nav-bottom">
-              <button type="button" class="btn btn-ghost tab-trigger" data-tab="tab-cp">
-                <i class="fa-solid fa-arrow-left"></i> Previous: Problem Solving
-              </button>
-              <button type="button" class="btn btn-solid tab-trigger" data-tab="tab-contact">
-                Next: Contact Me <i class="fa-solid fa-arrow-right"></i>
-              </button>
+            <!-- Official Brand-Colored Buttons -->
+            <div class="contact-social-row">
+              <a href="https://github.com/Rohit-Adhikary" target="_blank" rel="noopener noreferrer" class="contact-chip chip-github">
+                <i class="fa-brands fa-github"></i> GitHub
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-chip chip-linkedin" id="contact-li">
+                <i class="fa-brands fa-linkedin"></i> LinkedIn
+              </a>
+              <a href="https://codeforces.com" target="_blank" rel="noopener noreferrer" class="contact-chip chip-codeforces" id="contact-cf">
+                <i class="fa-solid fa-code"></i> Codeforces
+              </a>
+              <a href="https://kaggle.com" target="_blank" rel="noopener noreferrer" class="contact-chip chip-kaggle" id="contact-kg">
+                <i class="fa-brands fa-kaggle"></i> Kaggle
+              </a>
             </div>
-
           </div>
-        </section>
-      </div>
 
-      <!-- ====================================================================
-           SLIDE 5: CONTACT
-           ==================================================================== -->
-      <div class="tab-panel" id="tab-contact" data-index="5">
-        <section class="section contact-section">
-          <div class="container">
-            <div class="contact-box">
-              <span class="section-pill"><i class="fa-regular fa-paper-plane"></i> Get In Touch</span>
-              <h2 class="contact-title">Let's talk & collaborate.</h2>
-              <p class="contact-desc">
-                Whether you want to discuss an ESP32 automation idea, machine learning projects, 
-                competitive programming strategies, or open opportunities — my inbox is always open!
-              </p>
-
-              <div class="contact-action-row">
-                <a href="mailto:rohitadhikary299@gmail.com" class="direct-email-btn">
-                  <i class="fa-regular fa-envelope"></i>
-                  <span>rohitadhikary299@gmail.com</span>
-                </a>
-              </div>
-
-              <!-- Official Brand-Colored Buttons -->
-              <div class="contact-social-row">
-                <a href="https://github.com/Rohit-Adhikary" target="_blank" rel="noopener noreferrer" class="contact-chip chip-github">
-                  <i class="fa-brands fa-github"></i> GitHub
-                </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-chip chip-linkedin" id="contact-li">
-                  <i class="fa-brands fa-linkedin"></i> LinkedIn
-                </a>
-                <a href="https://codeforces.com" target="_blank" rel="noopener noreferrer" class="contact-chip chip-codeforces" id="contact-cf">
-                  <i class="fa-solid fa-code"></i> Codeforces
-                </a>
-                <a href="https://kaggle.com" target="_blank" rel="noopener noreferrer" class="contact-chip chip-kaggle" id="contact-kg">
-                  <i class="fa-brands fa-kaggle"></i> Kaggle
-                </a>
-              </div>
-            </div>
-
-            <!-- Slide back to Home button -->
-            <div class="slide-nav-bottom center">
-              <button type="button" class="btn btn-ghost tab-trigger" data-tab="tab-home">
-                <i class="fa-solid fa-house"></i> Back to Home
-              </button>
-            </div>
-
+          <div class="slide-nav-bottom center">
+            <button type="button" class="btn btn-ghost tab-trigger" data-tab="tab-home">
+              <i class="fa-solid fa-house"></i> Back to Home
+            </button>
           </div>
-        </section>
-      </div>
+
+        </div>
+      </section>
+    </div>
+
   </main>
 
   <!-- Clean Minimalist Footer -->
@@ -645,6 +1003,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=8.0"></script>
+  <script src="js/main.js?v=9.0"></script>
 </body>
 </html>
